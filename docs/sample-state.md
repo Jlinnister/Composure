@@ -1,6 +1,6 @@
 ```
 {
-  currentUser: {
+  current_user: {
     id: 1,
     username: "jlinnister",
     email: "jlin28@wustl.edu",
