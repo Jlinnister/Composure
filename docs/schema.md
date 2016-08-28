@@ -40,4 +40,4 @@
 | title | string |
 | body | text |
 | position | integer | not null
-| story_id | integer | not null, foreign key(photos), indexed
+| story_id | integer | not null, foreign key(stories), indexed
