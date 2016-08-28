@@ -8,6 +8,8 @@
 
 ##### Photo Story Index Container
 - Photo Story index component
+- Photo Story index item component
+  - Link to Photo Story show
 
 ##### Photo Story Show Container
 - Photo Story show component
@@ -17,6 +19,12 @@
   - 'Add a photo group' button
   - 'Add a full-width photo' button
   - 'Add a text-only group' button
+
+##### Story New and Edit Nav Bar Container
+- New and edit nav bar component
+  - Save Changes
+  - Delete Story
+  - My Storyboard
 
 ##### Photo Story Edit Container
 - Photo Story edit component
@@ -74,17 +82,12 @@
 - Photo Story show
 
 ##### New Story Container
-- Story New NavBar component
-  - Save Story
-  - My Storyboard
+- Story New and Edit NavBar
 - Photo story new
 - Buttons component
 
 ##### Edit Story Container
-- Story Edit NavBar component
-  - Save Changes
-  - Delete Story
-  - My Storyboard
+- Story new and Edit NavBar
 - Photo story edit
 - Buttons component
 
