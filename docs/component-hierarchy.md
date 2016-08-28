@@ -66,4 +66,4 @@
 | /profile/:id | UserProfileContainer |
 | /profile/:id/:storyId | StoryShowContainer |
 | /profile/:id/:storyId/edit | EditStoryContainer |
-| /new | newStoryContainer
+| /new | newStoryContainer |

@@ -45,13 +45,13 @@
   text_areas: {
     1: {
       title: "Niagara Falls",
-      sub_title: "Too much water in one place",
+      body: "Too much water in one place",
       position: "2",
       story_id: 1
     },
     2: {
       title: "",
-      sub_title: "Can't wait for my next big trip",
+      body: "Can't wait for my next big trip",
       position: "5",
       story_id: 1
     }
