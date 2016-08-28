@@ -12,16 +12,57 @@
 ##### Photo Story Show Container
 - Photo Story show component
 
+##### Story Buttons Container
+- Story buttons component
+  - 'Add a photo group' button
+  - 'Add a full-width photo' button
+  - 'Add a text-only group' button
+
+##### Photo Story Edit Container
+- Photo Story edit component
+  - Utilizes Photo Story show component
+  - Adds 'Edit Cover Image' button
+  - Landing 'Title' and 'Subtitle' text areas are editable (no option to remove - required)
+  - Additional text areas are editable
+  - Adds 'Remove Text' buttons under 'Story' text area elements
+    - Removes text area and reformats on-click
+  - Adds 'Remove' button under 'Story' photos on hover
+    - Removes photo and resizes on-click
+    - Removes section if no photos remain
+  - Photo Story button component
+    - 'Add a photo group' button
+    - 'Add a full-width photo' button
+    - 'Add a text-only group' button
+
+##### Photo Story New Container
+  - Photo Story new component
+    - Utilizes Photo Story edit component
+    - Adds 'Add Cover Image' button
+    - Landing 'Title' and 'Subtitle' text areas are editable (no option to remove - required)
+      - Includes default filler text
+    - Adds default text area with title and subtitle
+      - Includes default filler text
+    - Additional text areas are editable
+    - Adds 'Remove Text' buttons under 'Story' text area elements
+      - Removes text area and reformats on-click
+    - Adds 'Remove' button under 'Story' photos on hover
+      - Removes photo and resizes on-click
+      - Removes section if no photos remain
+    - Photo Story button component
+      - 'Add a photo group' button
+      - 'Add a full-width photo' button
+      - 'Add a text-only group' button
+
 ##### Splash Container
 - Splash NavBar component
 - Welcome component
-- Features component
+- About component
 - Examples component
 - Footer component
 
-##### User Profile Container
+##### User Index Container
 - User NavBar component
-  - Create Story
+  - New Story
   - Edit Profile modal component
   - Sign Out
 - Photo Story Index
@@ -36,10 +77,7 @@
 - Story New NavBar component
   - Save Story
   - My Storyboard
-- Create Main component
-  - Cover component
-  - Photo components
-  - Text components
+- Photo story new
 - Buttons component
 
 ##### Edit Story Container
@@ -47,12 +85,7 @@
   - Save Changes
   - Delete Story
   - My Storyboard
-- Create Main component
-  - Cover component
-  - Photo components
-    - Remove button component
-  - Text components
-    - Remove button component
+- Photo story edit
 - Buttons component
 
 ##### Routes
@@ -61,7 +94,7 @@
 | / | SplashContainer |
 | /signup | SignUpContainer |
 | /login | LoginContainer |
-| /profile/:id | UserProfileContainer |
-| /profile/:id/:storyId | StoryShowContainer |
-| /profile/:id/:storyId/edit | EditStoryContainer |
+| /storyboard/:id | UserIndexContainer |
+| /storyboard/:id/:storyId | StoryShowContainer |
+| /storyboard/:id/:storyId/edit | EditStoryContainer |
 | /new | newStoryContainer |
