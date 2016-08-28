@@ -46,5 +46,4 @@ Composure.me is a web application inspired by Exposure.co for sharing and discov
 [schema]: ./schema.md
 [redux-structure]: ./redux-structure.md
 [sample-state]: ./sample-state.md
-
-## Implementation Timeline
+[Implementation Timeline]: ./phases
