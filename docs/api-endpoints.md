@@ -9,6 +9,7 @@
 |---|---|---|---|
 | api_users | POST | api/users | api_users#create
 | api_user | GET | api/users/:id | api_users#show
+| api_user | PATCH | api/users/:id | api_users#update
 
 ##### Sessions
 | Prefix | Type | URI | Controller Action |
