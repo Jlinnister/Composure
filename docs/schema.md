@@ -20,6 +20,8 @@
 | description | text |
 | user_id | integer | not null, foreign key(users), indexed
 | cover_image_id | string | not null, foreign key(photos), indexed
+| date_created | string | 
+
 
 ##### Photos
 | Column Name | Data Type | Details |
