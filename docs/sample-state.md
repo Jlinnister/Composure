@@ -7,7 +7,6 @@
     avatar_url: "http://www.myavatar.com/avatar.jpg",
     profile_title: "Jeff Lin",
     profile_description: "Things I like to take pictures of",
-    password_digest:
   },
   forms: {
     sign_up: {errors: []},
