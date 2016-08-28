@@ -30,7 +30,7 @@
 | url | string | not null
 | medium_url | string |
 | position | integer | not null
-| full-width | boolean | not null, default: false
+| full_width | boolean | not null, default: false
 | story_id | integer | not null, foreign key(stories), indexed
 
 ##### Text Areas

@@ -27,18 +27,21 @@
       url: "http://www.myphotos.com/3987.jpg",
       medium_url: "http://www.myphotos.com/3987_med.jpg",
       position: "1",
+      full_width: true,
       story_id: 1
     },
     2: {
       url: "http://www.myphotos.com/2323.jpg",
       medium_url: "http://www.myphotos.com/2323_med.jpg",
       position: "3",
+      full_width: false,
       story_id: 1
     },
     3: {
       url: "http://www.myphotos.com/2342.jpg",
       medium_url: "http://www.myphotos.com/2342_med.jpg",
       position: "4",
+      full_width: false,
       story_id: 1
     }
   },
