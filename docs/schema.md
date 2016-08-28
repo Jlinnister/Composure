@@ -20,7 +20,7 @@
 | description | text |
 | user_id | integer | not null, foreign key(users), indexed
 | cover_image_id | string | not null, foreign key(photos), indexed
-| date_created | string | 
+| date_created | string |
 
 
 ##### Photos
@@ -30,6 +30,7 @@
 | url | string | not null
 | medium_url | string |
 | position | integer | not null
+| full-width | boolean | not null, default: false
 | story_id | integer | not null, foreign key(stories), indexed
 
 ##### Text Areas
