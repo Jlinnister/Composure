@@ -13,7 +13,7 @@
 - Photo Story show component
 
 ##### Splash Container
-- NavBar component
+- Splash NavBar component
 - Welcome component
 - Features component
 - Examples component
@@ -27,17 +27,15 @@
 - Photo Story Index
 
 ##### Story Show Container
-- User NavBar component
+- Story Show NavBar component
   - Edit Story
-  - Edit Profile modal component
-  - Sign Out
+  - My Storyboard
 - Photo Story show
 
 ##### New Story Container
-- User NavBar component
+- Story New NavBar component
   - Save Story
-  - Edit Profile modal component
-  - Sign Out
+  - My Storyboard
 - Create Main component
   - Cover component
   - Photo components
@@ -45,10 +43,10 @@
 - Buttons component
 
 ##### Edit Story Container
-- User NavBar component
-  - Save Story
+- Story Edit NavBar component
+  - Save Changes
   - Delete Story
-  - Sign Out
+  - My Storyboard
 - Create Main component
   - Cover component
   - Photo components

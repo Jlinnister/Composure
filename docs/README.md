@@ -23,11 +23,11 @@ Composure.me is a web application inspired by Exposure.co for sharing and discov
   - A photo group is auto-justified based on number of photos
   - A full-width photo will stretch or resize to fill or fit respectively
 - [ ] Dynamic splash page
-  - Navigation bar includes 'Welcome', 'Features', 'Examples', 'Login' and 'Sign Up' links
-  - 'Welcome', 'Features' and 'Examples' links scroll down to appropriate section
+  - Navigation bar includes 'Welcome', 'About', 'Examples', 'Login' and 'Sign Up' links
+  - 'Welcome', 'About' and 'Examples' links scroll down to appropriate section
   - 'Login' and 'Sign Up' links redirect to appropriate form page
   - 'Guest Login' link redirects to 'Login' form and auto fills
-  - Navigation bar includes 'Profile' link in place of 'Login' and 'Sign Up' for logged in users
+  - Navigation bar includes 'My Storyboard' link in place of 'Login' and 'Sign Up' for logged in users
 - [ ] Production README
 
 ## Design Documents
@@ -38,8 +38,8 @@ Composure.me is a web application inspired by Exposure.co for sharing and discov
 * [Redux Structure][redux-structure]
 * [Sample State][sample-state]
 
-[wireframes]: ./wireframes.md
-[components]: ./components.md
+[wireframes]: ./wireframes/
+[components]: ./component-hierarchy.md
 [redux-structure]: ./redux-structure.md
 [sample-state]: ./sample-state.md
 [api-endpoints]: ./api-endpoints.md
