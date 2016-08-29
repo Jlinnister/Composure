@@ -3,6 +3,21 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// @font-face {
+//   font-family: 'P22UndergroundPro-Heavy';
+//   src: url(P22UndergroundPro-Heavy.ttf) format("truetype");
+// }
+
+@font-face {
+  font-family: 'P22UndergroundPro-Heavy';
+  src: url(P22UndergroundPro-Heavy.eot);
+  src: local('☺︎'),
+    url(P22UndergroundPro-Heavy.woff) format("woff"),
+    url(P22UndergroundPro-Heavy.otf) format("opentype"),
+    url(P22UndergroundPro-Heavy.svg#P22UndergroundPro) format("svg");
+}
+
+
 @font-face {
   font-family: 'ProximaNova-Bold';
   src: url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),  url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.otf')  format('opentype'),
@@ -10,6 +25,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 
 $black: #212121;
 $white: #F5F5F5;
@@ -35,7 +51,7 @@ html, body, main {
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-family: 'ProximaNova-Bold';
+  font-family: 'P22UndergroundPro-Heavy';
   font-size: 76px;
   color: $white;
   text-shadow: 0 2px 2px $black;
