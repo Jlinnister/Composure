@@ -1,13 +1,30 @@
 class Api::UsersController < ApplicationController
   def create
-    render "api/users/show"
+    @user = User.new(user_params)
+
+    if @user.save
+      login(@user)
+      render "api/users/show"
+    else
+      @errors = ["Username already taken"]
+      render "api/shared/errors", status: 422
+    end
   end
 
   def show
-    render "api/users/show"
+    @user = User.find_by_username(params[:id])
+
+    if @user
+      render "api/users/show"
+    else
+      render json: nil, status: 404
+    end
   end
 
   def update
+    @user = current_user
+
+    @user.update(update_params)
     render "api/users/show"
   end
 
@@ -17,9 +34,7 @@ class Api::UsersController < ApplicationController
     params.require(:user).permit(:username, :password)
   end
 
-  # def update_params
-  #   params.require(:user).permit(:first_name,
-  #     :last_name, :about, :city, :country,
-  #     :avatar, :cover)
-  # end
+  def update_params
+    params.require(:user).permit(:avatar_url, :profile_title, :profile_description, :website_url)
+  end
 end
