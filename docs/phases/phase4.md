@@ -1,7 +1,10 @@
-## Phase 3: Stories cont. (1 day)
+## Phase 4: Stories cont. (2 day)
 
-#### Objective: Implement Cloudinary API to upload photos
-
-- [ ] 'APIUtil' to interact with Cloudinary
-- [ ] Implement 'Upload Photos', 'Text Area' and 'Full-Width Photo' buttons on 'Story' create page
+#### Objective: Story show page renders layout properly, nav bars render properly
+- [ ] UserIndexContainer nav bar renders
+- [ ] StoryShowContainer nav bar renders
+- [ ] PhotoStoryShow component renders cover image, title and subtitle on show landing  
+- [ ] PhotoStoryShow component renders remaining elements
+- [ ] PhotoStoryShow component auto-justifies photo groups depending on number of photos
+- [ ] PhotoStoryShow component renders full-screen photos
 - [ ] Review phase 4

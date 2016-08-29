@@ -1,7 +1,6 @@
 ## Phase 1: Backend setup and User Authentication (1 day)
 
 #### Objective: Functioning Rails project hosted on Heroku with front-end authentication
-
 - [ ] Hosted on Heroku
 - [ ] New Rails project
 - [ ] `User` model/migration
