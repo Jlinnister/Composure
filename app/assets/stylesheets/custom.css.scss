@@ -2,3 +2,41 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),  url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.otf')  format('opentype'),
+	     url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.woff') format('woff'), url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.ttf')  format('truetype'), url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$black: #212121;
+$white: #F5F5F5;
+$lightgrey: #BDBDBD;
+$darkgrey: #616161;
+$medgrey: #9E9E9E;
+$darkermedgrey: #757575;
+
+body {
+  background: url("https://oceanus.feralhosting.com/bx1th0j/background1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body {
+    height:100%;
+}
+
+.Aligner-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: 'ProximaNova-Bold';
+  font-size: 76px;
+  color: $white;
+  text-shadow: 0 2px 2px $black;
+}
