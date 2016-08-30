@@ -1,13 +1,18 @@
-import React from 'React';
+import { connect } from 'react-redux';
+import Storyboard from './storyboard';
+import { logout } from '../../actions/session_actions';
 
-export default class Storyboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const mapStateToProps = state => ({
+  loggedIn: !!state.session.current_user,
+  errors: state.session.errors,
+  current_user: state.session.current_user,
+});
 
-  render() {
-    return (
-      <div>Storyboard</div>
-    );
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  logout: () => dispatch(logout()),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Storyboard);
