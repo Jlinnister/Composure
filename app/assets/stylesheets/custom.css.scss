@@ -29,6 +29,10 @@ $medgrey: #9E9E9E;
 $darkermedgrey: #757575;
 $green: #4CAF50;
 
+a:link {
+  text-decoration: none;
+}
+
 @mixin create-buttons($bg, $color) {
   font-family: 'P22UndergroundPro-Demi';
   font-size: 14px;
@@ -70,6 +74,13 @@ $green: #4CAF50;
   min-width: 790px;
   min-height: 655px;
 
+  .logo {
+    font-family: 'P22UndergroundPro-Heavy';
+    font-size: 20px;
+    color: $black;
+    letter-spacing: 2px;
+    margin-top: -10px;
+  }
 
   nav {
     margin-top: 20px;
@@ -83,6 +94,7 @@ $green: #4CAF50;
 
       li {
         display: inline-block;
+        color: $black;
         margin: 0 0 0 30px;
         cursor: pointer;
         -webkit-transition: color 200ms; /* Safari */
@@ -456,7 +468,6 @@ $green: #4CAF50;
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 1;
   height: 44px;
   border-bottom: 1px solid #eaebec;
   padding: 0 0 0 20px;
@@ -505,6 +516,27 @@ $green: #4CAF50;
     }
   }
 }
+//end splash nav
+
+.signup-page, .login-page {
+  text-align: center;
+  padding: 0 40px;
+  background-image: url("https://oceanus.feralhosting.com/bx1th0j/background1.jpg");
+  background-position: 50% 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  min-width: 790px;
+  min-height: 655px;
+}
+
+.signup-form-container, .login-form-container {
+  margin-top: 125px;
+  padding: 10px;
+}
 
 .form-control {
   font-size: 24px;
@@ -533,21 +565,19 @@ input {
 .form-control::-moz-placeholder { color: #a9a9a9; }
 .form-control:-ms-input-placeholder { color: #a9a9a9; }
 
-.test {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-family: 'P22UndergroundPro-Heavy';
-  font-size: 76px;
-  color: $white;
-  text-shadow: 0 2px 2px $black;
-}
+
 
 .login-form-container, .signup-form-container, .recovery-page {
 
+  .signup-form-box {
+
+  }
+
   .login-form-title, .signup-form-title {
-    font-size: 24px;
+    font-family: 'P22UndergroundPro-Heavy';
+    color: $white;
+    font-size: 42px;
+    text-shadow: 1px 1px 1px $black;
     text-align: center;
   }
 
@@ -555,28 +585,29 @@ input {
     margin-bottom: 30px;
   }
   .notice {
-    font: 11px 'P22UndergroundPro-Heavy';
+    font: 11px 'P22UndergroundPro-Demi';
     color: $lightgrey;
     position: relative;
     top: -10px;
     text-align: center;
   }
   .errors {
-    font: 11px 'P22UndergroundPro-Heavy';
+    font: 11px 'P22UndergroundPro-Demi';
     color: $black;
     position: relative;
     top: -10px;
     text-align: center;
   }
   .submit-user, .login-user {
-    padding: 10px 40px;
+    padding: 12px 40px 10px 40px;
+    line-height: 14px;
     border: 0;
     text-transform: uppercase;
-    color: white;
+    color: $white;
     font-size: 14px;
-    background: $lightgrey;
+    background: $green;
     &:hover {
-      background: $darkgrey;
+      background: $lightgrey;
     }
   }
   .login-user {
@@ -585,16 +616,16 @@ input {
 
   input {
     border-radius: 0px;
-    font: 24px 'P22UndergroundPro-Heavy';
+    font: 24px 'P22UndergroundPro-Demi';
 
     .submit-user, .login-user {
-      font: 14px 'P22UndergroundPro-Heavy';
+      font: 14px 'P22UndergroundPro-Demi';
       letter-spacing: 1px;
     }
   }
 
     input.submit-user, input.login-user {
-      font: 14px 'P22UndergroundPro-Heavy';
+      font: 14px 'P22UndergroundPro-Demi';
       letter-spacing: 1px;
     }
 }

@@ -1,8 +1,6 @@
 # Composure
 
-
 ## Minimum Viable Product
-
 Composure.me is a web application inspired by Exposure.co for sharing and discovering beautifully generated photo stories. Technologies used to create Composure will include a React.js with Redux front-end, the Ruby on Rails framework and a PostgreSQL backend. By the end of week 9, Composure.me will satisfy the following requirements:
 
 - [ ] Hosted on Heroku with a custom domain
@@ -38,12 +36,12 @@ Composure.me is a web application inspired by Exposure.co for sharing and discov
 * [Redux Structure][redux-structure]
 * [Sample State][sample-state]
 
-[wireframes]: ./wireframes/
-[components]: ./component-hierarchy.md
-[redux-structure]: ./redux-structure.md
-[sample-state]: ./sample-state.md
-[api-endpoints]: ./api-endpoints.md
-[schema]: ./schema.md
-[redux-structure]: ./redux-structure.md
-[sample-state]: ./sample-state.md
-[Implementation Timeline]: ./phases
+[wireframes]: ./docs/wireframes/
+[components]: ./docs/component-hierarchy.md
+[redux-structure]: ./docs/redux-structure.md
+[sample-state]: ./docs/sample-state.md
+[api-endpoints]: ./docs/api-endpoints.md
+[schema]: ./docs/schema.md
+[redux-structure]: ./docs/redux-structure.md
+[sample-state]: ./docs/sample-state.md
+[Implementation Timeline]: ./docs/phases

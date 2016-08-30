@@ -51,23 +51,25 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="container login-form-container">
-        <div className="row">
-          <div className="col-md-4 col-md-offset-4">
-            <div className="login-form-title">
-              COMPOSURE
+      <div className="login-page">
+        <div className="container login-form-container">
+          <div className="row">
+            <div className="col-md-4 col-md-offset-4">
+              <div className="login-form-title">
+                COMPOSURE
+              </div>
+
+              {this.props.errors ? this.renderErrors() : null}
+
+              <form onSubmit={this.handleSubmit} className="login-form-box">
+
+                <input className="form-control" type="text" id="login-form-username" value={this.state.username} onChange={this.update("username")} placeholder="Username" />
+                <input className="form-control" type="password" id="login-form-password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
+
+                <input className="btn btn-primary login-user" type="submit" value="Log In" />
+
+              </form>
             </div>
-
-            {this.props.errors ? this.renderErrors() : null}
-
-            <form onSubmit={this.handleSubmit} className="login-form-box">
-
-              <input className="form-control" type="text" id="login-form-username" value={this.state.username} onChange={this.update("username")} placeholder="Username" />
-              <input className="form-control" type="password" id="login-form-password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
-
-              <input className="btn btn-primary login-user" type="submit" value="Log In" />
-
-            </form>
           </div>
         </div>
       </div>

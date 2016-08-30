@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link, hashHistory } from 'react-router';
 
 const SplashMain = () => (
 
   <div className="container-fluid splash">
     <nav>
+      <Link to="/" className="logo pull-left">COMPOSURE</Link>
       <ul className="options pull-right">
         <li className="welcome-link">Welcome</li>
         <li className="about-link">About</li>
         <li className="examples-link">Examples</li>
-        <li className="open-login">Login</li>
-        <li className="open-signup">Sign Up</li>
+        <Link to="/login"><li className="open-login">Login</li></Link>
+        <Link to="/signup"><li className="open-signup">Sign Up</li></Link>
       </ul>
     </nav>
 
