@@ -7,8 +7,14 @@ import configureStore from './store/store';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
+  console.log(window.currentUser);
   if (window.currentUser) {
-    const initialState = { current_user: window.currentUser };
+    const initialState = {
+      session: {
+        current_user: window.currentUser,
+        errors: [],
+      },
+    };
     store = configureStore(initialState);
   } else {
     window.store = store = configureStore();

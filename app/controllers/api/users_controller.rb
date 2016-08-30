@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render "api/users/show"
     else
-      @errors = ["Username already taken"]
+      @errors = ["Invalid username and password"]
       render "api/shared/errors", status: 422
     end
   end
@@ -31,7 +31,7 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :email, :password)
   end
 
   def update_params

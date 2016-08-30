@@ -83,9 +83,9 @@ input {
   text-shadow: 0 2px 2px $black;
 }
 
-.login-form-container, .log-in-page, .recovery-page {
+.login-form-container, .signup-form-container, .recovery-page {
 
-  .login-form-title {
+  .login-form-title, .signup-form-title {
     font-size: 24px;
     text-align: center;
   }

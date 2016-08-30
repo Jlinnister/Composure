@@ -1,11 +1,12 @@
 import React from 'React';
 import { Link, hashHistory } from 'react-router';
 
-class Login extends React.Component {
+class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
+      email: '',
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,9 +17,8 @@ class Login extends React.Component {
   }
 
   redirectIfLoggedIn() {
-    console.log(this.props.loggedIn)
     if (this.props.loggedIn) {
-      hashHistory.push("/storyboard");
+      hashHistory.push("/storyboard/");
     }
   }
 
@@ -29,14 +29,15 @@ class Login extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.login(user);
+    console.log(user);
+    this.props.signup(user);
   }
 
 	// navLink(){
-	// 	if (this.props.formType === "login") {
+	// 	if (this.props.formType === "signup") {
 	// 		return <Link to="/signup">sign up instead</Link>;
 	// 	} else {
-	// 		return <Link to="/login">log in instead</Link>;
+	// 		return <Link to="/signup">log in instead</Link>;
 	// 	}
 	// }
   //
@@ -52,21 +53,22 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="container login-form-container">
+      <div className="container signup-form-container">
         <div className="row">
           <div className="col-md-4 col-md-offset-4">
-            <div className="login-form-title">
+            <div className="signup-form-title">
               COMPOSURE
             </div>
 
             {this.props.errors ? this.renderErrors() : null}
 
-            <form onSubmit={this.handleSubmit} className="login-form-box">
+            <form onSubmit={this.handleSubmit} className="signup-form-box">
 
-              <input className="form-control" type="text" id="login-form-username" value={this.state.username} onChange={this.update("username")} placeholder="Username" />
-              <input className="form-control" type="password" id="login-form-password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
+              <input className="form-control" type="text" id="signup-form-username" value={this.state.username} onChange={this.update("username")} placeholder="Username" />
+              <input className="form-control" type="text" id="signup-form-email" value={this.state.email} onChange={this.update("email")} placeholder="Email" />
+              <input className="form-control" type="password" id="signup-form-password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
 
-              <input className="btn btn-primary login-user" type="submit" value="Log In" />
+              <input className="btn btn-primary submit-user" type="submit" value="Get Started" />
 
             </form>
           </div>
@@ -77,4 +79,4 @@ class Login extends React.Component {
 
 }
 
-export default Login;
+export default Signup;
