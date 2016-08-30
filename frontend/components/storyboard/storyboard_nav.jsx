@@ -7,8 +7,7 @@ export default class StoryboardNav extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  handleSubmit() {
     this.props.logout();
   }
 
@@ -19,7 +18,7 @@ export default class StoryboardNav extends React.Component {
           <ul className="options pull-right">
             <li className="new-story-link">New Story</li>
             <li className="edit-profile-link">Edit Profile</li>
-            <li className="signout-link">Sign Out</li>
+            <Link to="/"><li className="signout-link" onClick={this.handleSubmit.bind(null)}>Sign Out</li></Link>
           </ul>
         </nav>
       </div>
