@@ -7,7 +7,6 @@ import configureStore from './store/store';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
-  console.log(window.currentUser);
   if (window.currentUser) {
     const initialState = {
       session: {
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     store = configureStore(initialState);
   } else {
-    window.store = store = configureStore();
+    store = configureStore();
   }
 
   const root = document.getElementById('root');

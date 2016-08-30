@@ -16,7 +16,6 @@ class Login extends React.Component {
   }
 
   redirectIfLoggedIn() {
-    console.log(this.props.loggedIn)
     if (this.props.loggedIn) {
       hashHistory.push("/storyboard");
     }
