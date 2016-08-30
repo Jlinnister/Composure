@@ -37,7 +37,7 @@ Composure.me is a web application inspired by Exposure.co for sharing and discov
 * [Sample State][sample-state]
 
 [wireframes]: ./docs/wireframes/
-[components]: ./docs/component-hierarchy.md
+[components]: ./docs/component-hierarchy-revision.md
 [redux-structure]: ./docs/redux-structure.md
 [sample-state]: ./docs/sample-state.md
 [api-endpoints]: ./docs/api-endpoints.md
