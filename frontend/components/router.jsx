@@ -6,6 +6,7 @@ import Splash from './splash/splash';
 import LoginContainer from './session/login_container';
 import SignupContainer from './session/signup_container';
 import StoryboardContainer from './storyboard/storyboard_container';
+import StoryNewContainer from './story_new/story_new_container';
 
 class AppRouter extends React.Component {
   constructor(props) {
@@ -35,9 +36,9 @@ class AppRouter extends React.Component {
       <Router history={hashHistory}>
         <Route path="/" component={Splash} />
         <Route path="/login" component={LoginContainer} onEnter={this._redirectIfLoggedIn} />
-        <Route path="/storyboard" component={StoryboardContainer} onEnter={ this._ensureLoggedIn } />
-
         <Route path="/signup" component={SignupContainer} onEnter={this._redirectIfLoggedIn} />
+        <Route path="/storyboard" component={StoryboardContainer} onEnter={ this._ensureLoggedIn } />
+        <Route path="/new" component={StoryNewContainer} onEnter={ this._ensureLoggedIn } />
       </Router>
     );
   }
