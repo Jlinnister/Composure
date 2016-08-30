@@ -7,9 +7,9 @@
   font-family: 'P22UndergroundPro-Heavy';
   src: url(P22UndergroundPro-Heavy.eot);
   src: local('☺︎'),
-    url(P22UndergroundPro-Heavy.woff) format("woff"),
-    url(P22UndergroundPro-Heavy.otf) format("opentype"),
-    url(P22UndergroundPro-Heavy.svg#P22UndergroundPro) format("svg");
+    url('P22UndergroundPro-Heavy.woff') format("woff"),
+    url('P22UndergroundPro-Heavy.otf') format("opentype"),
+    url('P22UndergroundPro-Heavy.svg#P22UndergroundPro') format("svg");
 }
 
 $black: #212121;
