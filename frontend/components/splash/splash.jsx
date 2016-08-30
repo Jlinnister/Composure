@@ -1,5 +1,9 @@
 import React from 'react';
 
+import SplashNavBar from './splash_nav_bar';
+import SplashMain from './splash_main';
+
+
 export default class Splash extends React.Component {
   constructor(props) {
     super(props);
@@ -7,7 +11,9 @@ export default class Splash extends React.Component {
 
   render() {
     return (
-      <div className="test">COMPOSURE</div>
+      <div>
+        <SplashMain />
+      </div>
     );
   }
 }
