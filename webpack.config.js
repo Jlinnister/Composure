@@ -22,5 +22,13 @@ module.exports = {
   devtool: 'source-maps',
   resolve: {
     extensions: ['', '.js', '.jsx'],
+    alias: {
+      react: path.resolve(__dirname, './node_modules/react'),
+      React: path.resolve(__dirname, './node_modules/react'),
+    },
+    fallback: path.resolve(__dirname, './node_modules'),
+  },
+  resolveLoader: {
+    fallback: path.resolve(__dirname, './node_modules'),
   },
 };
