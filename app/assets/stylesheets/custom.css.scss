@@ -3,11 +3,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-// @font-face {
-//   font-family: 'P22UndergroundPro-Heavy';
-//   src: url(P22UndergroundPro-Heavy.ttf) format("truetype");
-// }
-
 @font-face {
   font-family: 'P22UndergroundPro-Heavy';
   src: url(P22UndergroundPro-Heavy.eot);
@@ -17,16 +12,6 @@
     url(P22UndergroundPro-Heavy.svg#P22UndergroundPro) format("svg");
 }
 
-
-@font-face {
-  font-family: 'ProximaNova-Bold';
-  src: url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),  url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.otf')  format('opentype'),
-	     url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.woff') format('woff'), url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.ttf')  format('truetype'), url('http://images.karenling.net/aa/fonts/ProximaNova-Bold/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 $black: #212121;
 $white: #F5F5F5;
 $lightgrey: #BDBDBD;
@@ -34,19 +19,60 @@ $darkgrey: #616161;
 $medgrey: #9E9E9E;
 $darkermedgrey: #757575;
 
+@mixin create-buttons($bg, $color) {
+  font-family: 'P22UndergroundPro-Heavy';
+  font-size: 14px;
+  background-color: $bg;
+  color: $color;
+  padding: 7px 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
 body {
   background: url("https://oceanus.feralhosting.com/bx1th0j/background1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font: 14px 'P22UndergroundPro-Heavy';
+  font-weight: 300;
+  margin: 0px;
+  line-height: 21px;
 }
 
 html, body, main {
     height:100%;
 }
 
-.Aligner-item {
+.form-control {
+  font-size: 24px;
+  line-height: 25px;
+  border-radius: 0;
+  border: 1px solid #eee;
+  margin: 10px 0;
+  padding: 30px 20px;
+  outline: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+input.form-control {
+  &:focus {
+    border: 1px solid #bbb;
+  }
+}
+input {
+  font-family: 'P22UndergroundPro-Heavy';
+}
+
+.form-control::-webkit-input-placeholder { color: #a9a9a9; }
+.form-control:-moz-placeholder { color: #a9a9a9; }
+.form-control::-moz-placeholder { color: #a9a9a9; }
+.form-control:-ms-input-placeholder { color: #a9a9a9; }
+
+.test {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,4 +81,91 @@ html, body, main {
   font-size: 76px;
   color: $white;
   text-shadow: 0 2px 2px $black;
+}
+
+.login-form-container, .log-in-page, .recovery-page {
+
+  .login-form-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+  .notice {
+    font: 11px 'P22UndergroundPro-Heavy';
+    color: $lightgrey;
+    position: relative;
+    top: -10px;
+    text-align: center;
+  }
+  .errors {
+    font: 11px 'P22UndergroundPro-Heavy';
+    color: $black;
+    position: relative;
+    top: -10px;
+    text-align: center;
+  }
+  .submit-user, .login-user {
+    padding: 10px 40px;
+    border: 0;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    background: $lightgrey;
+    &:hover {
+      background: $darkgrey;
+    }
+  }
+  .login-user {
+    padding: 10px 67px;
+  }
+
+  input {
+    border-radius: 0px;
+    font: 24px 'P22UndergroundPro-Heavy';
+
+    .submit-user, .login-user {
+      font: 14px 'P22UndergroundPro-Heavy';
+      letter-spacing: 1px;
+    }
+  }
+
+    input.submit-user, input.login-user {
+      font: 14px 'P22UndergroundPro-Heavy';
+      letter-spacing: 1px;
+    }
+}
+.sign-up-page {
+  margin-top: 100px;
+  text-align: center;
+
+  .sign-up-free {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 18px;
+    b {
+      color: #333;
+    }
+  }
+
+  .submit-user {
+    margin-top: 20px;
+  }
+  .guest-login-button {
+    @include create-buttons(#e8e8e8, black);
+    padding: 10px 40px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 0 7px 0;
+    border: 0;
+    -webkit-transition: opacity 200ms; /* Safari */
+    transition: opacity 200ms;
+    transition-timing-function: linear;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
 }

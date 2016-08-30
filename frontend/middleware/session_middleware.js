@@ -1,5 +1,5 @@
 import { receiveErrors, receiveCurrentUser, SessionConstants } from '../actions/session_actions';
-import { login, logout, signup } from '../util/session_api_util';
+import SessionUtil from '../util/session_api_util';
 
 export default({ getState, dispatch }) => next => action => {
   const successCallback = user => dispatch(receiveCurrentUser(user));
@@ -10,13 +10,13 @@ export default({ getState, dispatch }) => next => action => {
 
   switch (action.type) {
     case SessionConstants.LOGIN:
-      login(action.user, successCallback, errorCallback);
+      SessionUtil.login(action.user, successCallback, errorCallback);
       return next(action);
     case SessionConstants.LOGOUT:
-      logout(() => next(action));
+      SessionUtil.logout(() => next(action));
       break;
     case SessionConstants.SIGNUP:
-      signup(action.user, successCallback, errorCallback);
+      SessionUtil.signup(action.user, successCallback, errorCallback);
       return next(action);
     default:
       return next(action);
