@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   root "static_pages#root"
 
   namespace :api, defaults: {format: :json} do
-    resource :users, only: [:create, :show, :update]
+    resources :users, only: [:create, :show, :update]
     resource :session, only: [:create, :destroy, :show]
+    resources :textareas, only: [:create, :update, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
