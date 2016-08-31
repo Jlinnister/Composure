@@ -1,7 +1,7 @@
 class Api::StoriesController < ApplicationController
   def index
     @stories = current_user.stories
-    render :index
+    render "api/stories/index"
   end
 
   def create
