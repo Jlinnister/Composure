@@ -25,22 +25,15 @@ class StoryTextItem extends React.Component {
   }
 
   render() {
-
-    let {title, body} = this.props.part;
+    let { title, body } = this.props.part;
 
     return (
       <div className="story-text-item">
-          <div className="row">
-            <div className="col-md-6 col-md-offset-3">
-
-              <form onSubmit={this.createTextArea} className="story-text-form-box">
-
-                <input className="form-control" type="text" id="story-text-form-title" value={title} onChange={this.update("title")} placeholder="Title (Optional)" />
-                <textarea className="form-control" id="story-text-form-body" value={body} onChange={this.updateBody()} placeholder="Write your story here. (Optional)" ></textarea>
-                <input className="btn btn-primary story-text-form" type="submit" value="Save" />
-
-              </form>
-            </div>
+        <div className="row">
+          <div className="col-md-6 col-md-offset-3">
+            <input className="form-control" type="text" id="story-text-form-title" value={title} onChange={this.update("title")} placeholder="Title (Optional)" />
+            <textarea className="form-control" id="story-text-form-body" value={body} onChange={this.updateBody()} placeholder="Write your story here. (Optional)" ></textarea>
+          </div>
         </div>
       </div>
 		);

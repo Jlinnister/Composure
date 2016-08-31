@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import StoryNew from './story_new';
-import { logout } from '../../actions/session_actions';
+import * as TextAreaActions from '../../actions/text_area_actions';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.session.current_user,
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  logout: () => dispatch(logout()),
+  createTextArea: text_area => dispatch(TextAreaActions.createTextArea(text_area)),
 });
 
 export default connect(

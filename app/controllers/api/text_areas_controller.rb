@@ -1,13 +1,14 @@
 class Api::TextAreasController < ApplicationController
   def create
-    @text_area = TextArea.new(text_area_params)
+    @text_areas = TextArea.create(parse_text_areas(text_area_params))
+    # @text_area = TextArea.new(text_area_params)
 
-    if @text_area.save
+    # if @text_area.save
       render "api/text_areas/show"
-    else
-      @errors = ["Text area can't be blank"]
-      render "api/shared/errors", status: 422
-    end
+    # else
+    #   @errors = ["Text area can't be blank"]
+    #   render "api/shared/errors", status: 422
+    # end
   end
 
   # def show
@@ -35,7 +36,14 @@ class Api::TextAreasController < ApplicationController
   private
 
   def text_area_params
-    params.require(:text_area).permit(:title, :body, :position, :story_id)
+    params.require(:text_area).permit!
   end
 
+  def parse_text_areas(text_area_params)
+    text_areas = []
+    text_area_params.keys.each do |key|
+        text_areas << text_area_params[key]
+    end
+    text_areas
+  end
 end

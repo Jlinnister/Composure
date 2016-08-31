@@ -10,4 +10,5 @@ class TextArea < ActiveRecord::Base
 #   source: :owner
 # )
 validates :position, :story_id, presence: true
+
 end
