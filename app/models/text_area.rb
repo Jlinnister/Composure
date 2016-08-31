@@ -1,9 +1,10 @@
 class TextArea < ActiveRecord::Base
-#   belongs_to(
-#   :story,
-#   class_name: 'Story',
-#   foreign_key: :story_id
-# )
+  belongs_to(
+  :story,
+  class_name: 'Story',
+  foreign_key: :story_id
+)
+
 # has_one(
 #   :owner,
 #   through: :album,
