@@ -5,18 +5,9 @@ import StoryReducer from './story_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
-  stories: combineReducers({ text_area: TextAreaReducer,
-    story: StoryReducer,
-   }),
-
+  stories: StoryReducer,
+  text_area: TextAreaReducer,
 });
-
-
-  // combineReducers({
-  //   story: StoryReducer,
-  //   text_area: TextAreaReducer,
-  // }),
-
 
 
 export default RootReducer;

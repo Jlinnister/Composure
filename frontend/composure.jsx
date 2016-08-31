@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import * as Actions from './actions/text_area_actions';
+import * as Actions from './actions/story_actions';
 
 import Root from './components/root';
 

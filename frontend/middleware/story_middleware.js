@@ -1,12 +1,26 @@
 import StoryUtil from '../util/story_api_util';
+import { normalize, Schema, arrayOf } from 'normalizr';
 import { receiveStory,
          receiveStories,
          destroyStory,
          receiveErrors,
          StoryConstants } from '../actions/story_actions';
 
+// const story = new Schema('stories');
+// const text_area = new Schema('text_areas');
+//
+// story.define({
+//   text_areas: arrayOf(text_area),
+// });
+
 export default({ getState, dispatch }) => next => action => {
-  const storiesSuccess = stories => dispatch(receiveStories(stories));
+  const storiesSuccess = response => {
+    // response = normalize(response, {
+    //   stories: arrayOf(story),
+    // });
+    return dispatch(receiveStories(response));
+  };
+
   const storySuccess = story => dispatch(receiveStory(story));
   const storyDestroyedSuccess = story => dispatch(destroyStory(story));
   const errorCallback = xhr => {

@@ -7,12 +7,12 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
-#   has_many(
-#   :albums,
-#   class_name: 'Album',
-#   foreign_key: :user_id,
-#   dependent: :destroy
-# )
+  has_many(
+  :stories,
+  class_name: 'Story',
+  foreign_key: :user_id,
+  dependent: :destroy
+)
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

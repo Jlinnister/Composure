@@ -38,6 +38,7 @@ class AppRouter extends React.Component {
         <Route path="/login" component={LoginContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/signup" component={SignupContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/storyboard" component={StoryboardContainer} onEnter={ this._ensureLoggedIn } />
+        <Route path="/storyboard/:storyId" component={StoryNewContainer} />          
         <Route path="/new" component={StoryNewContainer} onEnter={ this._ensureLoggedIn } />
       </Router>
     );

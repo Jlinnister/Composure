@@ -29,11 +29,16 @@ $medgrey: #9E9E9E;
 $darkermedgrey: #757575;
 $green: #4CAF50;
 
-html, body {
+html, body, main {
   height: 100%;
+}
 
-  display: flex;
-  flex-direction: column;
+.root {
+  height: 100%;
+}
+
+#root, #root > div {
+    height: 100%;
 }
 
 a:link {
@@ -1081,4 +1086,49 @@ clear: both;
       }
     }
 
+}
+
+//storyboard
+.storyboard-container {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+
+  .profile-details {
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+
+    .profile-title {
+      font: 60px 'P22UndergroundPro-Heavy';
+      line-height: 90px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    .profile-description {
+      font: 18px 'Times New Roman';
+      font-style: italic;
+    }
+
+    .stories {
+      display: flex;
+    }
+    .story-list {
+    }
+  }
+
+  .user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+    position: absolute;
+    bottom: 51px;
+    left: 50%;
+    margin-left: -23px;
+    img {
+      width: 100%;
+    }
+  }
 }

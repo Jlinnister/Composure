@@ -42,7 +42,7 @@ class Api::StoriesController < ApplicationController
 
   private
     def story_params
-      params.require(:story).permit(:title, :description, :cover_image_id, :status, :password)
+      params.require(:story).permit(:title, :description, :cover_image_id, :user_id)
     end
 
     # def must_be_logged_in
