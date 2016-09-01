@@ -12,13 +12,14 @@ class StoryIndexItem extends React.Component {
 
   render() {
     const { story } = this.props;
-    const { title, cover_image_id, id } = story;
+    const { title, cover_image_med, id } = story;
     return (
-      <li onClick={this.onClick}>
+      <div onClick={this.onClick} className="photo">
         <Link to={`/storyboard/${id}`}>
-          {title}
+          <img src={cover_image_med} alt={title} />
         </Link>
-      </li>
+        <div className="photo-title">{title}</div>
+      </div>
     );
   }
 }

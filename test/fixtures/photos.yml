@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyString
+  med_url: MyString
+  position: 1
+  group_position: 1
+  full_width: false
+  story_id: 1
+
+two:
+  url: MyString
+  med_url: MyString
+  position: 1
+  group_position: 1
+  full_width: false
+  story_id: 1

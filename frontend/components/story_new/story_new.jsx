@@ -52,12 +52,15 @@ export default class StoryNew extends React.Component {
       <div>
         <form onSubmit={this.createStory} className="story-form">
           <StoryNewNav current_user={this.props.current_user} />
-          <div className="story-parts">
-            {this.state.storyParts.map((part, idx) => (
-              <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/>
-            ))}
-          </div>
-        </form>
+
+          <div className="cover-image"></div>
+
+            <div className="story-parts">
+              {this.state.storyParts.map((part, idx) => (
+                <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/>
+              ))}
+            </div>
+          </form>
         <div className="add-elements">
           <nav>
             <ul className="options">

@@ -1,15 +1,16 @@
-class TextArea < ActiveRecord::Base
+class Photo < ActiveRecord::Base
   belongs_to(
     :story,
     class_name: 'Story',
     foreign_key: :story_id
-  )
+)
 
   has_one(
     :owner,
     through: :story,
     source: :owner
   )
-  validates :position, :story_id, presence: true
+  
+validates :url, :med_url, :position, :group_position, :full_width, :story_id, presence: true
 
 end

@@ -29,6 +29,53 @@ $medgrey: #9E9E9E;
 $darkermedgrey: #757575;
 $green: #4CAF50;
 
+//reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+//end
+
+
 html, body, main {
   height: 100%;
 }
@@ -55,22 +102,6 @@ a:link {
   cursor: pointer;
 }
 
-// body {
-//   background: url("https://oceanus.feralhosting.com/bx1th0j/background1.jpg") no-repeat center center fixed;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-//   font: 14px 'P22UndergroundPro-Heavy';
-//   font-weight: 300;
-//   margin: 0px;
-//   line-height: 21px;
-// }
-//
-// html, body, main {
-//     height:100%;
-// }
-
 //splash page
 .splash {
   text-align: center;
@@ -91,7 +122,7 @@ a:link {
     font-size: 20px;
     color: $black;
     letter-spacing: 2px;
-    margin-top: -10px;
+    margin-top: -4px;
   }
 
   nav {
@@ -131,14 +162,6 @@ a:link {
         }
       }
 
-      // li.open-dash, li.open-login, li.open-signup {
-      //   border: 1px solid #111;
-      //   padding: 6px 18px;
-      // }
-      // li.open-signup {
-      //   margin-left: -5px;
-      //   border-left: 0;
-      // }
       li input.guest-login-button {
         border: 0;
         background: transparent;
@@ -163,17 +186,7 @@ a:link {
     margin-top: 10px;
     margin-bottom: 5px;
   }
-  // .get-started {
-  //   @include create-buttons($green, #fff);
-  //   padding: 10px 50px;
-  //   text-transform: uppercase;
-  //   display: inline-block;
-  //   margin: 15px 0 7px 0;
-  //   &:hover {
-  //     background: $darkgrey;
-  //   }
-  //
-  // }
+
   .get-started-guest {
     display: inline-block;
     .guest-login-button {
@@ -200,45 +213,6 @@ a:link {
     color: #999;
   }
 
-  .down-arrow {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    margin-left: -24px;
-    opacity: 0;
-    -webkit-transition: opacity 400ms, bottom 400ms;
-    transition: opacity 400ms, bottom 400ms;
-    transition-timing-function: linear;
-    width: 52px;
-    height: 30px;
-
-    &.moved {
-      opacity: 1;
-      bottom: 10px;
-    }
-    .left-side {
-      -ms-transform: rotate(40deg); /* IE 9 */
-      -webkit-transform: rotate(40deg); /* Chrome, Safari, Opera */
-      transform: rotate(40deg);
-      height: 3px;
-      background: #fff;
-      width: 30px;
-      position: relative;
-      top: 13px;
-    }
-
-    .right-side {
-      -ms-transform: rotate(-40deg); /* IE 9 */
-      -webkit-transform: rotate(-40deg);
-      transform: rotate(-40deg);
-      height: 3px;
-      background: #fff;
-      width: 30px;
-      position: relative;
-      left: 22px;
-      top: 9px;
-    }
-  }
 }
 
 
@@ -460,14 +434,6 @@ a:link {
           color: $green;
         }
       }
-    }
-    .copyright {
-      position: absolute;
-      bottom: 10px;
-      font-size: 11px;
-      color: #aaa;
-      width: 100%;
-      text-align: center;
     }
   }
 }
@@ -813,6 +779,53 @@ nav {
 }
 
 //new story page
+
+.story-form {
+  height: 100%;
+  width: 100%;
+}
+
+.cover-image {
+  background: #565656;
+  position: relative;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.cover-image:before {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.38) 75%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(2%,rgba(0,0,0,0)), color-stop(40%,rgba(0,0,0,0)), color-stop(75%,rgba(0,0,0,0.38)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+}
+.cover-image:after {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width:100%;
+  background: rgba(0,0,0,0.15);
+}
+
 .story-parts {
   margin-top: 50px;
   position: relative;
@@ -837,22 +850,6 @@ nav {
     .album-event-date {
       font: 18px 'Times New Roman';
       font-style: italic;
-    }
-    .album-open-button {
-      font: 10px 'ProximaNova-Regular';
-      border: 1px solid #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      width: 135px;
-      margin: 37px auto;
-      padding: 15px 0px;
-      cursor: pointer;
-      -webkit-transition: background 200ms; /* Safari */
-      transition: background 200ms;
-      transition-timing-function: linear;
-      &:hover {
-        background: rgba(0, 0, 0, 0.3);
-      }
     }
   }
 
@@ -886,34 +883,7 @@ nav {
     }
   }
 }
-.hero:before {
-  content: "";
-  display: block;
-  clear: both;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  width: 100%;
-  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.38) 75%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(2%,rgba(0,0,0,0)), color-stop(40%,rgba(0,0,0,0)), color-stop(75%,rgba(0,0,0,0.38)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.38) 75%,rgba(0,0,0,0.65) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 
-
-}
-.hero:after {
-  content: "";
-  display: block;
-  clear: both;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  width:100%;
-  background: rgba(0,0,0,0.15);
-}
 
 .information {
   padding: 25px 24px;
@@ -996,43 +966,6 @@ ul.view-more {
   }
 }
 
-.lock-nav {
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-  background: white;
-}
-.reduce-padding {
-  padding: 10px 24px;
-}
-.gallery-section {
-  position: relative;
-  padding: 0 24px;
-  width: 100%;
-  margin-bottom: 100px;
-
-
-  .public-subalbum-photos {
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .loading-gif {
-    text-align: center;
-  }
-}
-
-.grid-item {
-  margin-bottom: 6px;
-  cursor: pointer;
-
-
-  img {
-    width: 100%;
-  }
-}
-
 //add elements
 .add-elements {
   position: fixed;
@@ -1095,7 +1028,12 @@ clear: both;
   height: 100%;
 
   .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     text-align: center;
+    height: 300px;
     width: 100%;
     z-index: 1;
 
@@ -1103,19 +1041,67 @@ clear: both;
       font: 60px 'P22UndergroundPro-Heavy';
       line-height: 90px;
       text-transform: uppercase;
-      letter-spacing: 4px;
-    }
-    .profile-description {
-      font: 18px 'Times New Roman';
-      font-style: italic;
+      letter-spacing: 6px;
     }
 
-    .stories {
-      display: flex;
+    .profile-description {
+      font: 15px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
+      padding-bottom: 20px;
     }
-    .story-list {
+
+    .profile-line {
+      width: 68%;
+      margin-top: 10px;
+      float: center;
+      border: 0;
+      height: 1px;
+      background-image: -webkit-linear-gradient(left, $white, $black, $white);
+      background-image: -moz-linear-gradient(left, $white, $black, $white);
+      background-image: -ms-linear-gradient(left, $white, $black, $white);
+      background-image: -o-linear-gradient(left, $white, $black, $white);
     }
   }
+
+  .stories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 75px;
+  }
+
+  .photo {
+    padding: 10px 15px;
+    position: relative;
+
+    .photo-title {
+      position: absolute;
+      bottom: 16%;
+      margin: auto;
+      width: 250px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+      overflow: hidden;
+      letter-spacing: 3px;
+      font: 26px 'P22UndergroundPro-Heavy';
+      color: $white;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  img:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
 
   .user-avatar {
     width: 45px;

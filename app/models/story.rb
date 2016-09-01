@@ -19,7 +19,7 @@ class Story < ActiveRecord::Base
   )
 
   has_many(
-    photos:,
+    :photos,
     class_name: 'Photo',
     foreign_key: :story_id,
     dependent: :destroy

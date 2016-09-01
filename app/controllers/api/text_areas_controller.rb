@@ -1,14 +1,12 @@
 class Api::TextAreasController < ApplicationController
+  def index
+    @text_areas = current_user.text_areas
+    render "api/text_areas/index"
+  end
+
   def create
     @text_areas = TextArea.create(parse_text_areas(text_area_params))
-    # @text_area = TextArea.new(text_area_params)
-
-    # if @text_area.save
       render "api/text_areas/show"
-    # else
-    #   @errors = ["Text area can't be blank"]
-    #   render "api/shared/errors", status: 422
-    # end
   end
 
   # def show

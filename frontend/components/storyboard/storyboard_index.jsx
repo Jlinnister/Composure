@@ -18,15 +18,14 @@ export default class StoryboardIndex extends React.Component {
     const { stories } = this.props;
     return (
       <div className="container-fluid storyboard-container">
-        <div className="row profile-details">
+        <div className="profile-details">
           <div className="profile-avatar">Avatar picture here</div>
           <div className="profile-title">Profile Title</div>
           <div className="profile-description">Description of my profile</div>
+          <div className="profile-line"></div>
         </div>
-        <div className="row stories">
-          <ul className="story-list">
+        <div className="stories">
             {Object.keys(stories).map(key => <StoryIndexItem story={stories[key]} />)}
-          </ul>
         </div>
       </div>
     );

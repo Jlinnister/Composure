@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831161224) do
+ActiveRecord::Schema.define(version: 20160831235131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "url",                            null: false
+    t.string   "med_url",                        null: false
+    t.integer  "position",                       null: false
+    t.integer  "group_position",                 null: false
+    t.boolean  "full_width",     default: false, null: false
+    t.integer  "story_id",                       null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "photos", ["group_position"], name: "index_photos_on_group_position", using: :btree
+  add_index "photos", ["position"], name: "index_photos_on_position", using: :btree
+  add_index "photos", ["story_id"], name: "index_photos_on_story_id", using: :btree
 
   create_table "stories", force: :cascade do |t|
     t.string   "title",          null: false

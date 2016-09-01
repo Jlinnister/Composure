@@ -14,6 +14,18 @@ class User < ActiveRecord::Base
   dependent: :destroy
 )
 
+  has_many(
+  :text_areas,
+  through: :stories,
+  source: :text_areas
+  )
+
+  has_many(
+  :photos,
+  through: :stories,
+  source: :photos
+  )
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil if user.nil?
