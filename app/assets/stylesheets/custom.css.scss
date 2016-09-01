@@ -76,11 +76,7 @@ table {
 //end
 
 
-html, body, main {
-  height: 100%;
-}
-
-.root {
+html, body {
   height: 100%;
 }
 
@@ -499,7 +495,9 @@ a:link {
 .signup-page, .login-page {
   text-align: center;
   padding: 0 40px;
-  background-image: url("https://oceanus.feralhosting.com/bx1th0j/background1.jpg");
+  // background-image: url("https://oceanus.feralhosting.com/bx1th0j/background1.jpg");
+  // background-image: url("https://hd.unsplash.com/photo-1463778996521-da8b6f00dacf");
+  background-image: url("https://hd.unsplash.com/photo-1472469214909-13c93287b522");
   background-position: 50% 65%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -538,10 +536,10 @@ input {
   font-family: 'P22UndergroundPro-Heavy';
 }
 
-.form-control::-webkit-input-placeholder { color: #a9a9a9; }
-.form-control:-moz-placeholder { color: #a9a9a9; }
-.form-control::-moz-placeholder { color: #a9a9a9; }
-.form-control:-ms-input-placeholder { color: #a9a9a9; }
+.form-control::-webkit-input-placeholder { color: $lightgrey; }
+.form-control:-moz-placeholder { color: $lightgrey; }
+.form-control::-moz-placeholder { color: $lightgrey; }
+.form-control:-ms-input-placeholder { color: $lightgrey; }
 
 
 
@@ -553,9 +551,9 @@ input {
 
   .login-form-title, .signup-form-title {
     font-family: 'P22UndergroundPro-Heavy';
-    color: $white;
+    color: $black;
     font-size: 42px;
-    text-shadow: 1px 1px 1px $black;
+    text-shadow: 0px 1px 1px $lightgrey;
     text-align: center;
   }
 
@@ -1075,7 +1073,7 @@ clear: both;
 
     .photo-title {
       position: absolute;
-      bottom: 16%;
+      bottom: 12%;
       margin: auto;
       width: 250px;
       left: 0;
@@ -1085,7 +1083,7 @@ clear: both;
       text-transform: uppercase;
       overflow: hidden;
       letter-spacing: 3px;
-      font: 26px 'P22UndergroundPro-Heavy';
+      font: 22px 'P22UndergroundPro-Demi';
       color: $white;
     }
   }

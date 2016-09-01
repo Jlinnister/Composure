@@ -7,6 +7,7 @@ import LoginContainer from './session/login_container';
 import SignupContainer from './session/signup_container';
 import StoryboardContainer from './storyboard/storyboard_container';
 import StoryNewContainer from './story_new/story_new_container';
+import StoryShowContainer from './story_show/story_show_container';
 
 class AppRouter extends React.Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class AppRouter extends React.Component {
         <Route path="/login" component={LoginContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/signup" component={SignupContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/storyboard" component={StoryboardContainer} onEnter={ this._ensureLoggedIn } />
-        <Route path="/storyboard/:storyId" component={StoryNewContainer} />          
+        <Route path="/storyboard/:storyId" component={StoryShowContainer} />
         <Route path="/new" component={StoryNewContainer} onEnter={ this._ensureLoggedIn } />
       </Router>
     );

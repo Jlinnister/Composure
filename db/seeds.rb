@@ -5,3 +5,168 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+TextArea.delete_all
+Photo.delete_all
+Story.delete_all
+User.delete_all
+
+User.create!(
+  username: "composure",
+  password: "password",
+  email: "guest@gmail.com",
+  avatar_url: "https://secure.gravatar.com/avatar/d9fb812b41af97e6310fae5bcaf8c460?s=150&d=https://exposure-media.s3.amazonaws.com/static/exposure-logo-mark-avatar.png",
+  profile_title: "Lobster and Swan",
+  profile_description: "Welcome to Lobster & Swan. The place where I like to share all the things that warm my heart, from favourite recipes and home decor ideas to daily discoveries and inspirations.",
+  website_url: "http://www.lobsterandswan.com"
+)
+
+User.create!(
+  username: "guest",
+  password: "password",
+  email: "cook@gmail.com",
+  avatar_url: "https://secure.gravatar.com/avatar/d9fb812b41af97e6310fae5bcaf8c460?s=150&d=https://exposure-media.s3.amazonaws.com/static/exposure-logo-mark-avatar.png",
+  profile_title: "What to Cook",
+  profile_description: "What To Cook is a father daughter (Andrew and Sophie) team based in Sydney, Australia.",
+  website_url: "https://www.whattocook.com.au/"
+)
+
+Story.create!(
+  title: "Battered Fish Tacos",
+  description: "The ideal recipe for Friday nights with beers (&/or margaritas) and a bunch of friends! So fun!",
+  user_id: 2,
+  cover_image_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-44-1400x784.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-44-1400x784.jpg",
+  position: 1,
+  group_position: 1,
+  full_width: true,
+  story_id: 1
+)
+
+TextArea.create!(
+  title: "",
+  body: "Whenever I hear the words 'fish tacos' I instantly start seriously craving them! In my opinion, fish tacos are the holy grail of the taco world. They’re fun, fresh & incredibly delicious…so you can’t get anything better really.",
+  position: 2,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-53-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-53-503x682.jpg",
+  position: 3,
+  group_position: 1,
+  full_width: false,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-68-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-68-503x682.jpg",
+  position: 3,
+  group_position: 2,
+  full_width: false,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-82-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-82-503x682.jpg",
+  position: 3,
+  group_position: 3,
+  full_width: false,
+  story_id: 1
+)
+
+TextArea.create!(
+  title: "",
+  body: "Especially on a Friday night, out on the deck with a bunch of friends or your family. Just add some beers, margaritas, evening sunshine, a cool breeze & you have the at-home dining situation that dreams are made of! This is actually making me want to cancel tonights plans to do just that haha!",
+  position: 4,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-61-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-61-683x683.jpg",
+  position: 5,
+  group_position: 1,
+  full_width: false,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-9-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-9-683x683.jpg",
+  position: 6,
+  group_position: 2,
+  full_width: false,
+  story_id: 1
+)
+
+TextArea.create!(
+  title: "",
+  body: "For the accompaniments that go with the fish, we always tend to do the same thing – pico de gallo & smashed avocado. The reason being….it’s just too damn good! However, it’s also so much fun to change it up and add all your favourite Mexican trimmings. I sometimes like to look through the menus of my favourite Mexican restaurants & get inspired to see what creative combinations they have come up with. All you absolutely need is a lot of fresh lime & coriander and it will be scrumptious! Enjoy!",
+  position: 7,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-10-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-10-324x324.jpg",
+  position: 8,
+  group_position: 1,
+  full_width: false,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-13-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-13-324x324.jpg",
+  position: 8,
+  group_position: 2,
+  full_width: false,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-80-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-80-324x324.jpg",
+  position: 8,
+  group_position: 3,
+  full_width: false,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/IMG_0853-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/IMG_0853-324x324.jpg",
+  position: 8,
+  group_position: 4,
+  full_width: false,
+  story_id: 1
+)
+
+TextArea.create!(
+  title: "",
+  body: "ingredients\n6oog firm white fish, cut into small fillets\n\n1 x 150g packet tempura batter mix\n\n1/2 cup natural yogurt\n2 cups iceberg lettuce, shredded\n1 cup red cabbage, shredded\n\nPico De Gallo\n\nSmashed Avocado\n1 avocado, chopped\n30ml lime juice\nPinch of sea salt\n\nTo serve;\nLimes\nCoriander leaves\nHot sauce",
+  position: 9,
+  story_id: 1
+)
+
+TextArea.create!(
+  title: "",
+  body: "method\n\n1. Start by making the pico de gallo then set aside. For the smashed avocado, combine avo + lime juice + salt in a bowl and combine. Set aside.\n\n2. Pre-heat the deep fryer to 180c. Prepare the batter mix, following the packet instructions. Add the fish to the batter and coat well. Carefully add the fish to the deep fryer and cook in batches until golden. Remove & transfer from the deep fryer to a plate.\n\n3. Meanwhile warm the tortillas. Now it’s time to build the tacos; cover the tortilla with yogurt and lettuce. Add the fish then the pico de gallo, red cabbage and smashed avocado. Serve the tacos with limes and coriander leaves.",
+  position: 10,
+  story_id: 1
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-49-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-49-1400x683.jpg",
+  position: 11,
+  group_position: 1,
+  full_width: true,
+  story_id: 1
+)

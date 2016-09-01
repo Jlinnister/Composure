@@ -27,4 +27,12 @@ class Story < ActiveRecord::Base
 
   validates :title, :user_id, :cover_image_id, presence: true
 
+  def sort_photos_and_texts
+    positioned = []
+    story = current_user.stories.find(params[:id])
+    photos = story.photos.order(:position)
+    text_areas = story.text_areas.order(:position)
+    photos.each do { |photo| photo.sort
+  end
+
 end
