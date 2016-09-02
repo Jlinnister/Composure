@@ -6,16 +6,12 @@ class StoryIndexItem extends React.Component {
     super(props);
   }
 
-  onClick() {
-
-  }
-
   render() {
     const { story } = this.props;
     const { title, cover_image_med, id } = story;
     return (
-      <div onClick={this.onClick} className="photo">
-        <Link to={`/storyboard/${id}`} story={story}>
+      <div className="photo">
+        <Link to={`/storyboard/${id}`}>
           <img src={cover_image_med} alt={title} />
         </Link>
         <div className="photo-title">{title}</div>

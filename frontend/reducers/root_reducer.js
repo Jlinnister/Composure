@@ -8,7 +8,7 @@ const RootReducer = combineReducers({
   session: SessionReducer,
   stories: StoryReducer,
   text_area: TextAreaReducer,
-  elements: ElementReducer,
+  parts: ElementReducer,
 });
 
 

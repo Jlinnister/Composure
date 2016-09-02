@@ -7,9 +7,6 @@ export default class StoryboardIndex extends React.Component {
     super(props);
   }
 
-  onClick() {
-  }
-
   componentDidMount() {
     this.props.requestStories();
   }
