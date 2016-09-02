@@ -846,6 +846,13 @@ nav {
   z-index: 1;
   text-align: center;
 
+  #story-title {
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 5px;
+    font: 78px 'P22UndergroundPro-Demi';
+    color: $white;
+  }
   .story-show-title {
     // position: absolute;
     // top: 40%;

@@ -170,3 +170,120 @@ Photo.create!(
   full_width: true,
   story_id: 1
 )
+# end
+
+Story.create!(
+  title: "Tropical Breakfast Bar",
+  description: "Fresh, vibrant, happy & delicious! Entertain your friends with a tropical inspired breakfast bar!",
+  user_id: 2,
+  cover_image_id: 12
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-303-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-303-1400x683.jpg",
+  position: 1,
+  group_position: 1,
+  full_width: false,
+  story_id: 2
+)
+
+TextArea.create!(
+  title: "",
+  body: "If only every single day started with a breakfast as fresh & vibrant as this one. With the oppressive summer heat we’ve recently been having, I’ve been so inspired by everything tropical; from the fruits, to the colours, the smells & the ocean. Everything about it just screams ‘paradise‘!",
+  position: 2,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-205-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-205-503x632.jpg",
+  position: 3,
+  group_position: 1,
+  full_width: false,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-39-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-39-503x682.jpg",
+  position: 3,
+  group_position: 2,
+  full_width: false,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-119-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-119-503x682.jpg",
+  position: 3,
+  group_position: 3,
+  full_width: false,
+  story_id: 2
+)
+
+TextArea.create!(
+  title: "",
+  body: "So instead of running away on a tropical adventure, I was really inspired to bring the tropics to our backyard & have a poolside breakfast bar! It was so much fun & the most inspiring way to start a fresh new summers day.",
+  position: 4,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-226-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-226-683x683.jpg",
+  position: 5,
+  group_position: 1,
+  full_width: false,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-68-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-68-683x683.jpg",
+  position: 5,
+  group_position: 2,
+  full_width: false,
+  story_id: 2
+)
+
+TextArea.create!(
+  title: "",
+  body: "I had my super talented Tanya from Oh Flora, do the flowers for me and had Leah from My Creative Space do some custom tropical inspired watercolour illustrations & hand lettering to really take it up the next level – she was absolutely amazing to work with! Plus, West Elm is one of my all-time favourite homeware stores and I really wanted to incorporate them into the scene too, so a lot of the bowls, plates & coasters are from them! It looked like the most crazy colourful & vibrant set-up and I just couldn’t stop taking photos.",
+  position: 6,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-116-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-116-683x673.jpg",
+  position: 7,
+  group_position: 1,
+  full_width: false,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-83-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-83-683x683.jpg",
+  position: 7,
+  group_position: 2,
+  full_width: false,
+  story_id: 2
+)
+
+TextArea.create!(
+  title: "",
+  body: "For the actual food part of the morning, I had; watermelon, pineapple, coconuts, dragon fruit, passion fruits, kiwi fruits, peaches, plums, papaya, grapefruit, mangoes, strawberries, pomegranate, & some really interesting mini orange fruits that I can now no longer remember the name of, but were very refreshing. It was mainly all about the fruit, but it was nice to have a little muesli in there too! Next time I’m definitely planning to have acai in the mix too & perhaps some green smoothies, just to make it super “instagram” haha!",
+  position: 8,
+  story_id: 2
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-296-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-296-1400x683.jpg",
+  position: 9,
+  group_position: 1,
+  full_width: true,
+  story_id: 2
+)

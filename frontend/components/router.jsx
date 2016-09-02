@@ -38,7 +38,6 @@ class AppRouter extends React.Component {
 
   requestElementsOnEnter(nextState) {
     store.dispatch(StoryActions.requestStory(nextState.params.storyId))
-    store.dispatch(StoryActions.requestStories());
   }
 
   render() {

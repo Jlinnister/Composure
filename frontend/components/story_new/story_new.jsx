@@ -7,14 +7,23 @@ import merge from 'lodash/merge';
 export default class StoryNew extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { storyParts: [] };
+    this.state = { storyParts: [],
+                   story: {
+                     title: '',
+                     description: '',
+                     cover_image_id: null,
+                     user_id: this.props.current_user.id,
+                   },
+                 };
+
     this.createTextArea = this.createTextArea.bind(this);
     this.setPartState = this.setPartState.bind(this);
-    this.createStory = this.createStory.bind(this);
+    this.saveAllElements = this.saveAllElements.bind(this);
     this.blankStory = this.blankStory.bind(this);
   }
 
   setPartState(index, field, content) {
+    console.log(this.state);
     const newState = merge({}, this.state);
     const storyPart = newState.storyParts[index];
     storyPart[field] = content;
@@ -32,10 +41,11 @@ export default class StoryNew extends React.Component {
     );
   }
 
-  createStory(e) {
+  saveAllElements(e) {
     e.preventDefault();
-    console.log(this.state.storyParts);
-    this.props.createTextArea(this.state.storyParts)
+    const story = this.state.story;
+    this.props.createStory(story);
+    this.props.createTextArea(this.state.storyParts);
   }
 
   createTextArea() {
@@ -45,12 +55,26 @@ export default class StoryNew extends React.Component {
     console.log(this.state.storyParts);
   }
 
+  update(field) {
+    return e => {
+      console.log(this.state);
+      const newStory = merge({}, this.state.story);
+      newStory[field] = e.currentTarget.value;
+      this.setState({ story: newStory });
+    };
+  }
+
   render() {
+    const story = this.state.story;
     return (
       <div>
-        <form onSubmit={this.createStory} className="story-form" id="save-form">
+        <form onSubmit={this.saveAllElements} className="story-form" id="save-form">
           <StoryNewNav current_user={this.props.current_user} />
-          <div className="cover-image"></div>
+          <div className="cover-image">
+            <div className="details">
+              <input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" />
+            </div>
+          </div>
 
             <div className="story-parts">
               {this.state.storyParts.map((part, idx) => (

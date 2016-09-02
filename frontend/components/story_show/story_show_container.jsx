@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import StoryShow from './story_show';
 import * as StoryActions from '../../actions/story_actions';
+import * as ElementActions from '../../actions/element_actions';
 
 const mapStateToProps = state => ({
   parts: state.parts,

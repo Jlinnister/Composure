@@ -4,7 +4,7 @@ import { StoryConstants } from '../actions/story_actions';
 const ElementReducer = (state = {}, action) => {
   switch (action.type) {
     case StoryConstants.RECEIVE_STORY:
-      return Object.assign({}, state, action.story);
+      return Object.assign({}, state, action.story.elements);
     default:
       return state;
   }
