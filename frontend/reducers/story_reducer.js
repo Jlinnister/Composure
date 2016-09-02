@@ -9,7 +9,12 @@ const StoryReducer = (state = {}, action) => {
       return Object.assign({}, state, newStories);
     case StoryConstants.RECEIVE_STORY:
     console.log(action.story);
-      const newStory = {[action.story.stories.id]: action.story.stories};
+      let newStory
+      if (action.story.stories) {
+        newStory = {[action.story.stories.id]: action.story.stories};
+      } else {
+        newStory = {[action.story.id]: action.story};
+      }
       return Object.assign({}, state, newStory);
     case StoryConstants.DESTROY_STORY:
       let newState = Object.assign({}, state);

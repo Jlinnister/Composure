@@ -11,7 +11,7 @@ export default class StoryNew extends React.Component {
                    story: {
                      title: '',
                      description: '',
-                     cover_image_id: null,
+                     cover_image_id: 1,
                      user_id: this.props.current_user.id,
                    },
                  };
@@ -72,7 +72,8 @@ export default class StoryNew extends React.Component {
           <StoryNewNav current_user={this.props.current_user} />
           <div className="cover-image">
             <div className="details">
-              <input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" />
+              <div><input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" /></div>
+              <div><input type="text" className="story-description" onChange={this.update("description")} placeholder="Add a Description" /></div>
             </div>
           </div>
 

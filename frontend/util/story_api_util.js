@@ -20,7 +20,7 @@ const StoryUtil = {
     $.ajax({
       method: 'POST',
       url: 'api/stories',
-      data: story,
+      data: { story },
       success,
       error,
     });
