@@ -4,14 +4,22 @@ import StoryShowNav from './story_show_nav';
 import StoryTextItem from '../story_elements/story_text_item';
 import merge from 'lodash/merge';
 
+let imageCount = 1;
+
 export default class StoryShow extends React.Component {
   constructor(props) {
     super(props);
+    this.renderElements = this.renderElements.bind(this);
   }
 
-  componentDidMount() {
-    // this.props.requestStories();
-    // this.props.requestStory(this.props.params.storyId);
+  renderElements(el) {
+    if (el.url) {
+      el.group_position > imageCount ? imageCount = el.group_position : null;
+      return (<div className={imageCount} key={el.id}><img src={el.url} /></div>)
+    } else {
+        imageCount = 1;
+      return (<div>{el.body}</div>)
+    }
   }
 
   render() {
@@ -28,6 +36,9 @@ export default class StoryShow extends React.Component {
             <div className="story-show-title">{story.title}</div>
             <div className="story-show-description">{story.description}</div>
           </div>
+
+          { Object.keys(this.props.parts).map(key => this.renderElements(this.props.parts[key])) }
+
         </div>
       )
     } else {

@@ -12,7 +12,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   requestStory: id => dispatch(StoryActions.requestStory(id)),
-  requestStories: () => dispatch(StoryActions.requestStories()),
 });
 
 export default connect(
