@@ -17,6 +17,7 @@ export default class StoryNew extends React.Component {
                    },
                  };
 
+    this.addCoverPhoto = this.addCoverPhoto.bind(this);
     this.addPhoto = this.addPhoto.bind(this);
     this.createTextArea = this.createTextArea.bind(this);
     this.setPartState = this.setPartState.bind(this);
@@ -45,7 +46,20 @@ export default class StoryNew extends React.Component {
     })
   }
 
-
+  addCoverPhoto() {
+    cloudinary.openUploadWidget(window.CLOUDINARY_SETTINGS, (error, images) => {
+      if(error === null) {
+        const photo = {
+          url: images[0].url,
+          med_url: images[0].url,
+          story_id: 1,
+          position: this.state.storyParts.length + 1,
+          group_position: images.length,
+          full_width: false,
+        };
+      }
+    });
+  }
 
 
   setPartState(index, field, content) {
@@ -104,6 +118,7 @@ export default class StoryNew extends React.Component {
           <StoryNewNav current_user={this.props.current_user} />
           <div className="cover-image">
             <div className="details">
+              <div id="story-cover-photo" onClick={this.addCoverPhoto}>Click To Add A Cover Photo</div>
               <div><input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" /></div>
               <div><input type="text" className="story-description" onChange={this.update("description")} placeholder="Add a Description" /></div>
             </div>
