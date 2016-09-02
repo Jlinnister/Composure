@@ -26,7 +26,17 @@ export default class StoryNew extends React.Component {
   addPhoto() {
     cloudinary.openUploadWidget(window.CLOUDINARY_SETTINGS, (error, images) => {
       if(error === null) {
-        // this.props.createPhoto(images);
+
+        const photo = {
+          url: images[0].url,
+          med_url: images[0].url,
+          story_id: 1,
+          position: this.state.storyParts.length + 1,
+          group_position: images.length - 1,
+          full_width: false
+        }
+        debugger
+        this.props.createPhoto(photo);
         const newState = merge({}, this.state);
         newState.storyParts.push(null);
         this.setState(newState);
@@ -37,7 +47,6 @@ export default class StoryNew extends React.Component {
 
 
   setPartState(index, field, content) {
-    console.log(this.state);
     const newState = merge({}, this.state);
     const storyPart = newState.storyParts[index];
     storyPart[field] = content;
@@ -67,12 +76,10 @@ export default class StoryNew extends React.Component {
     const newState = merge({}, this.state);
     newState.storyParts.push(Object.assign({}, this.blankStory()));
     this.setState(newState);
-    console.log(this.state.storyParts);
   }
 
   update(field) {
     return e => {
-      console.log(this.state);
       const newStory = merge({}, this.state.story);
       newStory[field] = e.currentTarget.value;
       this.setState({ story: newStory });

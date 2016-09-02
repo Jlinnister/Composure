@@ -5,8 +5,12 @@ class Api::PhotosController < ApplicationController
   # end
   #
   def create
-    @photos = Photo.create(parse_photos(photo_params))
-    render "api/photos/show"
+    @photo = Photo.new(photo_params)
+    if @photo.save
+      render "api/photos/show"
+    else
+      debugger
+    end
   end
 
   # def show
