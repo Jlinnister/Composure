@@ -46,6 +46,7 @@ export default class StoryNew extends React.Component {
     const story = this.state.story;
     this.props.createStory(story);
     this.props.createTextArea(this.state.storyParts);
+    hashHistory.push('/storyboard');
   }
 
   createTextArea() {

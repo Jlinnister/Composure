@@ -18,7 +18,7 @@ export default class StoryShow extends React.Component {
       return (<div className={imageCount} key={el.id}><img src={el.url} /></div>)
     } else {
         imageCount = 1;
-      return (<div>{el.body}</div>)
+      return (<div className="text-area">{el.body}</div>)
     }
   }
 
@@ -37,8 +37,9 @@ export default class StoryShow extends React.Component {
             <div className="story-show-description">{story.description}</div>
           </div>
 
-          { Object.keys(this.props.parts).map(key => this.renderElements(this.props.parts[key])) }
-
+          <div className="story-elements">
+            { Object.keys(this.props.parts).map(key => this.renderElements(this.props.parts[key])) }
+          </div>
         </div>
       )
     } else {

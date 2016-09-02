@@ -1,5 +1,7 @@
 class Api::PhotosController < ApplicationController
   def index
+    cloud_name = Figaro.env.CLOUD_NAME
+    upload_preset = Figaro.env.UPLOAD_PRESET
     @photos = current_user.photos
     render "api/photos/index"
   end

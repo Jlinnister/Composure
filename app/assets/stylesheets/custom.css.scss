@@ -881,6 +881,23 @@ nav {
   }
 }
 
+.story-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+
+  .text-area {
+    width: 800px;
+    font: 16px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    line-height: 26px;
+  }
+}
+
 .story-parts {
   margin-top: 50px;
   position: relative;
