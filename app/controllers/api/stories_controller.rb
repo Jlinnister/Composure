@@ -15,13 +15,9 @@ class Api::StoriesController < ApplicationController
   end
 
   def show
-    @story = Album.includes(:subalbums, :photos).find(params[:id])
-
-    if @story.user_id == current_user.id
-      render :show
-    else
-      render json: "not your story", status: :forbidden
-    end
+    @story = current_user.stories.find(params[:id])
+    @elements = @story.sort_photos_and_texts
+    render "api/stories/show"
   end
 
   def update

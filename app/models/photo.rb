@@ -10,7 +10,7 @@ class Photo < ActiveRecord::Base
     through: :story,
     source: :owner
   )
-  
-validates :url, :med_url, :position, :group_position, :full_width, :story_id, presence: true
+
+validates :url, :med_url, :position, :group_position, :story_id, presence: true
 
 end

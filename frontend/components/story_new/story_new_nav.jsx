@@ -6,6 +6,12 @@ export default class StoryNewNav extends React.Component {
     super(props);
   }
 
+  onClick() {
+    e.preventDefault()
+    document.getElementById("save-form").submit();
+    console.log("clicked");
+  }
+
   render() {
     return (
       <div className="storynew-nav">

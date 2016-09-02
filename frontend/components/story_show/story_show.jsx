@@ -22,8 +22,10 @@ export default class StoryShow extends React.Component {
     this.createStory = this.createStory.bind(this);
   }
 
-  componentDidMount() {
-    this.props.requestStory();
+  componentWillMount() {
+    this.props.requestStory(this.props.params.storyId);
+    this.props.requestStories();
+    console.log(this.props);
   }
 
 
@@ -48,18 +50,30 @@ export default class StoryShow extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-          <StoryShowNav current_user={this.props.current_user} />
+    const story_id = this.props.params.storyId
+    const story = this.props.stories[story_id]
 
-          <div className="cover-image"></div>
+    if (story) {
+      return (
+        <div>
+            <StoryShowNav current_user={this.props.current_user} />
 
-            <div className="story-parts">
-              {this.state.storyParts.map((part, idx) => (
-                <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/>
-              ))}
-            </div>
-      </div>
-    );
+              <div className="cover-image"><img src={story.cover_image_url} /></div>
+              <div className="details">
+                <div className="story-show-title">{story.title}</div>
+                <div className="story-show-description">{story.description}</div>
+              </div>
+
+              <div className="story-parts">
+                {this.state.storyParts.map((part, idx) => (
+                  <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/>
+                ))}
+              </div>
+        </div>
+      )
+    } else {
+      return (<div></div>)
+    }
+
   }
 }

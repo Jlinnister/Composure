@@ -4,22 +4,14 @@ import StoryNewNav from './story_new_nav';
 import StoryTextItem from '../story_elements/story_text_item';
 import merge from 'lodash/merge';
 
-const _nullStory = Object.freeze({
-  title: '',
-  body: '',
-  position: 1,
-  story_id: 1, //ensure story_id in database model for text area
-});
-
 export default class StoryNew extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { storyParts: [
-      Object.assign({}, _nullStory),
-    ] };
+    this.state = { storyParts: [] };
     this.createTextArea = this.createTextArea.bind(this);
     this.setPartState = this.setPartState.bind(this);
     this.createStory = this.createStory.bind(this);
+    this.blankStory = this.blankStory.bind(this);
   }
 
   setPartState(index, field, content) {
@@ -29,20 +21,26 @@ export default class StoryNew extends React.Component {
     this.setState(newState);
   }
 
+  blankStory() {
+    return (
+      Object.freeze({
+        title: '',
+        body: '',
+        position: this.state.storyParts.length + 1,
+        story_id: null, //ensure story_id in database model for text area
+      })
+    );
+  }
+
   createStory(e) {
     e.preventDefault();
-    // this.fetchTextAreas();
     console.log(this.state.storyParts);
     this.props.createTextArea(this.state.storyParts)
   }
 
-  // fetchTextAreas() {
-  //   let textAreas = this.state.storyParts.map( textArea => textArea[])
-  // }
-
   createTextArea() {
     const newState = merge({}, this.state);
-    newState.storyParts.push(Object.assign({}, _nullStory));
+    newState.storyParts.push(Object.assign({}, this.blankStory()));
     this.setState(newState);
     console.log(this.state.storyParts);
   }
@@ -50,9 +48,8 @@ export default class StoryNew extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.createStory} className="story-form">
+        <form onSubmit={this.createStory} className="story-form" id="save-form">
           <StoryNewNav current_user={this.props.current_user} />
-
           <div className="cover-image"></div>
 
             <div className="story-parts">
@@ -60,7 +57,8 @@ export default class StoryNew extends React.Component {
                 <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/>
               ))}
             </div>
-          </form>
+        </form>
+
         <div className="add-elements">
           <nav>
             <ul className="options">
@@ -70,6 +68,7 @@ export default class StoryNew extends React.Component {
             </ul>
           </nav>
         </div>
+
       </div>
     );
   }

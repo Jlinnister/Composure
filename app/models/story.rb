@@ -28,11 +28,30 @@ class Story < ActiveRecord::Base
   validates :title, :user_id, :cover_image_id, presence: true
 
   def sort_photos_and_texts
-    positioned = []
-    story = current_user.stories.find(params[:id])
-    photos = story.photos.order(:position)
-    text_areas = story.text_areas.order(:position)
-    photos.each do { |photo| photo.sort
+    elements = self.photos + self.text_areas
+    merge_sort(elements)
+  end
+
+  private
+  def merge_sort(array)
+    return array if array.count < 2
+
+    middle = array.count / 2
+
+    left, right = array.take(middle), array.drop(middle)
+    sorted_left, sorted_right = merge_sort(left), merge_sort(right)
+
+    merge(sorted_left, sorted_right)
+  end
+
+  def merge(left, right)
+    merged_array = []
+    until left.empty? || right.empty?
+      merged_array <<
+        ((left.first.position < right.first.position) ? left.shift : right.shift)
+    end
+
+    merged_array + left + right
   end
 
 end

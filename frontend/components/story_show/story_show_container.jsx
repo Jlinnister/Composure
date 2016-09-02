@@ -6,10 +6,12 @@ const mapStateToProps = state => ({
   loggedIn: !!state.session.current_user,
   errors: state.session.errors,
   current_user: state.session.current_user,
+  stories: state.stories,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  requestStory: story => dispatch(StoryActions.requestStory(story)),
+  requestStory: id => dispatch(StoryActions.requestStory(id)),
+  requestStories: () => dispatch(StoryActions.requestStories()),
 });
 
 export default connect(
