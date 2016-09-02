@@ -2,6 +2,7 @@ import React from 'React';
 import { Link, hashHistory } from 'react-router';
 import StoryNewNav from './story_new_nav';
 import StoryTextItem from '../story_elements/story_text_item';
+import StoryPhotoItem from '../story_elements/story_photo_item';
 import merge from 'lodash/merge';
 
 export default class StoryNew extends React.Component {
@@ -32,17 +33,18 @@ export default class StoryNew extends React.Component {
           med_url: images[0].url,
           story_id: 1,
           position: this.state.storyParts.length + 1,
-          group_position: images.length - 1,
+          group_position: images.length,
           full_width: false
         }
-        debugger
         this.props.createPhoto(photo);
         const newState = merge({}, this.state);
-        newState.storyParts.push(null);
+        newState.storyParts.push(photo);
         this.setState(newState);
+        console.log(this.state);
       }
     })
   }
+
 
 
 
@@ -68,7 +70,15 @@ export default class StoryNew extends React.Component {
     e.preventDefault();
     const story = this.state.story;
     this.props.createStory(story);
-    this.props.createTextArea(this.state.storyParts);
+
+    const textParts = []
+    this.state.storyParts.forEach(part => {
+      if (part.title) {
+        textParts.push(part);
+      }
+    });
+
+    this.props.createTextArea(textParts);
     hashHistory.push('/storyboard');
   }
 
@@ -100,9 +110,14 @@ export default class StoryNew extends React.Component {
           </div>
 
             <div className="story-parts">
-              {this.state.storyParts.map((part, idx) => (
-                <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/>
-              ))}
+              {this.state.storyParts.map((part, idx) => {
+                if (part.url) {
+                  return ( <StoryPhotoItem part={part} key={idx} /> )
+                } else {
+                  return ( <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+                }
+              }
+            )}
             </div>
         </form>
 
