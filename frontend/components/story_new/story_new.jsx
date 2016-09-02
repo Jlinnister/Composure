@@ -16,11 +16,25 @@ export default class StoryNew extends React.Component {
                    },
                  };
 
+    this.addPhoto = this.addPhoto.bind(this);
     this.createTextArea = this.createTextArea.bind(this);
     this.setPartState = this.setPartState.bind(this);
     this.saveAllElements = this.saveAllElements.bind(this);
     this.blankStory = this.blankStory.bind(this);
   }
+
+  addPhoto() {
+    cloudinary.openUploadWidget(window.CLOUDINARY_SETTINGS, (error, images) => {
+      if(error === null) {
+        // this.props.createPhoto(images);
+        const newState = merge({}, this.state);
+        newState.storyParts.push(null);
+        this.setState(newState);
+      }
+    })
+  }
+
+
 
   setPartState(index, field, content) {
     console.log(this.state);
@@ -88,6 +102,9 @@ export default class StoryNew extends React.Component {
         <div className="add-elements">
           <nav>
             <ul className="options">
+              <li className="add-photo" onClick={this.addPhoto}>
+                Add Photos
+              </li>
               <li className="add-text-area" onClick={this.createTextArea}>
                 Add Text Area
               </li>

@@ -1,26 +1,24 @@
 class Api::PhotosController < ApplicationController
-  def index
-    cloud_name = Figaro.env.CLOUD_NAME
-    upload_preset = Figaro.env.UPLOAD_PRESET
-    @photos = current_user.photos
-    render "api/photos/index"
-  end
-
+  # def index
+  #   @photos = current_user.photos
+  #   render "api/photos/index"
+  # end
+  #
   def create
     @photos = Photo.create(parse_photos(photo_params))
     render "api/photos/show"
   end
 
-  def show
-    @photo = Album.includes(:subalbums, :photos).find(params[:id])
-
-    if @photo.user_id == current_user.id
-      render :show
-    else
-      render json: "not your photo", status: :forbidden
-    end
-  end
-
+  # def show
+  #   @photo = Album.includes(:subalbums, :photos).find(params[:id])
+  #
+  #   if @photo.user_id == current_user.id
+  #     render :show
+  #   else
+  #     render json: "not your photo", status: :forbidden
+  #   end
+  # end
+  #
   def update
     @photo = current_user.photos.find(params[:id])
 
