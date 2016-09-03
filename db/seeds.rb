@@ -57,7 +57,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-53-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-53-503x682.jpg",
   position: 3,
-  group_position: 1,
+  group_position: 3,
   full_width: false,
   story_id: 1
 )
@@ -66,7 +66,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-68-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-68-503x682.jpg",
   position: 3,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 1
 )
@@ -91,7 +91,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-61-683x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-61-683x683.jpg",
   position: 5,
-  group_position: 1,
+  group_position: 2,
   full_width: false,
   story_id: 1
 )
@@ -116,7 +116,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-10-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-10-324x324.jpg",
   position: 8,
-  group_position: 1,
+  group_position: 4,
   full_width: false,
   story_id: 1
 )
@@ -125,7 +125,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-13-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-13-324x324.jpg",
   position: 8,
-  group_position: 2,
+  group_position: 4,
   full_width: false,
   story_id: 1
 )
@@ -134,7 +134,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-80-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-80-324x324.jpg",
   position: 8,
-  group_position: 3,
+  group_position: 4,
   full_width: false,
   story_id: 1
 )
@@ -199,7 +199,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-205-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-205-503x632.jpg",
   position: 3,
-  group_position: 1,
+  group_position: 3,
   full_width: false,
   story_id: 2
 )
@@ -208,7 +208,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-39-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-39-503x682.jpg",
   position: 3,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 2
 )
@@ -233,7 +233,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-226-683x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-226-683x683.jpg",
   position: 5,
-  group_position: 1,
+  group_position: 2,
   full_width: false,
   story_id: 2
 )
@@ -258,7 +258,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-116-683x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-116-683x673.jpg",
   position: 7,
-  group_position: 1,
+  group_position: 2,
   full_width: false,
   story_id: 2
 )

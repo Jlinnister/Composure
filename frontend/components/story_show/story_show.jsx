@@ -4,8 +4,6 @@ import StoryShowNav from './story_show_nav';
 import StoryTextItem from '../story_elements/story_text_item';
 import merge from 'lodash/merge';
 
-let imageCount = 1;
-
 export default class StoryShow extends React.Component {
   constructor(props) {
     super(props);
@@ -14,10 +12,8 @@ export default class StoryShow extends React.Component {
 
   renderElements(el) {
     if (el.url) {
-      el.group_position > imageCount ? imageCount = el.group_position : null;
-      return (<div className={imageCount} key={el.id}><img src={el.url} /></div>)
+      return (<div id={el.group_position} key={el.id}><img src={el.url} /></div>)
     } else {
-        imageCount = 1;
         if (el.title && el.body) {
           return (<div><div className="text-area-title">{el.title}</div><div className="text-area-body">{el.body}</div></div>)
         } else if (el.title) {

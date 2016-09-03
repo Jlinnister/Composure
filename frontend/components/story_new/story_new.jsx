@@ -14,7 +14,7 @@ export default class StoryNew extends React.Component {
                      description: 'default',
                      cover_image_id: 0,
                      user_id: this.props.current_user.id,
-                     id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
+                     id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id + 1,
                    },
                  };
 
@@ -32,23 +32,24 @@ export default class StoryNew extends React.Component {
 
   addPhoto() {
     cloudinary.openUploadWidget(window.CLOUDINARY_SETTINGS, (error, images) => {
-      if(error === null) {
-
-        const photo = {
-          url: images[0].url,
-          med_url: images[0].url,
-          story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
-          position: this.state.storyParts.length + 1,
-          group_position: images.length,
-          full_width: false
-        }
-        this.props.createPhoto(photo);
-        const newState = merge({}, this.state);
-        newState.storyParts.push(photo);
-        this.setState(newState);
-        console.log(this.state);
+      if (error === null) {
+        images.forEach(image => {
+          const photo = {
+            url: image.url,
+            med_url: image.url,
+            story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
+            position: this.state.storyParts.length + 1,
+            group_position: images.length,
+            full_width: false
+          }
+          this.props.createPhoto(photo);
+          const newState = merge({}, this.state);
+          newState.storyParts.push(photo);
+          this.setState(newState);
+          console.log(this.state);
+        });
       }
-    })
+    });
   }
 
   addCoverPhoto() {
@@ -117,7 +118,6 @@ export default class StoryNew extends React.Component {
 
   render() {
     const story = this.props.stories
-    console.log(this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id);
     if (story) {
     return (
       <div>

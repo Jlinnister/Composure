@@ -8,7 +8,7 @@ class StoryPhotoItem extends React.Component {
     console.log(this.props);
 
     return (
-      <div className="story-photo-item">
+      <div className="story-photo-item" id={this.props.part.group_position}>
         <img src={url} />
       </div>
 		);
