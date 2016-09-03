@@ -5,7 +5,6 @@ import TextAreaUtil from '../util/text_area_api_util';
 
 export default({ getState, dispatch }) => next => action => {
   const textAreaCreatedSuccess = text_area => {
-    console.log(normalize(text_area, arrayOfTextAreas));
     dispatch(receiveTextArea(normalize(text_area, arrayOfTextAreas)));
   };
 

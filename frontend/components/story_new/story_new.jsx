@@ -9,6 +9,7 @@ export default class StoryNew extends React.Component {
   constructor(props) {
     super(props);
     this.state = { storyParts: [],
+                   coverImageUrl: "",
                    story: {
                      title: 'default',
                      description: 'default',
@@ -46,7 +47,6 @@ export default class StoryNew extends React.Component {
           const newState = merge({}, this.state);
           newState.storyParts.push(photo);
           this.setState(newState);
-          console.log(this.state);
         });
       }
     });
@@ -63,6 +63,10 @@ export default class StoryNew extends React.Component {
           group_position: images.length,
           full_width: false,
         };
+        this.props.createCoverPhoto(photo);
+        const newState = merge({}, this.state);
+        newState.coverImageUrl = photo.url;
+        this.setState(newState);
       }
     });
   }
@@ -88,7 +92,10 @@ export default class StoryNew extends React.Component {
 
   saveAllElements(e) {
     e.preventDefault();
+    const store = this.context.store.getState()
     const story = this.state.story;
+    story.cover_image_id = store.photos.id
+    console.log(story);
     this.props.updateStory(story);
 
     const textParts = []
@@ -124,8 +131,9 @@ export default class StoryNew extends React.Component {
         <form onSubmit={this.saveAllElements} className="story-form" id="save-form">
           <StoryNewNav current_user={this.props.current_user} />
           <div className="cover-image">
+            <img src={this.state.coverImageUrl} />
             <div className="details">
-              <div id="story-cover-photo" onClick={this.addCoverPhoto}>Click To Add A Cover Photo</div>
+              <div id="story-cover-photo" onClick={this.addCoverPhoto}>Click to Add or Edit Cover Photo</div>
               <div><input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" /></div>
               <div><input type="text" id="story-description" onChange={this.update("description")} placeholder="Add a Description" /></div>
             </div>
@@ -163,3 +171,7 @@ export default class StoryNew extends React.Component {
   }
   }
 }
+
+StoryNew.contextTypes = {
+  store: React.PropTypes.object.isRequired,
+};
