@@ -21,9 +21,8 @@ class Api::StoriesController < ApplicationController
 
   def update
     @story = current_user.stories.find(params[:id])
-
     if @story.update(story_params)
-      render :show
+      render json: @story
     else
       render json: @story.errors.full_messages, status: :unprocessable_entity
     end

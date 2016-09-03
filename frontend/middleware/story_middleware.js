@@ -15,9 +15,6 @@ import { receiveStory,
 
 export default({ getState, dispatch }) => next => action => {
   const storiesSuccess = response => {
-    // response = normalize(response, {
-    //   stories: arrayOf(story),
-    // });
     return dispatch(receiveStories(response));
   };
 
@@ -37,6 +34,7 @@ export default({ getState, dispatch }) => next => action => {
       return next(action);
       break;
     case StoryConstants.UPDATE_STORY:
+      console.log("story middleware:");
       StoryUtil.updateStory(action.story, storySuccess, errorCallback);
       return next(action);
     case StoryConstants.REQUEST_STORIES:

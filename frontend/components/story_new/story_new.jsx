@@ -14,6 +14,7 @@ export default class StoryNew extends React.Component {
                      description: 'default',
                      cover_image_id: 0,
                      user_id: this.props.current_user.id,
+                     id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
                    },
                  };
 
@@ -36,7 +37,7 @@ export default class StoryNew extends React.Component {
         const photo = {
           url: images[0].url,
           med_url: images[0].url,
-          story_id: 1,
+          story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
           position: this.state.storyParts.length + 1,
           group_position: images.length,
           full_width: false
@@ -56,7 +57,7 @@ export default class StoryNew extends React.Component {
         const photo = {
           url: images[0].url,
           med_url: images[0].url,
-          story_id: 1,
+          story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
           position: this.state.storyParts.length + 1,
           group_position: images.length,
           full_width: false,
@@ -79,7 +80,7 @@ export default class StoryNew extends React.Component {
         title: '',
         body: '',
         position: this.state.storyParts.length + 1,
-        story_id: this.props.stories[Object.keys(this.props.stories)[0]], //ensure story_id in database model for text area
+        story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id
       })
     );
   }
@@ -87,7 +88,7 @@ export default class StoryNew extends React.Component {
   saveAllElements(e) {
     e.preventDefault();
     const story = this.state.story;
-    this.props.createStory(story);
+    this.props.updateStory(story);
 
     const textParts = []
     this.state.storyParts.forEach(part => {
@@ -116,6 +117,7 @@ export default class StoryNew extends React.Component {
 
   render() {
     const story = this.props.stories
+    console.log(this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id);
     if (story) {
     return (
       <div>
