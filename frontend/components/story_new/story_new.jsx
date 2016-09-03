@@ -12,7 +12,7 @@ export default class StoryNew extends React.Component {
                    coverImageUrl: "",
                    story: {
                      title: 'default',
-                     description: 'default',
+                     description: '',
                      cover_image_id: 0,
                      user_id: this.props.current_user.id,
                      id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id + 1,
