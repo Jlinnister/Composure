@@ -6,7 +6,6 @@ class Api::StoriesController < ApplicationController
 
   def create
     @story = current_user.stories.new(story_params)
-
     if @story.save
       render json: @story
     else

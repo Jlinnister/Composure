@@ -10,9 +10,9 @@ export default class StoryNew extends React.Component {
     super(props);
     this.state = { storyParts: [],
                    story: {
-                     title: '',
-                     description: '',
-                     cover_image_id: 1,
+                     title: 'default',
+                     description: 'default',
+                     cover_image_id: 0,
                      user_id: this.props.current_user.id,
                    },
                  };
@@ -22,7 +22,11 @@ export default class StoryNew extends React.Component {
     this.createTextArea = this.createTextArea.bind(this);
     this.setPartState = this.setPartState.bind(this);
     this.saveAllElements = this.saveAllElements.bind(this);
-    this.blankStory = this.blankStory.bind(this);
+    this.blankTextArea = this.blankTextArea.bind(this);
+  }
+
+  componentWillMount() {
+    this.props.createStory(this.state.story);
   }
 
   addPhoto() {
@@ -69,13 +73,13 @@ export default class StoryNew extends React.Component {
     this.setState(newState);
   }
 
-  blankStory() {
+  blankTextArea() {
     return (
       Object.freeze({
         title: '',
         body: '',
         position: this.state.storyParts.length + 1,
-        story_id: null, //ensure story_id in database model for text area
+        story_id: this.props.stories[Object.keys(this.props.stories)[0]], //ensure story_id in database model for text area
       })
     );
   }
@@ -98,7 +102,7 @@ export default class StoryNew extends React.Component {
 
   createTextArea() {
     const newState = merge({}, this.state);
-    newState.storyParts.push(Object.assign({}, this.blankStory()));
+    newState.storyParts.push(Object.assign({}, this.blankTextArea()));
     this.setState(newState);
   }
 
@@ -111,7 +115,8 @@ export default class StoryNew extends React.Component {
   }
 
   render() {
-    const story = this.state.story;
+    const story = this.props.stories
+    if (story) {
     return (
       <div>
         <form onSubmit={this.saveAllElements} className="story-form" id="save-form">
@@ -150,6 +155,9 @@ export default class StoryNew extends React.Component {
         </div>
 
       </div>
-    );
+    )
+  } else {
+    return (<div></div>)
+  }
   }
 }

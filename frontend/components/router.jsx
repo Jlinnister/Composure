@@ -36,6 +36,16 @@ class AppRouter extends React.Component {
     }
   }
 
+  // createStoryOnEnter(nextState) {
+  //   let story = {
+  //     title: 'default',
+  //     description: 'default',
+  //     cover_image_id: 0,
+  //     user_id: this.context.store.getState().session.current_user.id,
+  //   }
+  //   store.dispatch(StoryActions.createStory(story))
+  // }
+
   requestElementsOnEnter(nextState) {
     store.dispatch(StoryActions.requestStory(nextState.params.storyId))
   }
