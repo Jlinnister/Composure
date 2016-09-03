@@ -287,3 +287,131 @@ Photo.create!(
   full_width: true,
   story_id: 2
 )
+# end
+
+Story.create!(
+  title: "Yarra Valley Travel Guide",
+  description: "The most magical region of Victoria!",
+  user_id: 2,
+  cover_image_id: 31
+)
+
+TextArea.create!(
+  title: "",
+  body: "The Yarra Valley is one of a kind! It’s not often that you come across a region that you feel an instant warmness as soon as you arrive. We all noticed it straight away – every single person, business or farmer that we met were so incredibly lovely and genuinely wanted you to love every second of being in the area that they call home.",
+  position: 1,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-51-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-51-503x682.jpg",
+  position: 2,
+  group_position: 3,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-476-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-476-503x682.jpg",
+  position: 2,
+  group_position: 3,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-158-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-158-503x682.jpg",
+  position: 2,
+  group_position: 3,
+  full_width: false,
+  story_id: 3
+)
+
+TextArea.create!(
+  title: "",
+  body: "With it being less than an hours drive away from Melbourne I was expecting it to have a city feel to the rural landscape. Instead, it feels like a country town miles and miles away from the city, yet still with everything you could need. Win-win!",
+  position: 3,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-364-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-364-683x683.jpg",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-232-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-232-683x683.jpg",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 3
+)
+
+TextArea.create!(
+  title: "",
+  body: "We stayed in the region for 2 nights and felt like we could have been there for a whole week and not even have the chance to do everything we wanted to. Karen, from Botanica Editions, was an incredible help in putting together a cohesive list of the regions highlights. See below for our guide to the incredible Yarra Valley.",
+  position: 5,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-244-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-244-324x324.jpg",
+  position: 6,
+  group_position: 4,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-176-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-176-324x324.jpg",
+  position: 6,
+  group_position: 4,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-215-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-215-324x324.jpg",
+  position: 6,
+  group_position: 4,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-463-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-463-324x324.jpg",
+  position: 6,
+  group_position: 4,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-9-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-9-1400x683.jpg",
+  position: 7,
+  group_position: 1,
+  full_width: false,
+  story_id: 3
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-228-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-228-1400x683.jpg",
+  position: 8,
+  group_position: 1,
+  full_width: true,
+  story_id: 3
+)
