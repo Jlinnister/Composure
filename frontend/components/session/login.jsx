@@ -11,6 +11,26 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.location.query.demo === "true") {
+      const guestUser = ['g', 'u', 'e', 's', 't', 'p', 'a', 's', 's', 'w', 'o', 'r', 'd'];
+      let idx = 0;
+      let interval = setInterval(()=>{
+        if (idx < 5) {
+          const name = this.state.username + guestUser[idx];
+          this.setState({ username: name });
+        } else if (idx < 13) {
+          const pw = this.state.password + guestUser[idx];
+          this.setState({ password: pw })
+        } else {
+          this.props.login(this.state);
+          clearInterval(interval);
+        }
+        idx += 1;
+      }, 200);
+    }
+  }
+
   componentDidUpdate() {
     this.redirectIfLoggedIn();
   }
@@ -31,14 +51,6 @@ class Login extends React.Component {
     this.props.login(user);
   }
 
-	// navLink(){
-	// 	if (this.props.formType === "login") {
-	// 		return <Link to="/signup">sign up instead</Link>;
-	// 	} else {
-	// 		return <Link to="/login">log in instead</Link>;
-	// 	}
-	// }
-  //
   renderErrors() {
     return (
       <div className="errors">
@@ -60,7 +72,6 @@ class Login extends React.Component {
               </div>
 
               {this.props.errors ? this.renderErrors() : null}
-
               <form onSubmit={this.handleSubmit} className="login-form-box">
 
                 <input className="form-control" type="text" id="login-form-username" value={this.state.username} onChange={this.update("username")} placeholder="Username" />
