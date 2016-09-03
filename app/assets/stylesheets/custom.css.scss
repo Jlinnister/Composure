@@ -855,6 +855,12 @@ nav {
     margin-bottom: 40px;
   }
   #story-title {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
     text-transform: uppercase;
     overflow: hidden;
     letter-spacing: 5px;
@@ -865,6 +871,12 @@ nav {
   #story-description {
     font: 18px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
     color: $white;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
   }
 
   .story-show-title {
@@ -897,13 +909,23 @@ nav {
   margin-top: 100px;
   text-align: center;
 
-  .text-area {
+  .text-area-body {
     width: 800px;
     font: 16px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
     padding-bottom: 35px;
     padding-top: 35px;
     line-height: 26px;
   }
+
+  .text-area-title {
+    width: 800px;
+    font: 45px 'P22UndergroundPro-Demi';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-top: 35px;
+    line-height: 26px;
+  }
+
 }
 
 .story-parts {

@@ -120,7 +120,7 @@ export default class StoryNew extends React.Component {
             <div className="details">
               <div id="story-cover-photo" onClick={this.addCoverPhoto}>Click To Add A Cover Photo</div>
               <div><input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" /></div>
-              <div><input type="text" className="story-description" onChange={this.update("description")} placeholder="Add a Description" /></div>
+              <div><input type="text" id="story-description" onChange={this.update("description")} placeholder="Add a Description" /></div>
             </div>
           </div>
 

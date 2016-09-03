@@ -18,7 +18,13 @@ export default class StoryShow extends React.Component {
       return (<div className={imageCount} key={el.id}><img src={el.url} /></div>)
     } else {
         imageCount = 1;
-      return (<div className="text-area">{el.body}</div>)
+        if (el.title && el.body) {
+          return (<div><div className="text-area-title">{el.title}</div><div className="text-area-body">{el.body}</div></div>)
+        } else if (el.title) {
+          return (<div className="text-area-title">{el.title}</div>)
+        } else if (el.body) {
+          return (<div className="text-area-body">{el.body}</div>)
+        }
     }
   }
 
