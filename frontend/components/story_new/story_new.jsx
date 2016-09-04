@@ -133,7 +133,7 @@ export default class StoryNew extends React.Component {
           <div className="cover-image">
             <img src={this.state.coverImageUrl} />
             <div className="details">
-              <div id="story-cover-photo" onClick={this.addCoverPhoto}>Click to Add or Edit Cover Photo</div>
+              <button id="story-cover-photo" onClick={this.addCoverPhoto}>Click to Add or Edit Cover Photo</button>
               <div><input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" /></div>
               <div><textarea id="story-description" onChange={this.update("description")} placeholder="Add a Description" /></div>
             </div>
