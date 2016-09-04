@@ -12,6 +12,9 @@ export default({ getState, dispatch }) => next => action => {
     case SessionConstants.LOGIN:
       SessionUtil.login(action.user, successCallback, errorCallback);
       return next(action);
+    case SessionConstants.UPDATE_USER:
+      SessionUtil.updateUser(action.user, successCallback, errorCallback);
+      return next(action);
     case SessionConstants.LOGOUT:
       SessionUtil.logout(() => next(action));
       break;

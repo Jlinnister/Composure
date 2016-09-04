@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+const Modal = require('react-modal');
 
 import * as Actions from './actions/story_actions';
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.actions = Actions; //remove
 
+  Modal.setAppElement(document.body)
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

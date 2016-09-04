@@ -9,6 +9,16 @@ const SessionUtil = {
     });
   },
 
+  updateUser(user, success, error) {
+    $.ajax({
+      url: `/api/users/${user.id}`,
+      method: 'PATCH',
+      data: { user },
+      success,
+      error,
+    });
+  },
+
   logout(success) {
     $.ajax({
       url: '/api/session',

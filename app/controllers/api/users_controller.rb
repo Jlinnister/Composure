@@ -23,7 +23,6 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = current_user
-
     @user.update(update_params)
     render "api/users/show"
   end

@@ -75,6 +75,11 @@ table {
 }
 //end
 
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 html, body {
   height: 100%;
@@ -716,6 +721,159 @@ input {
     }
   }
 }
+
+//edit profile
+button.close-view {
+  color: #888;
+  background: #fff;
+  border: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font: 28px 'Arial';
+  outline: none;
+  &:hover {
+    color: $green;
+  }
+}
+
+.title {
+  font: 20px 'P22UndergroundPro-Heavy';
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  font: 15px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
+  color: #555555;
+  padding: 22px 17px;
+}
+
+label {
+  font: 16px 'P22UndergroundPro-Demi';
+  margin-bottom: 0;
+  padding-top: 15px;
+}
+
+.input-info {
+  font: 15px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
+  color: #999;
+}
+
+.submit-button, .cancel-button, .delete-button {
+  border: 0;
+  color: white;
+  font-family: 'P22UndergroundPro-Demi';
+  font-size: 14px;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  float: left;
+  margin-top: 20px;
+  -webkit-transition: background 200ms; /* Safari */
+  transition: background 200ms;
+  transition-timing-function: linear;
+}
+.submit-button {
+  margin-right: 3px;
+  background-color: $green;
+  &:hover {
+    background-color: $lightgrey;
+  }
+}
+
+
+
+.save-cancel {
+  float: right;
+}
+.center-buttons {
+  button {
+    float: none;
+  }
+}
+
+.cancel-button {
+  background-color: #e8e8e8;
+  color: black;
+  &:hover {
+    background-color: #d8d8d8;
+  }
+}
+
+.delete-button {
+  margin-right: 3px;
+  background-color: $green;
+  &:hover {
+    background-color: $lightgrey;
+  }
+}
+
+
+.form-container.user-form {
+  input {
+    margin-bottom: 5px;
+  }
+  label {
+    margin-top: 15px;
+  }
+  .profile-photo {
+    font: 14px 'ProximaNova-Semibold';
+
+    .avatar-container {
+      position: relative;
+
+      .user-avatar {
+        width: 75px;
+        height: 75px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 11px 0px;
+        float: left;
+        img {
+          width: 100%;
+        }
+        .user-avatar-plus {
+          display: none;
+          background: rgba(0, 0, 0, 0.05);
+          border: 1px solid #fefefe;
+          position: absolute;
+          margin: 11px 0px;
+          top: 0;
+          left: 0;
+          width: 75px;
+          height: 75px;
+          border-radius: 5px;
+          text-align: center;
+          padding-top: 25px;
+          color: #aaa;
+        }
+
+        &:hover .user-avatar-plus {
+          display: block;
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+        }
+      }
+
+      .user-avatar-info {
+        padding-left: 30px;
+        padding-top: 30px;
+        float: left;
+        width: 445px;
+        vertical-align: bottom;
+
+        .no-photo {
+          display: none;
+          color: $green;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+//end
+
 
 //new story nav
 .storynew-nav {
