@@ -13,7 +13,7 @@ class StoryIndexItem extends React.Component {
       <div className="photo">
         <Link to={`/storyboard/${id}`}>
           <img src={cover_image_med} alt={title} />
-        </Link>
+          </Link>
         <div className="photo-title">{title}</div>
       </div>
     );

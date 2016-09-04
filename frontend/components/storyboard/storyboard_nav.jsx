@@ -18,7 +18,7 @@ const customStyles = {
     position: 'fixed',
     top: '80px',
     left: '400px',
-    height: '624px',
+    height: '500px',
     width: '600px',
   },
 };
