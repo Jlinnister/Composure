@@ -415,3 +415,388 @@ Photo.create!(
   full_width: true,
   story_id: 3
 )
+#end
+
+Story.create!(
+  title: "Beef Burrito Bowl",
+  description: "A bowl of pure Mexican deliciousness. Have fun with this one & get creative with the toppings!",
+  user_id: 2,
+  cover_image_id: 32
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-86-1400x784.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-86-1400x784.jpg",
+  position: 1,
+  group_position: 1,
+  full_width: true,
+  story_id: 4
+)
+
+TextArea.create!(
+  title: "",
+  body: "I don’t know if you can get anything more comforting while also being deliciously fresh at the same time. That’s one of my favourite things about Mexican food; while you’re eating it, it feels like you’re getting a big comforting hug from your mum with the flavours still being incredibly fresh – you can really taste everything you’ve put into the recipe.",
+  position: 2,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-42-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-42-683x683.jpg",
+  position: 3,
+  group_position: 2,
+  full_width: false,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-26-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-26-683x683.jpg",
+  position: 3,
+  group_position: 2,
+  full_width: false,
+  story_id: 4
+)
+
+TextArea.create!(
+  title: "",
+  body: "A super great thing about making burrito bowls is that there’s only a little real cooking involved. The rest of it comes down to the combination of the toppings, and it’s here where you can get really crazy & creative. It was utterly delicious with some pico de gallo, guacamole, cheese, coriander, jalapeños & a couple Doritos & some lime on the side.\nIt’s currently Monday evening here and we are having these burrito bowls for dinner tonight after watching the Super Bowl today. It’s been a bit of a sombre mood around the house this afternoon as unfortunately the Carolina Panthers (the team George & I go for) lost against the Denver Broncos! These burrito bowls will surely cheer us up though! I also reckon that these burrito bowls would be the perfect Friday night at-home dinner with friends! You can pre-prepare all the toppings and just cook up the mince (or chicken – these would also be super delicious with some spicy chicken) when guests arrive. Serve them up with some American or Mexican beers and you have the ideal Friday night….in my book anyway :) Enjoy!",
+  position: 4,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-90-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-90-1400x683.jpg",
+  position: 5,
+  group_position: 1,
+  full_width: false,
+  story_id: 4
+)
+
+TextArea.create!(
+  title: "",
+  body: "1. Start by preparing the rice (following the packet instructions) and then the Pico de Gallo & guacamole (we made a tomato-less & onion-less version seeing as we have the pico de gallo as well), then set aside. Combine all the spices together in a bowl & set aside.",
+  position: 6,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-77-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-77-324x324.jpg",
+  position: 7,
+  group_position: 4,
+  full_width: false,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-61-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-61-324x324.jpg",
+  position: 7,
+  group_position: 4,
+  full_width: false,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-99-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-99-324x324.jpg",
+  position: 7,
+  group_position: 4,
+  full_width: false,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-92-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-92-324x324.jpg",
+  position: 7,
+  group_position: 4,
+  full_width: false,
+  story_id: 4
+)
+
+TextArea.create!(
+  title: "",
+  body: "2. Heat olive oil in a fry pan over a medium heat. Add the mince and break it up into smallish bits. Add in the spice mixture and stir to combine. Cook for about 5-6 minutes or until the mince is pretty much completely cooked then add in the beans. Stir to combine and cook for about 2-3 minutes or until the beans have been warmed through and the mince is completely cooked.",
+  position: 8,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-73-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-73-503x682.jpg",
+  position: 9,
+  group_position: 3,
+  full_width: false,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-38-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-38-503x682.jpg",
+  position: 9,
+  group_position: 3,
+  full_width: false,
+  story_id: 4
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-80-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-80-503x682.jpg",
+  position: 9,
+  group_position: 3,
+  full_width: false,
+  story_id: 4
+)
+
+TextArea.create!(
+title: "",
+body: "3. Now you can start constructing the bowls – the fun part. Start with a base of lettuce & red rice. Top with some more lettuce and some shredded cabbage. Then comes the beef & beans mixture. And then it’s time for the toppings – guacamole, pico de gallo, cheese, jalapeños, coriander, diced red onion, & a couple of Doritos too, with some limes on the side of course.",
+position: 10,
+story_id: 4
+)
+#end
+
+Story.create!(
+  title: "Homemade Lasagne",
+  description: "Hearty, comforting and incredibly delicious! This is a great recipe for a simple homemade lasagne!",
+  user_id: 2,
+  cover_image_id: 50
+)
+
+TextArea.create!(
+title: "",
+body: "This is actually the first time we’ve ever made a homemade lasagne. You might have guessed that we are fairly pasta obsessed in the WTC Kitchen, but have never really had the desire to cook up our own lasagne. For our first lasagne, we decided to skip out on the bechamel sauce to keep it on the simpler side for at-home mid-week cooking. To make up for the lacking of the creamy bechamel sauce, just keep adding in more cheese….delicious!!",
+position: 1,
+story_id: 5
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-66-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-66-683x683.jpg",
+  position: 2,
+  group_position: 2,
+  full_width: false,
+  story_id: 5
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-75-683x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-75-683x683.jpg",
+  position: 2,
+  group_position: 2,
+  full_width: false,
+  story_id: 5
+)
+
+TextArea.create!(
+title: "",
+body: "1. Start by making the mince mixture; heat 30ml olive oil in a heavy based fry pan over a medium heat then add the chilli and stir briefly. Add in the onion and saute for a couple of minutes, until soft then add in the carrot and saute for a further 4-5 minutes, stirring often. Add in the fresh rosemary and combine.",
+position: 3,
+story_id: 5
+)
+
+TextArea.create!(
+title: "",
+body: "2. Push the carrot & onion mixture to the side and add the mince, breaking it up with the back of a wooden spoon and then combine with the onion & carrot mixture. Pour in the red wine and passata and combine. Season to taste and simmer for 5-10 minutes.",
+position: 4,
+story_id: 5
+)
+
+TextArea.create!(
+title: "",
+body: "3. Meanwhile, heat 20ml olive oil in a separate frypan over medium-high heat. Add the pancetta and cook until lightly crisp. Preheat oven to 180c. Brush oil on a baking dish.",
+position: 5,
+story_id: 5
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-86-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-86-1400x683.jpg",
+  position: 6,
+  group_position: 1,
+  full_width: false,
+  story_id: 5
+)
+
+TextArea.create!(
+title: "",
+body: "4. Now is the time to start layering the lasagne. Add a third of the mince mixture into the baking dish. Cover with a pasta sheet and then spoon another third of the mince mixture on top. Top with buffalo mozzarella and the crispy pancetta then place a pasta sheet on top of it. Add the final layer of mince mixture. Top with the final pasta sheet, add buffalo mozzarella & sprinkle with the grated parmesan.",
+position: 7,
+story_id: 5
+)
+
+TextArea.create!(
+title: "",
+body: "5. Place in the preheated oven, cover with foil and bake for 20 minutes. Remove the foil and bake for a further 5-10 to crisp up the top.",
+position: 8,
+story_id: 5
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-54-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-54-324x324.jpg",
+  position: 9,
+  group_position: 4,
+  full_width: false,
+  story_id: 5
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-38-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-38-324x324.jpg",
+  position: 9,
+  group_position: 4,
+  full_width: false,
+  story_id: 5
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-50-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-50-324x324.jpg",
+  position: 9,
+  group_position: 4,
+  full_width: false,
+  story_id: 5
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-53-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-53-324x324.jpg",
+  position: 9,
+  group_position: 4,
+  full_width: false,
+  story_id: 5
+)
+
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-81-1400x784.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-81-1400x784.jpg",
+  position: 10,
+  group_position: 1,
+  full_width: true,
+  story_id: 5
+)
+#end
+
+Story.create!(
+  title: "Sweet Potato & Feta Ravioli",
+  description: "A recipe to take your time with and enjoy the whole process. Slow cooking at its finest!",
+  user_id: 2,
+  cover_image_id: 57
+)
+
+TextArea.create!(
+title: "",
+body: "It’s only Tuesday but this recipe has me already dreaming of the weekend because this is the ideal weekend cooking project! It means you can take your time & truly enjoy the process of making homemade ravioli. It’s not about perfection either – that’s probably the best thing about homemade ravioli…it’s not the perfect little parcels you might get at the supermarket, but I think that that is what makes it taste so delicious!",
+position: 1,
+story_id: 6
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-60-862x504.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-60-862x504.jpg",
+  position: 2,
+  group_position: 2,
+  full_width: false,
+  story_id: 6
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-125-503x503.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-125-503x503.jpg",
+  position: 2,
+  group_position: 2,
+  full_width: false,
+  story_id: 6
+)
+
+TextArea.create!(
+title: "",
+body: "We’ve made a couple batches over the years and it’s so much fun to come up with the flavour combinations. This was was such a winner and is absolutely worth a try on the next free weekend you have. All you need to do is put on some music, get the whole family involved, have the wine flowing (or Ribena for the kids haha) & have a blast making some incredible food without the burden of time-pressures (unlike those pesky weeknights). How great is cooking! :) Enjoy!",
+position: 3,
+story_id: 6
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-37-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-37-503x682.jpg",
+  position: 4,
+  group_position: 3,
+  full_width: false,
+  story_id: 6
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-101-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-101-503x682.jpg",
+  position: 4,
+  group_position: 3,
+  full_width: false,
+  story_id: 6
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-80-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-80-503x682.jpg",
+  position: 4,
+  group_position: 3,
+  full_width: false,
+  story_id: 6
+)
+
+TextArea.create!(
+title: "",
+body: "1. Start by making the pasta dough. For filled pasta, roll two sheets of pasta to the thinest setting, then set aside.",
+position: 5,
+story_id: 6
+)
+
+TextArea.create!(
+title: "",
+body: "2. For the filling; place the roasted sweet potato & parmesan in a food processor and briefly whizz. Add in the oregano leaves and continue to whizz until combined then the mixture to a bowl and add the feta. Season with cracked pepper & a little sea salt then mix to combine and set the mixture aside.",
+position: 6,
+story_id: 6
+)
+
+TextArea.create!(
+title: "",
+body: "3. Lightly brush one sheet of rolled pasta with water, then place 1.5 tsp of mixture 4cm apart and place the other sheet on top of the filling. Press around the mixture to remove any air bubbles and then cut into ravioli. Place on a tray and dust with semolina (or a little extra flour). Set aside while you make the sauce.",
+position: 7,
+story_id: 6
+)
+
+TextArea.create!(
+title: "",
+body: "4. Heat 40ml olive oil in a large fry pan over a medium heat. Add the diced onion and saute for 3 minutes (or until a little soft & fragrant), stirring often. Add the oregano, garlic & tomatoes then stir to combine and cook for 2 minutes. Pour in the white wine and cook for a further 2 minutes before adding in the passata. Cook for 5 minutes, or until the tomatoes start to slightly blister. Keep warm over a low heat while you cook the ravioli.",
+position: 8,
+story_id: 6
+)
+
+TextArea.create!(
+title: "",
+body: "5. Bring a large pot of well-salted water to the boil. Add the ravioli and cook for 2-3 minutes then remove & drain.",
+position: 9,
+story_id: 6
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-91-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-91-1400x683.jpg",
+  position: 10,
+  group_position: 1,
+  full_width: true,
+  story_id: 6
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-109-1400x784.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-109-1400x784.jpg",
+  position: 11,
+  group_position: 1,
+  full_width: true,
+  story_id: 6
+)
