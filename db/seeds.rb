@@ -24,7 +24,7 @@ User.create!(
   username: "guest",
   password: "password",
   email: "cook@gmail.com",
-  avatar_url: "https://secure.gravatar.com/avatar/d9fb812b41af97e6310fae5bcaf8c460?s=150&d=https://exposure-media.s3.amazonaws.com/static/exposure-logo-mark-avatar.png",
+  avatar_url: "http://res.cloudinary.com/dw8oe4f1v/image/upload/v1472961671/tfcgtxj7hhlrnuho0z5r.gif",
   profile_title: "What to Cook",
   profile_description: "What To Cook is a father daughter (Andrew and Sophie) team based in Sydney, Australia.",
   website_url: "https://www.whattocook.com.au/"

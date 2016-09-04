@@ -35,6 +35,18 @@ export default class StoryboardNav extends React.Component {
     this.handleSignOutSubmit = this.handleSignOutSubmit.bind(this);
     this.handleEditSubmit = this.handleEditSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.addAvatar = this.addAvatar.bind(this);
+  }
+
+  addAvatar() {
+    cloudinary.openUploadWidget(window.CLOUDINARY_AVATAR, (error, images) => {
+      if(error === null) {
+        const newState = merge({}, this.state);
+        const user = newState.user;
+        user.avatar_url = images[0].url;
+        this.setState(newState);
+      }
+    });
   }
 
   update(field) {
@@ -93,8 +105,8 @@ export default class StoryboardNav extends React.Component {
                 Avatar
                 <div className="avatar-container">
                   <div className="user-avatar">
-                    <img className="avatar-image" src='' />
-                    <div className="user-avatar-plus"><i className="fa fa-plus-square-o fa-2x"></i></div>
+                    <img className="avatar-image" src={this.state.user.avatar_url} />
+                    <div className="user-avatar-plus" onClick={this.addAvatar}><i className="fa fa-plus-square-o fa-2x"></i></div>
                   </div>
                 </div>
               </div>

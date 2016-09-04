@@ -14,6 +14,13 @@
       "client_allowed_formats": ["png","gif", "jpeg"],
       "max_file_size": 50000000
     };
+    window.CLOUDINARY_AVATAR = {
+      "cloud_name": "<%= ENV['CLOUD_NAME'] %>",
+      "upload_preset": "<%= ENV['UPLOAD_AVATAR_PRESET'] %>",
+      "stylesheet": "<%= asset_url 'cloudinary_minimal.css' %>",
+      "client_allowed_formats": ["png","gif", "jpeg"],
+      "max_file_size": 50000000
+    };
   </script>
 </head>
 <body>
