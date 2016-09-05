@@ -1021,3 +1021,141 @@ Photo.create!(
   story_id: 8
 )
 #end
+
+Story.create!(
+  title: "Beef Pho",
+  description: "This will just make you feel good! So much freshness. So much lightness. So much deliciousness. If you get really good quality beef it will take it to the next level!",
+  user_id: 2,
+  cover_image_id: 77
+)
+
+TextArea.create!(
+title: "",
+body: "1. In a large heavy-based saucepan add the; stock, consommé, water, ginger, onion, garlic, star anise, cinnamon, palm sugar and fish sauce. Bring to the boil then reduce the heat, cover and simmer for 20 minutes. Strain the pho liquid, (discarding the solids), then return the soup to the saucepan. Cover and return to the boil.",
+position: 1,
+story_id: 9
+)
+
+TextArea.create!(
+title: "",
+body: "2. Prepare the rice stick noodles following the instructions on the packet. Once prepared, drain well and divide the noodles into four soup bowls. Top with the beef. Pour over the hot pho (this will cook the beef). Top with bean sprouts.",
+position: 2,
+story_id: 9
+)
+
+TextArea.create!(
+title: "",
+body: "3. Serve garnished with spring onions, chilli, mint, coriander and a squeeze of lemon juice.",
+position: 3,
+story_id: 9
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-6-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-6-324x324.jpg",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 9
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-2-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-2-324x324.jpg",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 9
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-31-1041x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-31-1041x683.jpg",
+  position: 5,
+  group_position: 1,
+  full_width: false,
+  story_id: 9
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-28-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-28-503x682.jpg",
+  position: 6,
+  group_position: 2,
+  full_width: false,
+  story_id: 9
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-20-503x503.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-20-503x503.jpg",
+  position: 6,
+  group_position: 2,
+  full_width: false,
+  story_id: 9
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-29.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-29.jpg",
+  position: 7,
+  group_position: 1,
+  full_width: true,
+  story_id: 9
+)
+#end
+
+Story.create!(
+  title: "Sausage & Vegetable Bake",
+  description: "The easiest dinner on the planet",
+  user_id: 2,
+  cover_image_id: 80
+)
+
+TextArea.create!(
+title: "",
+body: "This has to be one of the most perfect weeknight dinners you could ever think of cooking. It’s minimal preparation and then about 1% actual cooking effort. Weeknight perfection!",
+position: 1,
+story_id: 10
+)
+
+TextArea.create!(
+title: "",
+body: "1. Preheat oven to 180c. Place all ingredients (excluding the basil & parsley) in a large baking tray lined with baking paper. Spray with oil and season to taste.",
+position: 2,
+story_id: 10
+)
+
+TextArea.create!(
+title: "",
+body: "2. Place in the oven and cook for 35-40 minutes or until sausages have cooked through. Half way through cooking, turn the sausages over. Remove from oven and garnish with the fresh basil & parsley.",
+position: 3,
+story_id: 10
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-11-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-11-1400x683.jpg",
+  position: 4,
+  group_position: 1,
+  full_width: true,
+  story_id: 10
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-17-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-17-1400x683.jpg",
+  position: 5,
+  group_position: 1,
+  full_width: true,
+  story_id: 10
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-15.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-15.jpg",
+  position: 5,
+  group_position: 1,
+  full_width: true,
+  story_id: 10
+)
