@@ -21,6 +21,6 @@ export const receiveCoverPhoto = photo => ({
 });
 
 export const destroyPhoto = photo => ({
-  type: PhotoConstants.DESTROY_TEXT_AREA,
+  type: PhotoConstants.DESTROY_PHOTO,
   photo,
 });

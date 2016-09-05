@@ -25,6 +25,14 @@ export default class StoryEdit extends React.Component {
     this.setPartState = this.setPartState.bind(this);
     this.saveAllElements = this.saveAllElements.bind(this);
     this.blankTextArea = this.blankTextArea.bind(this);
+    this.removeTextArea = this.removeTextArea.bind(this);
+  }
+
+  removeTextArea(idx) {
+    this.props.destroyTextArea(this.state.storyParts[idx])
+    const newState = merge({}, this.state);
+    newState.storyParts.splice(idx, 1);
+    this.setState(newState);
   }
 
   addPhoto() {
@@ -90,18 +98,23 @@ export default class StoryEdit extends React.Component {
     e.preventDefault();
     const store = this.context.store.getState()
     const story = this.state.story;
+    this.props.destroyPhoto({id: this.state.story.cover_image_id})
     story.cover_image_id = store.photos.id
     this.props.updateStory(story);
 
-    const textParts = {}
+    const updateTextParts = {};
+    const newTextParts = [];
     this.state.storyParts.forEach( (part,idx) => {
-      if (part.title || part.body) {
+      if (part.id && (part.title || part.body)) {
         let id = part.id;
-        textParts[id] = part;
+        updateTextParts[id] = part;
+      } else if (part.title || part.body) {
+        newTextParts.push(part);
       }
     });
 
-    this.props.updateTextArea(textParts);
+    this.props.updateTextArea(updateTextParts);
+    this.props.createTextArea(newTextParts);
     hashHistory.push('/storyboard');
   }
 
@@ -141,7 +154,7 @@ export default class StoryEdit extends React.Component {
                 if (part.url) {
                   return ( <StoryPhotoItem part={part} key={idx} /> )
                 } else {
-                  return ( <StoryTextItem part={part} key={idx} edit="true" setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+                  return ( <StoryTextItem part={part} key={idx} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
                 }
               }
             )}

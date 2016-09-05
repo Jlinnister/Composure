@@ -3,6 +3,9 @@ import { Link, hashHistory } from 'react-router';
 
 class StoryTextItem extends React.Component {
 
+  removeTextArea() {
+    this.props.removeTextArea(this.props.idx);
+  }
   update(field) {
     return e => { this.props.setPartState(field,e.currentTarget.value) };
   }
@@ -26,7 +29,7 @@ class StoryTextItem extends React.Component {
 
   editCheck() {
     if (this.props.edit === 'true') {
-      return (<button type="button" className="text-area-remove">Remove</button>);
+      return (<button type="button" onClick={this.removeTextArea.bind(this)} className="text-area-remove">Remove</button>);
     }
   }
 

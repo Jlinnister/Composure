@@ -27,7 +27,6 @@ const StoryUtil = {
   },
 
   updateStory(story, success) {
-    console.log(story);
     $.ajax({
       method: 'PATCH',
       url: `api/stories/${story.id}`,

@@ -1,7 +1,5 @@
 const TextAreaUtil = {
   update(text_area, success, error) {
-    console.log("sending ajax:");
-    console.log(text_area);
     $.ajax({
       url: `/api/text_areas/1`,
       method: 'PATCH',
