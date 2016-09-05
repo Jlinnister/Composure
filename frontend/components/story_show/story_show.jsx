@@ -27,12 +27,11 @@ export default class StoryShow extends React.Component {
   render() {
     const story_id = this.props.params.storyId
     const story = this.props.stories[story_id]
-    console.log(this.props);
 
     if (story) {
       return (
         <div>
-          <StoryShowNav current_user={this.props.current_user} />
+          <StoryShowNav current_user={this.props.current_user} storyId={story_id} />
           <div className="cover-image"><img src={story.cover_image_url} /></div>
           <div className="details">
             <div className="story-show-title">{story.title}</div>

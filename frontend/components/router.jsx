@@ -8,6 +8,7 @@ import SignupContainer from './session/signup_container';
 import StoryboardContainer from './storyboard/storyboard_container';
 import StoryNewContainer from './story_new/story_new_container';
 import StoryShowContainer from './story_show/story_show_container';
+import StoryEditContainer from './story_edit/story_edit_container';
 
 import * as StoryActions from '../actions/story_actions';
 
@@ -36,16 +37,6 @@ class AppRouter extends React.Component {
     }
   }
 
-  // createStoryOnEnter(nextState) {
-  //   let story = {
-  //     title: 'default',
-  //     description: 'default',
-  //     cover_image_id: 0,
-  //     user_id: this.context.store.getState().session.current_user.id,
-  //   }
-  //   store.dispatch(StoryActions.createStory(story))
-  // }
-
   requestElementsOnEnter(nextState) {
     store.dispatch(StoryActions.requestStory(nextState.params.storyId))
   }
@@ -58,6 +49,7 @@ class AppRouter extends React.Component {
         <Route path="/signup" component={SignupContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/storyboard" component={StoryboardContainer} onEnter={ this._ensureLoggedIn } />
         <Route path="/storyboard/:storyId" component={StoryShowContainer} onEnter={ this.requestElementsOnEnter } />
+        <Route path="/storyboard/:storyId/edit" component={StoryEditContainer} onEnter={ this.requestElementsOnEnter } />
         <Route path="/new" component={StoryNewContainer} onEnter={ this._ensureLoggedIn } />
       </Router>
     );

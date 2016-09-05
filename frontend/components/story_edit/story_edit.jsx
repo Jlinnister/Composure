@@ -1,21 +1,21 @@
 import React from 'React';
 import { Link, hashHistory } from 'react-router';
-import StoryNewNav from './story_new_nav';
+import StoryEditNav from './story_edit_nav';
 import StoryTextItem from '../story_elements/story_text_item';
 import StoryPhotoItem from '../story_elements/story_photo_item';
 import merge from 'lodash/merge';
 
-export default class StoryNew extends React.Component {
+export default class StoryEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state = { storyParts: [],
-                   coverImageUrl: "",
+                   coverImageUrl: this.props.stories[this.props.params.storyId].cover_image_url,
                    story: {
-                     title: 'default',
-                     description: '',
-                     cover_image_id: 0,
+                     title: this.props.stories[this.props.params.storyId].title,
+                     description: this.props.stories[this.props.params.storyId].description,
+                     cover_image_id: this.props.stories[this.props.params.storyId].cover_image_id,
                      user_id: this.props.current_user.id,
-                     id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id + 1,
+                     id: this.props.params.storyId,
                    },
                  };
 
@@ -25,10 +25,6 @@ export default class StoryNew extends React.Component {
     this.setPartState = this.setPartState.bind(this);
     this.saveAllElements = this.saveAllElements.bind(this);
     this.blankTextArea = this.blankTextArea.bind(this);
-  }
-
-  componentWillMount() {
-    this.props.createStory(this.state.story);
   }
 
   addPhoto() {
@@ -124,18 +120,20 @@ export default class StoryNew extends React.Component {
   }
 
   render() {
-    const story = this.props.stories
+    const story_id = this.props.params.storyId
+    const story = this.props.stories[story_id]
+    console.log(this.props);
     if (story) {
     return (
       <div>
         <form onSubmit={this.saveAllElements} className="story-form" id="save-form">
-          <StoryNewNav current_user={this.props.current_user} />
+          <StoryEditNav current_user={this.props.current_user} />
           <div className="cover-image">
             <img src={this.state.coverImageUrl} />
             <div className="details">
-              <button type="button" id="story-cover-photo" onClick={this.addCoverPhoto}>Click to Add or Edit Cover Photo</button>
-              <div><input type="text" id="story-title" onChange={this.update("title")} placeholder="Name Your Story" /></div>
-              <div><textarea id="story-description" onChange={this.update("description")} placeholder="Add a Description" /></div>
+              <button id="story-cover-photo" onClick={this.addCoverPhoto}>Click to Add or Edit Cover Photo</button>
+              <div><input type="text" id="story-title" onChange={this.update("title")} value={this.state.story.title} /></div>
+              <div><textarea id="story-description" onChange={this.update("description")} value={this.state.story.description} /></div>
             </div>
           </div>
 
@@ -172,6 +170,6 @@ export default class StoryNew extends React.Component {
   }
 }
 
-StoryNew.contextTypes = {
+StoryEdit.contextTypes = {
   store: React.PropTypes.object.isRequired,
 };

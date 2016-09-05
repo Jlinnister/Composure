@@ -996,12 +996,14 @@ nav {
     letter-spacing: 5px;
     font: 78px 'P22UndergroundPro-Demi';
     color: $white;
+    cursor: default;
   }
 
   .story-show-description {
     font: 18px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
     color: $white;
     line-height: 26px;
+    cursor: default;
   }
 }
 
@@ -1046,6 +1048,7 @@ nav {
     line-height: 26px;
     padding: 3% 10%;
     word-wrap: break-word;
+    cursor: default;
   }
 
   .text-area-title {
@@ -1058,6 +1061,7 @@ nav {
     line-height: 50px;
     padding: 3% 10%;
     word-wrap: break-word;
+    cursor: default;
   }
 }
 
@@ -1285,6 +1289,7 @@ clear: both;
       letter-spacing: 3px;
       font: 22px 'P22UndergroundPro-Demi';
       color: $white;
+      cursor: pointer;
     }
   }
 

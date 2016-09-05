@@ -11,7 +11,7 @@ export default class StoryShowNav extends React.Component {
       <div className="storyboard-nav">
         <nav>
           <ul className="options pull-right">
-            <li className="edit-profile-link">Edit Story</li>
+            <Link to={`/storyboard/${this.props.storyId}/edit`}><li className="edit-profile-link">Edit Story</li></Link>
             <Link to="/storyboard"><li className="storyboard-link">My Storyboard</li></Link>
           </ul>
         </nav>
