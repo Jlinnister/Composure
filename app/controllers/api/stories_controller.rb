@@ -1,6 +1,7 @@
 class Api::StoriesController < ApplicationController
   def index
     @stories = current_user.stories
+    @stories = @stories.select { |story| story.title != "default" }
     render "api/stories/index"
   end
 

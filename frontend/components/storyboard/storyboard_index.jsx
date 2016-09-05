@@ -23,7 +23,7 @@ export default class StoryboardIndex extends React.Component {
           <div className="profile-line"></div>
         </div>
         <div className="stories">
-            {Object.keys(stories).map(key => <StoryIndexItem story={stories[key]} />)}
+            {Object.keys(stories).map(key => <StoryIndexItem story={stories[key]} key={stories[key].id}/>)}
         </div>
       </div>
     );

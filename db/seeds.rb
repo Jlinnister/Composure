@@ -800,3 +800,224 @@ Photo.create!(
   full_width: true,
   story_id: 6
 )
+#end
+
+Story.create!(
+  title: "Jaffles Three Ways",
+  description: "Mexican beef & beans; Brie, thyme & sautéed mushrooms; Salami & pickles...all super delicious!",
+  user_id: 2,
+  cover_image_id: 66
+)
+
+TextArea.create!(
+title: "",
+body: "Last weekend we made jaffles while sitting around a magical bonfire. It was pure perfection! We definitely recommend you doing something similar over an upcoming weekend, and if you do then here are three delicious different types of jaffles. You’ll need a jaffle maker to make them, however, if you don’t have one then just toast them up in the oven and they will still be absolutely scrumptious!",
+position: 1,
+story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-91-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-91-324x324.jpg",
+  position: 2,
+  group_position: 3,
+  full_width: false,
+  story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-44-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-44-324x324.jpg",
+  position: 2,
+  group_position: 3,
+  full_width: false,
+  story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-81-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-81-324x324.jpg",
+  position: 2,
+  group_position: 3,
+  full_width: false,
+  story_id: 7
+)
+
+TextArea.create!(
+title: "",
+body: "1. Starting with jaffle number one. For the beef mixture; heat olive oil in a frypan over a medium heat. Add the chilli & onion and saute for a couple minutes. Add the beef mince, breaking it up with a wooden spoon. Add in the fajita spice mix and the beans then combine. Cook for about 4-6 minutes, or until the mince is fully cooked through. Then remove from pan and set aside in a bowl.",
+position: 3,
+story_id: 7
+)
+
+TextArea.create!(
+title: "",
+body: "2. Assembling jaffle number one; Turn your jaffle maker on. Spread butter on some sliced bread. Place buttered side down on the jaffle maker. Top with the mince mixture. Add jalapeños, coriander & cheddar or manchego. Top with another slice of bread, making sure the buttered side is the one facing outwards. Shut the jaffle maker and toast the jaffle until golden & hot. Delicious!!",
+position: 4,
+story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-96-1041x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-96-1041x683.jpg",
+  position: 5,
+  group_position: 1,
+  full_width: false,
+  story_id: 7
+)
+
+TextArea.create!(
+title: "",
+body: "3. Jaffle number two. For the mushrooms; heat olive oil & butter in a frypan over high heat. Once butter is bubbling, add mushrooms and saute until golden. Remove from pan and set aside.",
+position: 6,
+story_id: 7
+)
+
+TextArea.create!(
+title: "",
+body: "4. Assembling jaffle number two; Place the brie on a slice of rye. Top with the sautéed mushrooms and fresh thyme leaves. Place another slice on top (making sure the butter sides are on the outside) and toast until the jaffle is golden. YUM!",
+position: 7,
+story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-66-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-66-503x682.jpg",
+  position: 8,
+  group_position: 2,
+  full_width: false,
+  story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-60-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-60-503x682.jpg",
+  position: 8,
+  group_position: 2,
+  full_width: false,
+  story_id: 7
+)
+
+TextArea.create!(
+title: "",
+body: "5. For the third jaffle there’s no cooking involved so all you have to do is assemble the ingredients; place salami and tomatoes on a slice of rye. Season to taste. Top with cheddar and cornichons. Place in the jaffle maker and toast until golden. Scrumptious!",
+position: 9,
+story_id: 7
+)
+
+TextArea.create!(
+title: "",
+body: "6. Enjoy the feast with some beers or whiskey by the bonfire.",
+position: 10,
+story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-24-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-24-324x324.jpg",
+  position: 11,
+  group_position: 2,
+  full_width: false,
+  story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-33-324x324.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-33-324x324.jpg",
+  position: 11,
+  group_position: 2,
+  full_width: false,
+  story_id: 7
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-53-1400x784.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-53-1400x784.jpg",
+  position: 12,
+  group_position: 1,
+  full_width: true,
+  story_id: 7
+)
+#end
+
+Story.create!(
+  title: "Minestrone Soup",
+  description: "The perfect soup that's comforting enough for cold weather but also light enough for hot weather!",
+  user_id: 2,
+  cover_image_id: 71
+)
+
+TextArea.create!(
+title: "",
+body: "After arriving back in a cold and rainy Sydney (after a week in the Hawaiian sun), we have all been craving soup! But a soup that’s not too heavy (we definitely overate while we were away haha). Enter the Minestrone. It’s so light and packed full of flavour while also being perfectly comforting on a cold autumn night! Enjoy!",
+position: 1,
+story_id: 8
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-14-1400x683.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-14-1400x683.jpg",
+  position: 2,
+  group_position: 1,
+  full_width: false,
+  story_id: 8
+)
+
+TextArea.create!(
+title: "",
+body: "1. In a heavy based sauce pan heat the oil over a medium heat, add the pancetta and sauté for 2-4 minutes. Then add the garlic, onion, carrots, celery and parsley and sauté for a further 5-10 minutes until soft. Add the wine and bring to the boil.",
+position: 3,
+story_id: 8
+)
+
+TextArea.create!(
+title: "",
+body: "2. Then add the tomatoes, zucchini and Parmesan rind. Reduce the heat and simmer for 10 minutes or until soup thickens then add the cabbage, borlotti beans and stock and stir to combine.",
+position: 4,
+story_id: 8
+)
+
+TextArea.create!(
+title: "",
+body: "3. Add pasta shells and simmer for 10 minutes or until pasta is cooked. Season to taste and serve with grated Parmesan.",
+position: 5,
+story_id: 8
+)
+
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-15-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-15-503x682.jpg",
+  position: 6,
+  group_position: 3,
+  full_width: false,
+  story_id: 8
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-503x503.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-503x503.jpg",
+  position: 6,
+  group_position: 3,
+  full_width: false,
+  story_id: 8
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-19-503x682.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-19-503x682.jpg",
+  position: 6,
+  group_position: 3,
+  full_width: false,
+  story_id: 8
+)
+
+Photo.create!(
+  url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup--1400x784.jpg",
+  med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup--1400x784.jpg",
+  position: 7,
+  group_position: 1,
+  full_width: false,
+  story_id: 8
+)
+#end

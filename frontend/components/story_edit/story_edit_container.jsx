@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
   updateStory: story => dispatch(StoryActions.updateStory(story)),
   createPhoto: photo => dispatch(PhotoActions.createPhoto(photo)),
   createCoverPhoto: photo => dispatch(PhotoActions.createCoverPhoto(photo)),
+  destroyStory: story => dispatch(StoryActions.destroyStory(story)),
 });
 
 export default connect(

@@ -30,7 +30,7 @@ export default({ getState, dispatch }) => next => action => {
       StoryUtil.createStory(action.story, storySuccess, errorCallback);
       return next(action);
     case StoryConstants.DESTROY_STORY:
-      StoryUtil.deleteStory(action.story, storyDestroyedSuccess, errorCallback);
+      StoryUtil.destroyStory(action.story, storyDestroyedSuccess, errorCallback);
       return next(action);
       break;
     case StoryConstants.UPDATE_STORY:

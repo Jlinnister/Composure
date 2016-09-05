@@ -126,7 +126,7 @@ export default class StoryEdit extends React.Component {
     return (
       <div>
         <form onSubmit={this.saveAllElements} className="story-form" id="save-form">
-          <StoryEditNav current_user={this.props.current_user} />
+          <StoryEditNav current_user={this.props.current_user} story={this.state.story} destroyStory={this.props.destroyStory}/>
           <div className="cover-image">
             <img src={this.state.coverImageUrl} />
             <div className="details">

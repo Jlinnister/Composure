@@ -17,7 +17,7 @@ const StoryReducer = (state = {}, action) => {
       return Object.assign({}, state, newStory);
     case StoryConstants.DESTROY_STORY:
       let newState = Object.assign({}, state);
-      delete newState[action.newState.id];
+      delete newState[action.story.id];
       return newState;
     // case StoryConstants.RECEIVE_ERRORS:
     //   const errors = action.errors;
