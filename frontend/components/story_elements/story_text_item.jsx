@@ -24,6 +24,12 @@ class StoryTextItem extends React.Component {
     );
   }
 
+  editCheck() {
+    if (this.props.edit === 'true') {
+      return (<button type="button" className="text-area-remove">Remove</button>);
+    }
+  }
+
   render() {
     let { title, body } = this.props.part;
 
@@ -33,6 +39,7 @@ class StoryTextItem extends React.Component {
           <div className="col-md-6 col-md-offset-3">
             <input className="form-control" type="text" id="story-text-form-title" value={title} onChange={this.update("title")} placeholder="Title (Optional)" />
             <textarea className="form-control" id="story-text-form-body" value={body} onChange={this.updateBody()} placeholder="Write your story here. (Optional)" ></textarea>
+            {this.editCheck()}
           </div>
         </div>
       </div>

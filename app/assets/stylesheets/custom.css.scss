@@ -902,6 +902,22 @@ nav {
 
 //new and show story page
 
+.text-area-remove {
+  border: 0;
+  color: $white;
+  font-family: 'P22UndergroundPro-Demi';
+  font-size: 14px;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  -webkit-transition: background 200ms; /* Safari */
+  transition: background 200ms;
+  transition-timing-function: linear;
+  background-color: $black;
+}
+
 .story-form {
   height: 100%;
   width: 100%;
@@ -1280,6 +1296,8 @@ clear: both;
     justify-content: center;
     flex-wrap: wrap;
     padding: 0px 75px;
+    max-width: 1200px;
+    margin: auto;
   }
 
   .photo {

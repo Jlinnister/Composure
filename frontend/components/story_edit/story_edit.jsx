@@ -141,7 +141,7 @@ export default class StoryEdit extends React.Component {
                 if (part.url) {
                   return ( <StoryPhotoItem part={part} key={idx} /> )
                 } else {
-                  return ( <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+                  return ( <StoryTextItem part={part} key={idx} edit="true" setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
                 }
               }
             )}
