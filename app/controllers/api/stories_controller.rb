@@ -22,6 +22,7 @@ class Api::StoriesController < ApplicationController
 
   def update
     @story = current_user.stories.find(params[:id])
+    debugger
     if @story.update(story_params)
       render json: @story
     else

@@ -20,8 +20,10 @@ class Api::TextAreasController < ApplicationController
   # end
 
   def update
-    @text_area = TextArea.find(params[:id])
-    @text_area.update(text_area_params)
+    textAreas = text_area_params
+    TextArea.update(textAreas.keys, textAreas.values)
+    # @text_area = TextArea.find(params[:id])
+    # @text_area.update(text_area_params)
     render "api/text_areas/show"
   end
 

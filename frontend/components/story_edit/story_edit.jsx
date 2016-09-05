@@ -34,7 +34,7 @@ export default class StoryEdit extends React.Component {
           const photo = {
             url: image.url,
             med_url: image.url,
-            story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
+            story_id: this.props.params.storyId,
             position: this.state.storyParts.length + 1,
             group_position: images.length,
             full_width: false
@@ -54,7 +54,7 @@ export default class StoryEdit extends React.Component {
         const photo = {
           url: images[0].url,
           med_url: images[0].url,
-          story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
+          story_id: this.props.params.storyId,
           position: this.state.storyParts.length + 1,
           group_position: images.length,
           full_width: false,
@@ -81,7 +81,7 @@ export default class StoryEdit extends React.Component {
         title: '',
         body: '',
         position: this.state.storyParts.length + 1,
-        story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id
+        story_id: this.props.params.storyId
       })
     );
   }
@@ -122,7 +122,6 @@ export default class StoryEdit extends React.Component {
   render() {
     const story_id = this.props.params.storyId
     const story = this.props.stories[story_id]
-    console.log(this.props);
     if (story) {
     return (
       <div>
@@ -131,7 +130,7 @@ export default class StoryEdit extends React.Component {
           <div className="cover-image">
             <img src={this.state.coverImageUrl} />
             <div className="details">
-              <button id="story-cover-photo" onClick={this.addCoverPhoto}>Click to Add or Edit Cover Photo</button>
+              <button type="button" id="story-cover-photo" onClick={this.addCoverPhoto}>Click to Add or Edit Cover Photo</button>
               <div><input type="text" id="story-title" onChange={this.update("title")} value={this.state.story.title} /></div>
               <div><textarea id="story-description" onChange={this.update("description")} value={this.state.story.description} /></div>
             </div>
