@@ -22,6 +22,10 @@ class Signup extends React.Component {
     }
   }
 
+  splashPage() {
+      hashHistory.push("/");
+  }
+
   update(field) {
     return e => { this.setState({ [field]: e.currentTarget.value }); };
   }
@@ -56,7 +60,7 @@ class Signup extends React.Component {
         <div className="container signup-form-container">
           <div className="row">
             <div className="col-md-4 col-md-offset-4">
-              <div className="signup-form-title">
+              <div className="signup-form-title" onClick={this.splashPage}>
                 COMPOSURE
               </div>
 

@@ -8,7 +8,7 @@ import merge from 'lodash/merge';
 export default class StoryEdit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { storyParts: [],
+    this.state = { storyParts: Object.keys(this.props.parts).map(key => this.props.parts[key]),
                    coverImageUrl: this.props.stories[this.props.params.storyId].cover_image_url,
                    story: {
                      title: this.props.stories[this.props.params.storyId].title,
@@ -91,17 +91,17 @@ export default class StoryEdit extends React.Component {
     const store = this.context.store.getState()
     const story = this.state.story;
     story.cover_image_id = store.photos.id
-    console.log(story);
     this.props.updateStory(story);
 
-    const textParts = []
-    this.state.storyParts.forEach(part => {
-      if (part.title) {
-        textParts.push(part);
+    const textParts = {}
+    this.state.storyParts.forEach( (part,idx) => {
+      if (part.title || part.body) {
+        let id = part.id;
+        textParts[id] = part;
       }
     });
 
-    this.props.createTextArea(textParts);
+    this.props.updateTextArea(textParts);
     hashHistory.push('/storyboard');
   }
 

@@ -533,6 +533,7 @@ input {
     text-shadow: 0px 1px 1px $lightgrey;
     text-align: center;
     letter-spacing: 4px;
+    cursor: pointer;
   }
 
   .logo {
@@ -549,7 +550,7 @@ input {
     font: 11px 'P22UndergroundPro-Demi';
     color: $black;
     position: relative;
-    top: -10px;
+    top: 4px;
     text-align: center;
   }
   .submit-user, .login-user {

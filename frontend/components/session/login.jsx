@@ -41,6 +41,10 @@ class Login extends React.Component {
     }
   }
 
+  splashPage() {
+      hashHistory.push("/");
+  }
+
   update(field) {
     return e => { this.setState({ [field]: e.currentTarget.value }); };
   }
@@ -67,7 +71,7 @@ class Login extends React.Component {
         <div className="container login-form-container">
           <div className="row">
             <div className="col-md-4 col-md-offset-4">
-              <div className="login-form-title">
+              <div className="login-form-title" onClick={this.splashPage}>
                 COMPOSURE
               </div>
 

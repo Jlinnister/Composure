@@ -15,6 +15,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   createTextArea: text_area => dispatch(TextAreaActions.createTextArea(text_area)),
+  updateTextArea: text_area => dispatch(TextAreaActions.updateTextArea(text_area)),
   createStory: story => dispatch(StoryActions.createStory(story)),
   updateStory: story => dispatch(StoryActions.updateStory(story)),
   createPhoto: photo => dispatch(PhotoActions.createPhoto(photo)),
