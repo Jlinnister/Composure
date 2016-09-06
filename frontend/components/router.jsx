@@ -11,6 +11,7 @@ import StoryShowContainer from './story_show/story_show_container';
 import StoryEditContainer from './story_edit/story_edit_container';
 
 import * as StoryActions from '../actions/story_actions';
+import { clearErrors } from '../actions/session_actions';
 
 
 class AppRouter extends React.Component {
@@ -34,6 +35,8 @@ class AppRouter extends React.Component {
     const currentUser = currentState.session.current_user;
     if (currentUser) {
       replace('/');
+    } else {
+      store.dispatch(clearErrors());
     }
   }
 

@@ -36,14 +36,6 @@ class Signup extends React.Component {
     this.props.signup(user);
   }
 
-	// navLink(){
-	// 	if (this.props.formType === "signup") {
-	// 		return <Link to="/signup">sign up instead</Link>;
-	// 	} else {
-	// 		return <Link to="/signup">log in instead</Link>;
-	// 	}
-	// }
-  //
   renderErrors() {
     return (
       <div className="errors">
