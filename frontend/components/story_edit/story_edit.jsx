@@ -67,6 +67,7 @@ export default class StoryEdit extends React.Component {
           group_position: images.length,
           full_width: false,
         };
+        this.props.destroyPhoto({id: this.state.story.cover_image_id})
         this.props.createCoverPhoto(photo);
         const newState = merge({}, this.state);
         newState.coverImageUrl = photo.url;
@@ -98,7 +99,6 @@ export default class StoryEdit extends React.Component {
     e.preventDefault();
     const store = this.context.store.getState()
     const story = this.state.story;
-    this.props.destroyPhoto({id: this.state.story.cover_image_id})
     story.cover_image_id = store.photos.id
     this.props.updateStory(story);
 
@@ -112,9 +112,12 @@ export default class StoryEdit extends React.Component {
         newTextParts.push(part);
       }
     });
-
-    this.props.updateTextArea(updateTextParts);
-    this.props.createTextArea(newTextParts);
+    if (updateTextParts[0]) {
+      this.props.updateTextArea(updateTextParts);
+    }
+    if (newTextParts.length > 0) {
+      this.props.createTextArea(newTextParts);
+    }
     hashHistory.push('/storyboard');
   }
 

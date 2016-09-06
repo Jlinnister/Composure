@@ -8,7 +8,7 @@ export default({ getState, dispatch }) => next => action => {
     dispatch(receiveTextArea(normalize(text_area, arrayOfTextAreas)));
   };
 
-  const textAreaDestroyedSuccess = text_area => dispatch(destroyTextArea(text_area));
+  const textAreaDestroyedSuccess = () => {};
   const errorCallback = xhr => {
     const errors = xhr.responseJSON;
     dispatch(receiveErrors(errors));
