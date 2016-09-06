@@ -95,7 +95,6 @@ export default class StoryNew extends React.Component {
     const store = this.context.store.getState()
     const story = this.state.story;
     story.cover_image_id = store.photos.id
-    console.log(story);
     this.props.updateStory(story);
 
     const textParts = []

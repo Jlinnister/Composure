@@ -4,9 +4,9 @@ import { receiveErrors, receivePhoto, receiveCoverPhoto, PhotoConstants } from '
 import PhotoUtil from '../util/photo_api_util';
 
 export default({ getState, dispatch }) => next => action => {
-  const photoCreatedSuccess = photo => console.log("good job");
+  const photoCreatedSuccess = photo => {};
   const coverPhotoCreatedSuccess = photo => dispatch(receiveCoverPhoto(photo));
-  const photoDestroyedSuccess = photo => console.log("goodbye photo");
+  const photoDestroyedSuccess = photo => {};
 
   switch (action.type) {
     case PhotoConstants.CREATE_PHOTO:

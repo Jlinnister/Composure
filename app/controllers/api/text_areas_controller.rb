@@ -40,7 +40,7 @@ class Api::TextAreasController < ApplicationController
   def parse_text_areas(text_area_params)
     text_areas = []
     text_area_params.keys.each do |key|
-      text_area_params[key]['story_id'] = Story.all.last.id
+        # text_area_params[key]['story_id'] = Story.all.last.id
         text_areas << text_area_params[key]
     end
     text_areas

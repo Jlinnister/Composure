@@ -125,7 +125,6 @@ export default class StoryEdit extends React.Component {
       this.props.updateTextArea(updateTextParts);
     }
     if (newTextParts.length > 0) {
-      console.log("inside new part if");
       this.props.createTextArea(newTextParts);
     }
     hashHistory.push('/storyboard');

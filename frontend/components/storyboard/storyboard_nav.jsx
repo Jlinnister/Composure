@@ -54,7 +54,6 @@ export default class StoryboardNav extends React.Component {
       const newState = merge({}, this.state);
       const user = newState.user;
       user[field] = e.currentTarget.value;
-      console.log(newState);
       this.setState(newState);
     };
   }

@@ -9,7 +9,6 @@ export default class StoryNewNav extends React.Component {
   onClick() {
     e.preventDefault()
     document.getElementById("save-form").submit();
-    console.log("clicked");
   }
 
   render() {

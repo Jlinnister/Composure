@@ -6,7 +6,6 @@
 //     case TextAreaConstants.RECEIVE_TEXT_AREA:
 //       // const textAreas = {}
 //       // action.text_area.forEach( item => textAreas[item.id] = item )
-//       console.log(action);
 //       return Object.assign({}, state, action.text_area.entities.text_areas);
 //     case TextAreaConstants.DESTROY_TEXT_AREA:
 //       let newState = Object.assign({}, state);
