@@ -918,6 +918,40 @@ nav {
   background-color: $black;
 }
 
+.photo-item-remove {
+  border: 0;
+  color: $white;
+  font-family: 'P22UndergroundPro-Demi';
+  font-size: 14px;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  -webkit-transition: background 200ms; /* Safari */
+  transition: background 200ms;
+  transition-timing-function: linear;
+  background-color: $black;
+}
+
+.story-photo-item {
+  position: relative;
+}
+.story-photo-item .photo-item-remove {
+  display: none;
+}
+
+.story-photo-item:hover .photo-item-remove {
+  display: block;
+  position: absolute;
+  bottom: 12%;
+  margin: auto;
+  width: 96px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 .story-form {
   height: 100%;
   width: 100%;

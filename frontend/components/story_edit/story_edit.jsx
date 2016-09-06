@@ -26,10 +26,18 @@ export default class StoryEdit extends React.Component {
     this.saveAllElements = this.saveAllElements.bind(this);
     this.blankTextArea = this.blankTextArea.bind(this);
     this.removeTextArea = this.removeTextArea.bind(this);
+    this.removePhoto = this.removePhoto.bind(this);
   }
 
   removeTextArea(idx) {
     this.props.destroyTextArea(this.state.storyParts[idx])
+    const newState = merge({}, this.state);
+    newState.storyParts.splice(idx, 1);
+    this.setState(newState);
+  }
+
+  removePhoto(idx) {
+    this.props.destroyPhoto(this.state.storyParts[idx])
     const newState = merge({}, this.state);
     newState.storyParts.splice(idx, 1);
     this.setState(newState);
@@ -155,7 +163,7 @@ export default class StoryEdit extends React.Component {
             <div className="story-parts">
               {this.state.storyParts.map((part, idx) => {
                 if (part.url) {
-                  return ( <StoryPhotoItem part={part} key={idx} /> )
+                  return ( <StoryPhotoItem part={part} key={idx} idx={idx} edit="true" removePhoto={this.removePhoto}/> )
                 } else {
                   return ( <StoryTextItem part={part} key={idx} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
                 }
