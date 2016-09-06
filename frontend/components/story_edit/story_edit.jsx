@@ -10,6 +10,7 @@ export default class StoryEdit extends React.Component {
     super(props);
     this.state = { storyParts: Object.keys(this.props.parts).map(key => this.props.parts[key]),
                    coverImageUrl: this.props.stories[this.props.params.storyId].cover_image_url,
+                   length: this.props.parts[Object.keys(this.props.parts)[Object.keys(this.props.parts).length-1]].position,
                    story: {
                      title: this.props.stories[this.props.params.storyId].title,
                      description: this.props.stories[this.props.params.storyId].description,
@@ -51,13 +52,14 @@ export default class StoryEdit extends React.Component {
             url: image.url,
             med_url: image.url,
             story_id: this.props.params.storyId,
-            position: this.state.storyParts.length + 1,
+            position: this.state.length + 1,
             group_position: images.length,
             full_width: false
           }
           this.props.createPhoto(photo);
           const newState = merge({}, this.state);
           newState.storyParts.push(photo);
+          newState.length += 1;
           this.setState(newState);
         });
       }
@@ -97,7 +99,7 @@ export default class StoryEdit extends React.Component {
       Object.freeze({
         title: '',
         body: '',
-        position: this.state.storyParts.length + 1,
+        position: this.state.length + 1,
         story_id: this.props.params.storyId
       })
     );
@@ -133,6 +135,7 @@ export default class StoryEdit extends React.Component {
   createTextArea() {
     const newState = merge({}, this.state);
     newState.storyParts.push(Object.assign({}, this.blankTextArea()));
+    newState.length += 1;
     this.setState(newState);
   }
 

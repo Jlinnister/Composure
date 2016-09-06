@@ -14,10 +14,13 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   createTextArea: text_area => dispatch(TextAreaActions.createTextArea(text_area)),
+  destroyTextArea: text_area => dispatch(TextAreaActions.destroyTextArea(text_area)),
   createStory: story => dispatch(StoryActions.createStory(story)),
   updateStory: story => dispatch(StoryActions.updateStory(story)),
   createPhoto: photo => dispatch(PhotoActions.createPhoto(photo)),
+  destroyPhoto: photo => dispatch(PhotoActions.destroyPhoto(photo)),
   createCoverPhoto: photo => dispatch(PhotoActions.createCoverPhoto(photo)),
+  destroyStory: story => dispatch(StoryActions.destroyStory(story)),
 });
 
 export default connect(

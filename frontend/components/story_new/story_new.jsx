@@ -15,7 +15,7 @@ export default class StoryNew extends React.Component {
                      description: '',
                      cover_image_id: 0,
                      user_id: this.props.current_user.id,
-                     id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id + 1,
+                    //  id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id + 1,
                    },
                  };
 
@@ -25,11 +25,29 @@ export default class StoryNew extends React.Component {
     this.setPartState = this.setPartState.bind(this);
     this.saveAllElements = this.saveAllElements.bind(this);
     this.blankTextArea = this.blankTextArea.bind(this);
+    this.removeTextArea = this.removeTextArea.bind(this);
+    this.removePhoto = this.removePhoto.bind(this);
   }
 
   componentWillMount() {
     this.props.createStory(this.state.story);
   }
+
+  removeTextArea(idx) {
+  const newState = merge({}, this.state);
+  newState.storyParts.splice(idx, 1);
+  this.setState(newState);
+}
+
+removePhoto(idx) {
+  console.log(idx);
+  console.log(this.state.storyParts);
+  console.log(this.state.storyParts[idx]);
+  this.props.destroyPhoto(this.state.storyParts[idx])
+  const newState = merge({}, this.state);
+  newState.storyParts.splice(idx, 1);
+  this.setState(newState);
+}
 
   addPhoto() {
     cloudinary.openUploadWidget(window.CLOUDINARY_SETTINGS, (error, images) => {
@@ -41,8 +59,8 @@ export default class StoryNew extends React.Component {
             story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
             position: this.state.storyParts.length + 1,
             group_position: images.length,
-            full_width: false
-          }
+            full_width: false,
+          };
           this.props.createPhoto(photo);
           const newState = merge({}, this.state);
           newState.storyParts.push(photo);
@@ -95,6 +113,7 @@ export default class StoryNew extends React.Component {
     const store = this.context.store.getState()
     const story = this.state.story;
     story.cover_image_id = store.photos.id
+    story.id = this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id
     this.props.updateStory(story);
 
     const textParts = []
@@ -141,9 +160,9 @@ export default class StoryNew extends React.Component {
             <div className="story-parts">
               {this.state.storyParts.map((part, idx) => {
                 if (part.url) {
-                  return ( <StoryPhotoItem part={part} key={idx} /> )
+                  return ( <StoryPhotoItem part={part} key={idx} idx={idx} edit="false" removePhoto={this.removePhoto} /> )
                 } else {
-                  return ( <StoryTextItem part={part} key={idx} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+                  return ( <StoryTextItem part={part} key={idx} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
                 }
               }
             )}
