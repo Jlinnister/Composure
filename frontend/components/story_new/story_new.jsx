@@ -147,7 +147,7 @@ removePhoto(idx) {
     return (
       <div>
         <form onSubmit={this.saveAllElements} className="story-form" id="save-form">
-          <StoryNewNav current_user={this.props.current_user} />
+          <StoryNewNav current_user={this.props.current_user} story={this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]]} destroyStory={this.props.destroyStory}/>
           <div className="cover-image">
             <img src={this.state.coverImageUrl} />
             <div className="details">
