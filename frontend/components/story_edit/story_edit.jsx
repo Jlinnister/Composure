@@ -120,10 +120,12 @@ export default class StoryEdit extends React.Component {
         newTextParts.push(part);
       }
     });
-    if (updateTextParts[0]) {
+
+    if (Object.keys(updateTextParts).length > 0) {
       this.props.updateTextArea(updateTextParts);
     }
     if (newTextParts.length > 0) {
+      console.log("inside new part if");
       this.props.createTextArea(newTextParts);
     }
     hashHistory.push('/storyboard');
@@ -165,7 +167,7 @@ export default class StoryEdit extends React.Component {
                 if (part.url) {
                   return ( <StoryPhotoItem part={part} key={idx} idx={idx} edit="true" removePhoto={this.removePhoto}/> )
                 } else {
-                  return ( <StoryTextItem part={part} key={idx} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+                  return ( <StoryTextItem part={part} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
                 }
               }
             )}
@@ -173,16 +175,12 @@ export default class StoryEdit extends React.Component {
         </form>
 
         <div className="add-elements">
-          <nav>
-            <ul className="options">
-              <li className="add-photo" onClick={this.addPhoto}>
-                Add Photos
-              </li>
-              <li className="add-text-area" onClick={this.createTextArea}>
-                Add Text Area
-              </li>
-            </ul>
-          </nav>
+          <button type="button" className="add-photo" onClick={this.addPhoto}>
+            Add a photo-group
+          </button>
+          <button type="button" className="add-text-area" onClick={this.createTextArea}>
+            Add a text-only group
+          </button>
         </div>
 
       </div>

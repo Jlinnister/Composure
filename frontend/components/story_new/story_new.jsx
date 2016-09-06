@@ -152,16 +152,12 @@ export default class StoryNew extends React.Component {
         </form>
 
         <div className="add-elements">
-          <nav>
-            <ul className="options">
-              <li className="add-photo" onClick={this.addPhoto}>
-                Add Photos
-              </li>
-              <li className="add-text-area" onClick={this.createTextArea}>
-                Add Text Area
-              </li>
-            </ul>
-          </nav>
+              <button type="button" className="add-photo" onClick={this.addPhoto}>
+                Add a photo-group
+              </button>
+              <button type="button" className="add-text-area" onClick={this.createTextArea}>
+                Add a text-only group
+              </button>
         </div>
 
       </div>
