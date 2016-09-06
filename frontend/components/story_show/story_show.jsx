@@ -12,14 +12,14 @@ export default class StoryShow extends React.Component {
 
   renderElements(el) {
     if (el.url) {
-      return (<div id={el.group_position} ><img src={el.url} /></div>)
+      return (<div id={el.group_position} key={`${el.id}-image`} ><img src={el.url} /></div>)
     } else {
         if (el.title && el.body) {
-          return (<div><div className="text-area-title" >{el.title}</div><div className="text-area-body" >{el.body}</div></div>)
+          return (<div><div className="text-area-title" key={`${el.id}-title`}>{el.title}</div><div className="text-area-body" key={`${el.id}-body`}>{el.body}</div></div>)
         } else if (el.title) {
-          return (<div className="text-area-title" >{el.title}</div>)
+          return (<div className="text-area-title" key={`${el.id}-title`}>{el.title}</div>)
         } else if (el.body) {
-          return (<div className="text-area-body" >{el.body}</div>)
+          return (<div className="text-area-body" key={`${el.id}-body`}>{el.body}</div>)
         }
     }
   }

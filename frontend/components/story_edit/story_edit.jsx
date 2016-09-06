@@ -164,9 +164,9 @@ export default class StoryEdit extends React.Component {
             <div className="story-parts">
               {this.state.storyParts.map((part, idx) => {
                 if (part.url) {
-                  return ( <StoryPhotoItem part={part} key={idx} idx={idx} edit="true" removePhoto={this.removePhoto}/> )
+                  return ( <StoryPhotoItem part={part} key={`${idx}-photo`} idx={idx} edit="true" removePhoto={this.removePhoto}/> )
                 } else {
-                  return ( <StoryTextItem part={part} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+                  return ( <StoryTextItem part={part} key={`${idx}-text`} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
                 }
               }
             )}
