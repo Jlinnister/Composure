@@ -234,23 +234,32 @@ a:link {
 
 }
 
-
-.design-examples {
+.examples {
+  height: 803px;
+  top: 803px;
   min-width: 600px;
-  min-height: 655px;
+  min-height: 803px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+.about {
+  height: 803px;
+  top: 803px;
+  min-width: 600px;
+  min-height: 803px;
   width: 100%;
   position: absolute;
   text-align: center;
   overflow-y: hidden;
 
-
-  .designed-to-impress {
-    margin-top: 50px;
-    font: 24px 'ProximaNova-Bold';
-    line-height: 26px;
+  .about-title {
+    font: 40px 'P22UndergroundPro-Heavy';
+    color: $black;
     letter-spacing: 2px;
-    color: #111;
-    text-transform: uppercase;
+    margin-top: 70px;
   }
 
   .design-tagline {
