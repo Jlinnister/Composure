@@ -16,7 +16,7 @@ export default class StoryEdit extends React.Component {
                      description: this.props.stories[this.props.params.storyId].description,
                      cover_image_id: this.props.stories[this.props.params.storyId].cover_image_id,
                      user_id: this.props.current_user.id,
-                     id: parseInt(this.props.params.storyId, 10),
+                     id: this.props.params.storyId,
                    },
                  };
 
@@ -111,7 +111,7 @@ export default class StoryEdit extends React.Component {
     e.preventDefault();
     const store = this.context.store.getState()
     const story = this.state.story;
-    if (store.photos.story_id === story.id) {
+    if (store.photos.story_id === parseInt(story.id, 10)) {
       story.cover_image_id = store.photos.id
     }
     this.props.updateStory(story);
