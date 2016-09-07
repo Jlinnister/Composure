@@ -19,7 +19,7 @@ export default({ getState, dispatch }) => next => action => {
   };
 
   const storySuccess = story => dispatch(receiveStory(story));
-  const storyDestroyedSuccess = story => dispatch(destroyStory(story));
+  const storyDestroyedSuccess = () => {};
   const errorCallback = xhr => {
     const errors = xhr.responseJSON;
     dispatch(receiveErrors(errors));
