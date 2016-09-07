@@ -129,8 +129,11 @@ removePhoto(idx) {
     } else {
       const store = this.context.store.getState();
       const story = this.state.story;
-      story.cover_image_id = store.photos.id;
+      // story.cover_image_id = store.photos.id;
       story.id = this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id
+      if (store.photos.story_id === parseInt(story.id, 10)) {
+        story.cover_image_id = store.photos.id
+      }
       this.props.updateStory(story);
 
       const textParts = []
@@ -139,8 +142,9 @@ removePhoto(idx) {
           textParts.push(part);
         }
       });
-
-      this.props.createTextArea(textParts);
+      if (textParts.length > 0) {
+        this.props.createTextArea(textParts);
+      }
       hashHistory.push('/storyboard');
     }
   }
