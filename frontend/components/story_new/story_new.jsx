@@ -173,6 +173,26 @@ removePhoto(idx) {
     }
   }
 
+  partsContainer() {
+    let parts = []
+    let photoParts = []
+    let counter = 0
+    this.state.storyParts.forEach((part, idx) => {
+      if (part.url) {
+        counter++;
+        photoParts.push(<StoryPhotoItem part={part} key={idx} idx={idx} edit="false" removePhoto={this.removePhoto} />)
+        if (part.group_position === counter) {
+            parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
+            counter = 0;
+            photoParts = []
+        }
+      } else {
+        parts.push(<StoryTextItem part={part} key={idx} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+      }
+    });
+    return parts;
+  }
+
   render() {
     const story = this.props.stories
     if (story) {
@@ -191,14 +211,7 @@ removePhoto(idx) {
           </div>
 
             <div className="story-parts">
-              {this.state.storyParts.map((part, idx) => {
-                if (part.url) {
-                  return ( <StoryPhotoItem part={part} key={idx} idx={idx} edit="false" removePhoto={this.removePhoto} /> )
-                } else {
-                  return ( <StoryTextItem part={part} key={idx} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
-                }
-              }
-            )}
+              {this.partsContainer()}
             </div>
         </form>
 
