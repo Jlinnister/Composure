@@ -2,6 +2,7 @@ export const PhotoConstants = {
   CREATE_PHOTO: 'CREATE_PHOTO',
   CREATE_COVER_PHOTO: 'CREATE_COVER_PHOTO',
   RECEIVE_COVER_PHOTO: 'RECEIVE_COVER_PHOTO',
+  RECEIVE_PHOTOS: 'RECEIVE_PHOTOS',
   DESTROY_PHOTO: 'DESTROY_PHOTO',
 };
 
@@ -17,6 +18,11 @@ export const createCoverPhoto = photo => ({
 
 export const receiveCoverPhoto = photo => ({
   type: PhotoConstants.RECEIVE_COVER_PHOTO,
+  photo,
+});
+
+export const receivePhotos = photo => ({
+  type: PhotoConstants.RECEIVE_PHOTOS,
   photo,
 });
 

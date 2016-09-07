@@ -14,18 +14,22 @@ export default class StoryboardIndex extends React.Component {
   render() {
     const { stories } = this.props;
     const { current_user } = this.props;
-    return (
-      <div className="container-fluid storyboard-container">
-        <div className="profile-details">
-          <div className="profile-avatar"><img src={current_user.avatar_url} /></div>
-          <div className="profile-title">{current_user.profile_title}</div>
-          <div className="profile-description">{current_user.profile_description}</div>
-          <div className="profile-line"></div>
+    if (current_user) {
+      return (
+        <div className="container-fluid storyboard-container">
+          <div className="profile-details">
+            <div className="profile-avatar"><img src={current_user.avatar_url} /></div>
+            <div className="profile-title">{current_user.profile_title}</div>
+            <div className="profile-description">{current_user.profile_description}</div>
+            <div className="profile-line"></div>
+          </div>
+          <div className="stories">
+              {Object.keys(stories).map(key => <StoryIndexItem story={stories[key]} key={stories[key].id}/>)}
+          </div>
         </div>
-        <div className="stories">
-            {Object.keys(stories).map(key => <StoryIndexItem story={stories[key]} key={stories[key].id}/>)}
-        </div>
-      </div>
-    );
+      );
+    } else {
+      return (<div></div>)
+    }
   }
 }

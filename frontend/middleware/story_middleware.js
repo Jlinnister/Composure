@@ -38,9 +38,11 @@ export default({ getState, dispatch }) => next => action => {
       return next(action);
     case StoryConstants.REQUEST_STORIES:
       StoryUtil.fetchStories(storiesSuccess);
+      return next(action);
       break;
     case StoryConstants.REQUEST_STORY:
       StoryUtil.fetchStory(action.id, storySuccess);
+      return next(action);
       break;
     default:
       return next(action);

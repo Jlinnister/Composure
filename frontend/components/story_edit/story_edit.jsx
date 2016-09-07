@@ -109,7 +109,9 @@ export default class StoryEdit extends React.Component {
     e.preventDefault();
     const store = this.context.store.getState()
     const story = this.state.story;
-    story.cover_image_id = store.photos.id
+    if (store.photos.story_id === story.id) {
+      story.cover_image_id = store.photos.id
+    }
     this.props.updateStory(story);
 
     const updateTextParts = {};

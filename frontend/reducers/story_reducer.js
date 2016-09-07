@@ -7,6 +7,8 @@ const StoryReducer = (state = {}, action) => {
       let newStories = {};
       action.stories.forEach(story => newStories[story.id] = story);
       return Object.assign({}, state, newStories);
+    case StoryConstants.CLEAR_STORIES:
+      return {};
     case StoryConstants.RECEIVE_STORY:
       let newStory
       if (action.story.stories) {

@@ -21,6 +21,8 @@ export default class StoryNewNav extends React.Component {
     return (
       <div className="storynew-nav">
         <nav>
+          <Link to="/" className="logo pull-left">COMPOSURE</Link>
+
           <ul className="options pull-right">
             <li className="delete-story-link" onClick={this.destroyStory}>Delete Story</li>
             <li className="save-changes-link"><input className="story-save-form-control" type="submit" value="Save Changes" /></li>

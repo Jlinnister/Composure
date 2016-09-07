@@ -81,10 +81,11 @@ export default class StoryboardNav extends React.Component {
     return (
       <div className="storyboard-nav">
         <nav>
+          <Link to="/" className="logo pull-left">COMPOSURE</Link>
           <ul className="options pull-right">
             <Link to="/new"><li className="new-story-link">New Story</li></Link>
             <li className="edit-profile-link" onClick={this.openModal}>Edit Profile</li>
-            <Link to="/"><li className="signout-link" onClick={this.handleSignOutSubmit.bind(null)}>Sign Out</li></Link>
+            <li className="signout-link" onClick={this.handleSignOutSubmit}>Sign Out</li>
           </ul>
         </nav>
 

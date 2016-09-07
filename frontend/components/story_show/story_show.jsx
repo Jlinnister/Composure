@@ -15,7 +15,7 @@ export default class StoryShow extends React.Component {
       return (<div id={el.group_position} key={`${el.id}-image`} ><img src={el.url} /></div>)
     } else {
         if (el.title && el.body) {
-          return (<div><div className="text-area-title" key={`${el.id}-title`}>{el.title}</div><div className="text-area-body" key={`${el.id}-body`}>{el.body}</div></div>)
+          return (<div key={`${el.id}-text`}><div className="text-area-title" key={`${el.id}-title`}>{el.title}</div><div className="text-area-body" key={`${el.id}-body`}>{el.body}</div></div>)
         } else if (el.title) {
           return (<div className="text-area-title" key={`${el.id}-title`}>{el.title}</div>)
         } else if (el.body) {

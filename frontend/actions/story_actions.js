@@ -1,6 +1,7 @@
 export const StoryConstants = {
   REQUEST_STORY: 'REQUEST_STORY',
   REQUEST_STORIES: 'REQUEST_STORIES',
+  CLEAR_STORIES: 'CLEAR_STORIES',
   CREATE_STORY: 'CREATE_STORY',
   UPDATE_STORY: 'UPDATE_STORY',
   DESTROY_STORY: 'DESTROY_STORY',
@@ -11,6 +12,10 @@ export const StoryConstants = {
 
 export const requestStories = () => ({
   type: StoryConstants.REQUEST_STORIES,
+});
+
+export const clearStories = () => ({
+  type: StoryConstants.CLEAR_STORIES,
 });
 
 export const requestStory = id => ({
