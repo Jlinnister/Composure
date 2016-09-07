@@ -16,7 +16,7 @@ export default class StoryEdit extends React.Component {
                      description: this.props.stories[this.props.params.storyId].description,
                      cover_image_id: this.props.stories[this.props.params.storyId].cover_image_id,
                      user_id: this.props.current_user.id,
-                     id: this.props.params.storyId,
+                     id: parseInt(this.props.params.storyId, 10),
                    },
                  };
 
@@ -77,7 +77,9 @@ export default class StoryEdit extends React.Component {
           group_position: images.length,
           full_width: false,
         };
-        this.props.destroyPhoto({id: this.state.story.cover_image_id})
+        if (this.state.story.cover_image_id !== 0) {
+          this.props.destroyPhoto({id: this.state.story.cover_image_id});
+        }
         this.props.createCoverPhoto(photo);
         const newState = merge({}, this.state);
         newState.coverImageUrl = photo.url;
