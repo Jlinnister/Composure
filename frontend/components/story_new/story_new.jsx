@@ -9,7 +9,7 @@ export default class StoryNew extends React.Component {
   constructor(props) {
     super(props);
     this.state = { storyParts: [],
-                   coverImageUrl: "",
+                   coverImageUrl: '',
                    story: {
                      title: 'default',
                      description: '',
@@ -17,6 +17,7 @@ export default class StoryNew extends React.Component {
                      user_id: this.props.current_user.id,
                     //  id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id + 1,
                    },
+                   error: [],
                  };
 
     this.addCoverPhoto = this.addCoverPhoto.bind(this);
@@ -27,6 +28,7 @@ export default class StoryNew extends React.Component {
     this.blankTextArea = this.blankTextArea.bind(this);
     this.removeTextArea = this.removeTextArea.bind(this);
     this.removePhoto = this.removePhoto.bind(this);
+    this.renderError = this.renderError.bind(this);
   }
 
   componentWillMount() {
@@ -40,9 +42,6 @@ export default class StoryNew extends React.Component {
 }
 
 removePhoto(idx) {
-  console.log(idx);
-  console.log(this.state.storyParts);
-  console.log(this.state.storyParts[idx]);
   this.props.destroyPhoto(this.state.storyParts[idx])
   const newState = merge({}, this.state);
   newState.storyParts.splice(idx, 1);
@@ -110,21 +109,40 @@ removePhoto(idx) {
 
   saveAllElements(e) {
     e.preventDefault();
-    const store = this.context.store.getState()
-    const story = this.state.story;
-    story.cover_image_id = store.photos.id
-    story.id = this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id
-    this.props.updateStory(story);
 
-    const textParts = []
-    this.state.storyParts.forEach(part => {
-      if (part.title) {
-        textParts.push(part);
-      }
+    let emptyTextArea = this.state.storyParts.some( el => {
+      return (el.title === "" && el.body === "")
     });
 
-    this.props.createTextArea(textParts);
-    hashHistory.push('/storyboard');
+    if (this.state.storyParts.length === 0) {
+      const newState = merge({}, this.state);
+      newState.error.push('Please include some content!');
+      this.setState(newState);
+    } else if (emptyTextArea) {
+      const newState = merge({}, this.state);
+      newState.error.push('Text groups cannot be empty');
+      this.setState(newState);
+    } else if (this.state.story.title === 'default') {
+      const newState = merge({}, this.state);
+      newState.error.push('Name your story!');
+      this.setState(newState);
+    } else {
+      const store = this.context.store.getState();
+      const story = this.state.story;
+      story.cover_image_id = store.photos.id;
+      story.id = this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id
+      this.props.updateStory(story);
+
+      const textParts = []
+      this.state.storyParts.forEach(part => {
+        if (part.title) {
+          textParts.push(part);
+        }
+      });
+
+      this.props.createTextArea(textParts);
+      hashHistory.push('/storyboard');
+    }
   }
 
   createTextArea() {
@@ -141,11 +159,22 @@ removePhoto(idx) {
     };
   }
 
+  renderError() {
+    if (this.state.error.length > 0) {
+      let error = this.state.error[0]
+      this.state.error = [];
+      return (<div className="new-story-error">{error}</div>)
+    } else {
+      return document.getElementsByClassName("new-story-error").InnerHTML = ''
+    }
+  }
+
   render() {
     const story = this.props.stories
     if (story) {
     return (
       <div>
+        {this.renderError()}
         <form onSubmit={this.saveAllElements} className="story-form" id="save-form">
           <StoryNewNav current_user={this.props.current_user} story={this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]]} destroyStory={this.props.destroyStory}/>
           <div className="cover-image">
