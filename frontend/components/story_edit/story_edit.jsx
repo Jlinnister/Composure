@@ -42,6 +42,7 @@ export default class StoryEdit extends React.Component {
     const newState = merge({}, this.state);
     newState.storyParts.splice(idx, 1);
     this.setState(newState);
+    console.log(this.state.storyParts);
   }
 
   addPhoto() {
@@ -151,9 +152,31 @@ export default class StoryEdit extends React.Component {
     };
   }
 
+  partsContainer() {
+    let parts = []
+    let photoParts = []
+    let counter = 0
+    this.state.storyParts.forEach((part, idx) => {
+      if (part.url) {
+        counter++;
+        photoParts.push(<StoryPhotoItem part={part} key={`${idx}-photo`} idx={idx} edit="true" removePhoto={this.removePhoto}/>)
+
+        if (part.group_position === counter || (this.state.storyParts.length - 1) < idx + 1 || (this.state.storyParts[idx + 1].title === '' || this.state.storyParts[idx + 1].title)) {
+            parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
+            counter = 0;
+            photoParts = []
+        }
+      } else {
+        parts.push(<StoryTextItem part={part} key={`${idx}-text`} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
+      }
+    });
+    return parts;
+  }
+
   render() {
     const story_id = this.props.params.storyId
     const story = this.props.stories[story_id]
+    let photos = this.partsContainer();
     if (story) {
     return (
       <div>
@@ -169,14 +192,7 @@ export default class StoryEdit extends React.Component {
           </div>
 
             <div className="story-parts">
-              {this.state.storyParts.map((part, idx) => {
-                if (part.url) {
-                  return ( <StoryPhotoItem part={part} key={`${idx}-photo`} idx={idx} edit="true" removePhoto={this.removePhoto}/> )
-                } else {
-                  return ( <StoryTextItem part={part} key={`${idx}-text`} idx={idx} edit="true" removeTextArea={this.removeTextArea} setPartState={(field,content) => this.setPartState(idx,field,content)}/> )
-                }
-              }
-            )}
+              {photos}
             </div>
         </form>
 

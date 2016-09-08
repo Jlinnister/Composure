@@ -7,21 +7,33 @@ import merge from 'lodash/merge';
 export default class StoryShow extends React.Component {
   constructor(props) {
     super(props);
-    this.renderElements = this.renderElements.bind(this);
   }
 
-  renderElements(el) {
-    if (el.url) {
-      return (<div id={el.group_position} key={`${el.id}-image`} ><img src={el.url} /></div>)
-    } else {
-        if (el.title && el.body) {
-          return (<div key={`${el.id}-text`}><div className="text-area-title" key={`${el.id}-title`}>{el.title}</div><div className="text-area-body" key={`${el.id}-body`}>{el.body}</div></div>)
-        } else if (el.title) {
-          return (<div className="text-area-title" key={`${el.id}-title`}>{el.title}</div>)
-        } else if (el.body) {
-          return (<div className="text-area-body" key={`${el.id}-body`}>{el.body}</div>)
+  partsContainer() {
+    let parts = []
+    let photoParts = []
+    let counter = 0
+    Object.keys(this.props.parts).forEach((key, idx) => {
+      let el = this.props.parts[key];
+      if (el.url) {
+        counter++;
+        photoParts.push(<div id={el.group_position} key={`${el.id}-image`} ><img src={el.url} /></div>)
+        if (el.group_position === counter) {
+            parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
+            counter = 0;
+            photoParts = []
         }
-    }
+      } else {
+          if (el.title && el.body) {
+            parts.push(<div key={`${el.id}-text`}><div className="text-area-title" key={`${el.id}-title`}>{el.title}</div><div className="text-area-body" key={`${el.id}-body`}>{el.body}</div></div>)
+          } else if (el.title) {
+            parts.push(<div className="text-area-title" key={`${el.id}-title`}>{el.title}</div>)
+          } else if (el.body) {
+            parts.push(<div className="text-area-body" key={`${el.id}-body`}>{el.body}</div>)
+          }
+      }
+    });
+    return parts;
   }
 
   render() {
@@ -39,7 +51,7 @@ export default class StoryShow extends React.Component {
           </div>
 
           <div className="story-elements">
-            { Object.keys(this.props.parts).map(key => this.renderElements(this.props.parts[key])) }
+            { this.partsContainer()}
           </div>
         </div>
       )
