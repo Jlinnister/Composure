@@ -8,7 +8,7 @@ class SplashAbout extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid about">
+      <div className="container-fluid" id="about">
         <a href="#" />
         <div className="about-title">FULLY FEATURED.</div>
       </div>
