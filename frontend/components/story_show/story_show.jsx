@@ -14,7 +14,9 @@ export default class StoryShow extends React.Component {
     let photoParts = []
     Object.keys(this.props.parts).forEach((key, idx) => {
       let el = this.props.parts[key];
-      if (el.url) {
+      if (el.full_width !== undefined && el.full_width === true) {
+        parts.push(<div className="full-width-photo" key={`group-${idx}`}><div className="story-photo-item" key={`${el.id}-image`} ><img src={el.url} /></div></div>)
+      } else if (el.url) {
         photoParts.push(<div className="story-photo-item" key={`${el.id}-image`} ><img src={el.url} /></div>)
         if (Object.keys(this.props.parts).length - 1 < idx + 1 || (this.props.parts[Object.keys(this.props.parts)[idx + 1]].title === '' || this.props.parts[Object.keys(this.props.parts)[idx + 1]].title) || (el.group_position !== this.props.parts[Object.keys(this.props.parts)[idx + 1]].group_position)) {
           parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);

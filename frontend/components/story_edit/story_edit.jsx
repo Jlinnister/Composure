@@ -23,6 +23,7 @@ export default class StoryEdit extends React.Component {
 
     this.addCoverPhoto = this.addCoverPhoto.bind(this);
     this.addPhoto = this.addPhoto.bind(this);
+    this.addFullWidthPhoto = this.addFullWidthPhoto.bind(this);
     this.createTextArea = this.createTextArea.bind(this);
     this.setPartState = this.setPartState.bind(this);
     this.saveAllElements = this.saveAllElements.bind(this);
@@ -65,6 +66,27 @@ export default class StoryEdit extends React.Component {
         });
         const newState = merge({}, this.state);
         newState.photoGroupId += 1;
+        this.setState(newState);
+      }
+    });
+  }
+
+  addFullWidthPhoto() {
+    cloudinary.openUploadWidget(window.CLOUDINARY_SETTINGS, (error, images) => {
+      if (error === null) {
+        const photo = {
+          url: images[0].url,
+          med_url: images[0].url,
+          story_id: this.props.params.storyId,
+          position: this.state.length + 1,
+          group_position: this.state.photoGroupId,
+          full_width: true,
+        };
+        this.props.createPhoto(photo);
+        const newState = merge({}, this.state);
+        newState.photoGroupId += 1;
+        newState.storyParts.push(photo);
+        newState.length += 1;
         this.setState(newState);
       }
     });
@@ -159,7 +181,9 @@ export default class StoryEdit extends React.Component {
     let parts = []
     let photoParts = []
     this.state.storyParts.forEach((part, idx) => {
-      if (part.url) {
+      if (part.full_width !== undefined && part.full_width === true) {
+        parts.push(<div className="full-width-photo" key={`group-${idx}`}><StoryPhotoItem part={part} key={idx} idx={idx} edit="true" removePhoto={this.removePhoto} /></div>)
+      } else if (part.url) {
         photoParts.push(<StoryPhotoItem part={part} key={`${idx}-photo`} idx={idx} edit="true" removePhoto={this.removePhoto}/>)
         if (this.state.storyParts.length - 1 < idx + 1 || (this.state.storyParts[idx + 1].title === '' || this.state.storyParts[idx + 1].title) || (part.group_position !== this.state.storyParts[idx + 1].group_position)) {
             parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
@@ -198,6 +222,9 @@ export default class StoryEdit extends React.Component {
         <div className="add-elements">
           <button type="button" className="add-photo" onClick={this.addPhoto}>
             Add a photo-group
+          </button>
+          <button type="button" className="add-full-width-photo" onClick={this.addFullWidthPhoto}>
+            Add a full-width photo
           </button>
           <button type="button" className="add-text-area" onClick={this.createTextArea}>
             Add a text-only group
