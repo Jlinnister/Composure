@@ -17,6 +17,11 @@ export default class Splash extends React.Component {
         <SplashMain />
         <SplashAbout />
         <SplashExamples />
+        <div id="footer">
+          <h2>Created by Jeff Lin</h2>
+          <h2>Composure is inspired by <a href="http://www.exposure.co">Exposure.co</a></h2>
+          <h2>All content and images are property of their respective owners</h2>
+        </div>
       </div>
     );
   }
