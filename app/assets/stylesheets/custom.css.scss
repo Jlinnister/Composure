@@ -272,7 +272,9 @@ a:link {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 100px 75px;
+    padding: 0px 75px;
+    position: relative;
+    top: 12%;
     margin: auto;
   }
 
