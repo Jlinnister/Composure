@@ -7,6 +7,23 @@ class SplashMain extends React.Component {
     this.loggedIn = this.loggedIn.bind(this);
   }
 
+  componentDidMount() {
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1500);
+            return false;
+          }
+        }
+      });
+    });
+  }
+
   guestLogin() {
     hashHistory.push({
       pathname: '/login',
@@ -21,18 +38,18 @@ class SplashMain extends React.Component {
     if (store.session.current_user) {
       return (
         <ul className="options pull-right">
-          <li className="welcome-link">Welcome</li>
-          <li className="about-link">About</li>
-          <li className="examples-link">Examples</li>
+          <li className="welcome-link current">Welcome</li>
+            <li className="about-link"><a href="#about" >About</a></li>
+          <li className="examples-link"><a href="#examples" >Examples</a></li>
           <Link to="/storyboard"><li className="open-login">My Storyboard</li></Link>
         </ul>
       );
     }
     return (
       <ul className="options pull-right">
-        <li className="welcome-link">Welcome</li>
-        <li className="about-link">About</li>
-        <li className="examples-link">Examples</li>
+        <li className="welcome-link current">Welcome</li>
+          <li className="about-link"><a href="#about" >About</a></li>
+        <li className="examples-link"><a href="#examples" >Examples</a></li>
         <Link to="/login"><li className="open-login">Login</li></Link>
         <Link to="/signup"><li className="open-signup">Sign Up</li></Link>
       </ul>

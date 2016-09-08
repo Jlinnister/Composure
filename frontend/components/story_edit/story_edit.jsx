@@ -11,7 +11,7 @@ export default class StoryEdit extends React.Component {
     this.state = { storyParts: Object.keys(this.props.parts).map(key => this.props.parts[key]),
                    coverImageUrl: this.props.stories[this.props.params.storyId].cover_image_url,
                    length: this.props.parts[Object.keys(this.props.parts)[Object.keys(this.props.parts).length-1]].position,
-                   photoGroupId: 1,
+                   photoGroupId: this.props.parts[Object.keys(this.props.parts)[Object.keys(this.props.parts).length-1]].position,
                    story: {
                      title: this.props.stories[this.props.params.storyId].title,
                      description: this.props.stories[this.props.params.storyId].description,

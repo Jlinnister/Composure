@@ -15,6 +15,8 @@ export default class Splash extends React.Component {
     return (
       <div>
         <SplashMain />
+        <SplashAbout />
+        <SplashExamples />
       </div>
     );
   }
