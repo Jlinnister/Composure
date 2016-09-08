@@ -11,6 +11,7 @@ export default class StoryEdit extends React.Component {
     this.state = { storyParts: Object.keys(this.props.parts).map(key => this.props.parts[key]),
                    coverImageUrl: this.props.stories[this.props.params.storyId].cover_image_url,
                    length: this.props.parts[Object.keys(this.props.parts)[Object.keys(this.props.parts).length-1]].position,
+                   photoGroupId: 1,
                    story: {
                      title: this.props.stories[this.props.params.storyId].title,
                      description: this.props.stories[this.props.params.storyId].description,
@@ -42,7 +43,6 @@ export default class StoryEdit extends React.Component {
     const newState = merge({}, this.state);
     newState.storyParts.splice(idx, 1);
     this.setState(newState);
-    console.log(this.state.storyParts);
   }
 
   addPhoto() {
@@ -54,7 +54,7 @@ export default class StoryEdit extends React.Component {
             med_url: image.url,
             story_id: this.props.params.storyId,
             position: this.state.length + 1,
-            group_position: images.length,
+            group_position: this.state.photoGroupId,
             full_width: false
           }
           this.props.createPhoto(photo);
@@ -63,6 +63,9 @@ export default class StoryEdit extends React.Component {
           newState.length += 1;
           this.setState(newState);
         });
+        const newState = merge({}, this.state);
+        newState.photoGroupId += 1;
+        this.setState(newState);
       }
     });
   }
@@ -75,7 +78,7 @@ export default class StoryEdit extends React.Component {
           med_url: images[0].url,
           story_id: this.props.params.storyId,
           position: this.state.storyParts.length + 1,
-          group_position: images.length,
+          group_position: 1,
           full_width: false,
         };
         if (this.state.story.cover_image_id !== 0) {
@@ -155,15 +158,11 @@ export default class StoryEdit extends React.Component {
   partsContainer() {
     let parts = []
     let photoParts = []
-    let counter = 0
     this.state.storyParts.forEach((part, idx) => {
       if (part.url) {
-        counter++;
         photoParts.push(<StoryPhotoItem part={part} key={`${idx}-photo`} idx={idx} edit="true" removePhoto={this.removePhoto}/>)
-
-        if (part.group_position === counter || (this.state.storyParts.length - 1) < idx + 1 || (this.state.storyParts[idx + 1].title === '' || this.state.storyParts[idx + 1].title)) {
+        if (this.state.storyParts.length - 1 < idx + 1 || (this.state.storyParts[idx + 1].title === '' || this.state.storyParts[idx + 1].title) || (part.group_position !== this.state.storyParts[idx + 1].group_position)) {
             parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
-            counter = 0;
             photoParts = []
         }
       } else {

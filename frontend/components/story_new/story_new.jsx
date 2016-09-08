@@ -10,6 +10,7 @@ export default class StoryNew extends React.Component {
     super(props);
     this.state = { storyParts: [],
                    coverImageUrl: '',
+                   photoGroupId: 1,
                    story: {
                      title: 'default',
                      description: '',
@@ -57,7 +58,7 @@ removePhoto(idx) {
             med_url: image.url,
             story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
             position: this.state.storyParts.length + 1,
-            group_position: images.length,
+            group_position: this.state.photoGroupId,
             full_width: false,
           };
           this.props.createPhoto(photo);
@@ -65,6 +66,9 @@ removePhoto(idx) {
           newState.storyParts.push(photo);
           this.setState(newState);
         });
+        const newState = merge({}, this.state);
+        newState.photoGroupId += 1;
+        this.setState(newState);
       }
     });
   }
@@ -77,7 +81,7 @@ removePhoto(idx) {
           med_url: images[0].url,
           story_id: this.props.stories[Object.keys(this.props.stories)[Object.keys(this.props.stories).length-1]].id,
           position: this.state.storyParts.length + 1,
-          group_position: images.length,
+          group_position: 1,
           full_width: false,
         };
         this.props.createCoverPhoto(photo);
@@ -176,14 +180,11 @@ removePhoto(idx) {
   partsContainer() {
     let parts = []
     let photoParts = []
-    let counter = 0
     this.state.storyParts.forEach((part, idx) => {
       if (part.url) {
-        counter++;
         photoParts.push(<StoryPhotoItem part={part} key={idx} idx={idx} edit="false" removePhoto={this.removePhoto} />)
-        if (part.group_position === counter) {
+        if (this.state.storyParts.length - 1 < idx + 1 || (this.state.storyParts[idx + 1].title === '' || this.state.storyParts[idx + 1].title) || (part.group_position !== this.state.storyParts[idx + 1].group_position)) {
             parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
-            counter = 0;
             photoParts = []
         }
       } else {

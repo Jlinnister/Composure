@@ -57,7 +57,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-53-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-53-503x682.jpg",
   position: 3,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 1
 )
@@ -66,7 +66,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-68-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-68-503x682.jpg",
   position: 3,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 1
 )
@@ -75,7 +75,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-82-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-82-503x682.jpg",
   position: 3,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 1
 )
@@ -116,7 +116,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-10-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-10-324x324.jpg",
   position: 8,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 1
 )
@@ -125,7 +125,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-13-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-13-324x324.jpg",
   position: 8,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 1
 )
@@ -134,7 +134,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-80-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-80-324x324.jpg",
   position: 8,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 1
 )
@@ -143,7 +143,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/IMG_0853-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/IMG_0853-324x324.jpg",
   position: 8,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 1
 )
@@ -166,7 +166,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-49-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Fish-Tacos-What-To-Cook-49-1400x683.jpg",
   position: 11,
-  group_position: 1,
+  group_position: 4,
   full_width: true,
   story_id: 1
 )
@@ -199,7 +199,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-205-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-205-503x632.jpg",
   position: 3,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 2
 )
@@ -208,7 +208,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-39-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-39-503x682.jpg",
   position: 3,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 2
 )
@@ -217,7 +217,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-119-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-119-503x682.jpg",
   position: 3,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 2
 )
@@ -258,7 +258,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-116-683x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-116-683x673.jpg",
   position: 7,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 2
 )
@@ -267,7 +267,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-83-683x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-83-683x683.jpg",
   position: 7,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 2
 )
@@ -283,7 +283,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-296-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Tropical-Breakfast-Bar-What-To-Cook-296-1400x683.jpg",
   position: 9,
-  group_position: 1,
+  group_position: 4,
   full_width: true,
   story_id: 2
 )
@@ -307,7 +307,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-51-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-51-503x682.jpg",
   position: 2,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 3
 )
@@ -316,7 +316,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-476-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-476-503x682.jpg",
   position: 2,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 3
 )
@@ -325,7 +325,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-158-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-158-503x682.jpg",
   position: 2,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 3
 )
@@ -366,7 +366,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-244-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-244-324x324.jpg",
   position: 6,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 3
 )
@@ -375,7 +375,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-176-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-176-324x324.jpg",
   position: 6,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 3
 )
@@ -384,7 +384,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-215-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-215-324x324.jpg",
   position: 6,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 3
 )
@@ -393,7 +393,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-463-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-463-324x324.jpg",
   position: 6,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 3
 )
@@ -402,7 +402,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-9-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-9-1400x683.jpg",
   position: 7,
-  group_position: 1,
+  group_position: 4,
   full_width: false,
   story_id: 3
 )
@@ -411,7 +411,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-228-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/10/Yarra-Valley-Victoria-228-1400x683.jpg",
   position: 8,
-  group_position: 1,
+  group_position: 5,
   full_width: true,
   story_id: 3
 )
@@ -469,7 +469,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-90-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-90-1400x683.jpg",
   position: 5,
-  group_position: 1,
+  group_position: 3,
   full_width: false,
   story_id: 4
 )
@@ -528,7 +528,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-73-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-73-503x682.jpg",
   position: 9,
-  group_position: 3,
+  group_position: 5,
   full_width: false,
   story_id: 4
 )
@@ -537,7 +537,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-38-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-38-503x682.jpg",
   position: 9,
-  group_position: 3,
+  group_position: 5,
   full_width: false,
   story_id: 4
 )
@@ -546,7 +546,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-80-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/02/Beef-Burrito-Bowl-What-To-Cook-80-503x682.jpg",
   position: 9,
-  group_position: 3,
+  group_position: 5,
   full_width: false,
   story_id: 4
 )
@@ -577,7 +577,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-66-683x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-66-683x683.jpg",
   position: 2,
-  group_position: 2,
+  group_position: 1,
   full_width: false,
   story_id: 5
 )
@@ -586,7 +586,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-75-683x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-75-683x683.jpg",
   position: 2,
-  group_position: 2,
+  group_position: 1,
   full_width: false,
   story_id: 5
 )
@@ -616,7 +616,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-86-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-86-1400x683.jpg",
   position: 6,
-  group_position: 1,
+  group_position: 2,
   full_width: false,
   story_id: 5
 )
@@ -639,7 +639,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-54-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-54-324x324.jpg",
   position: 9,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 5
 )
@@ -648,7 +648,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-38-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-38-324x324.jpg",
   position: 9,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 5
 )
@@ -657,7 +657,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-50-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-50-324x324.jpg",
   position: 9,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 5
 )
@@ -666,7 +666,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-53-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-53-324x324.jpg",
   position: 9,
-  group_position: 4,
+  group_position: 3,
   full_width: false,
   story_id: 5
 )
@@ -676,7 +676,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-81-1400x784.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Lasagne-What-To-Cook-81-1400x784.jpg",
   position: 10,
-  group_position: 1,
+  group_position: 4,
   full_width: true,
   story_id: 5
 )
@@ -700,7 +700,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-60-862x504.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-60-862x504.jpg",
   position: 2,
-  group_position: 2,
+  group_position: 1,
   full_width: false,
   story_id: 6
 )
@@ -709,7 +709,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-125-503x503.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-125-503x503.jpg",
   position: 2,
-  group_position: 2,
+  group_position: 1,
   full_width: false,
   story_id: 6
 )
@@ -725,7 +725,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-37-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-37-503x682.jpg",
   position: 4,
-  group_position: 3,
+  group_position: 2,
   full_width: false,
   story_id: 6
 )
@@ -734,7 +734,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-101-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-101-503x682.jpg",
   position: 4,
-  group_position: 3,
+  group_position: 2,
   full_width: false,
   story_id: 6
 )
@@ -743,7 +743,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-80-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-80-503x682.jpg",
   position: 4,
-  group_position: 3,
+  group_position: 2,
   full_width: false,
   story_id: 6
 )
@@ -787,7 +787,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-91-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-91-1400x683.jpg",
   position: 10,
-  group_position: 1,
+  group_position: 3,
   full_width: true,
   story_id: 6
 )
@@ -796,7 +796,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-109-1400x784.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2016/04/Sweet-Potato-Feta-Ravioli-What-To-Cook-109-1400x784.jpg",
   position: 11,
-  group_position: 1,
+  group_position: 4,
   full_width: true,
   story_id: 6
 )
@@ -820,7 +820,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-91-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-91-324x324.jpg",
   position: 2,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 7
 )
@@ -829,7 +829,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-44-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-44-324x324.jpg",
   position: 2,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 7
 )
@@ -838,7 +838,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-81-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-81-324x324.jpg",
   position: 2,
-  group_position: 3,
+  group_position: 1,
   full_width: false,
   story_id: 7
 )
@@ -861,7 +861,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-96-1041x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-96-1041x683.jpg",
   position: 5,
-  group_position: 1,
+  group_position: 2,
   full_width: false,
   story_id: 7
 )
@@ -884,7 +884,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-66-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-66-503x682.jpg",
   position: 8,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 7
 )
@@ -893,7 +893,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-60-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-60-503x682.jpg",
   position: 8,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 7
 )
@@ -916,7 +916,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-24-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-24-324x324.jpg",
   position: 11,
-  group_position: 2,
+  group_position: 4,
   full_width: false,
   story_id: 7
 )
@@ -925,7 +925,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-33-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-33-324x324.jpg",
   position: 11,
-  group_position: 2,
+  group_position: 4,
   full_width: false,
   story_id: 7
 )
@@ -934,7 +934,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-53-1400x784.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2015/08/Jaffles-What-To-Cook-53-1400x784.jpg",
   position: 12,
-  group_position: 1,
+  group_position: 5,
   full_width: true,
   story_id: 7
 )
@@ -989,7 +989,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-15-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-15-503x682.jpg",
   position: 6,
-  group_position: 3,
+  group_position: 2,
   full_width: false,
   story_id: 8
 )
@@ -998,7 +998,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-503x503.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-503x503.jpg",
   position: 6,
-  group_position: 3,
+  group_position: 2,
   full_width: false,
   story_id: 8
 )
@@ -1007,7 +1007,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-19-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup-19-503x682.jpg",
   position: 6,
-  group_position: 3,
+  group_position: 2,
   full_width: false,
   story_id: 8
 )
@@ -1016,7 +1016,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup--1400x784.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/05/WTC-Minestrone-Soup--1400x784.jpg",
   position: 7,
-  group_position: 1,
+  group_position: 3,
   full_width: false,
   story_id: 8
 )
@@ -1054,7 +1054,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-6-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-6-324x324.jpg",
   position: 4,
-  group_position: 2,
+  group_position: 1,
   full_width: false,
   story_id: 9
 )
@@ -1063,7 +1063,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-2-324x324.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-2-324x324.jpg",
   position: 4,
-  group_position: 2,
+  group_position: 1,
   full_width: false,
   story_id: 9
 )
@@ -1072,7 +1072,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-31-1041x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-31-1041x683.jpg",
   position: 5,
-  group_position: 1,
+  group_position: 2,
   full_width: false,
   story_id: 9
 )
@@ -1081,7 +1081,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-28-503x682.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-28-503x682.jpg",
   position: 6,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 9
 )
@@ -1090,7 +1090,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-20-503x503.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-20-503x503.jpg",
   position: 6,
-  group_position: 2,
+  group_position: 3,
   full_width: false,
   story_id: 9
 )
@@ -1099,7 +1099,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-29.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/07/WTC-Beef-Pho-29.jpg",
   position: 7,
-  group_position: 1,
+  group_position: 4,
   full_width: true,
   story_id: 9
 )
@@ -1146,7 +1146,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-17-1400x683.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-17-1400x683.jpg",
   position: 5,
-  group_position: 1,
+  group_position: 2,
   full_width: true,
   story_id: 10
 )
@@ -1155,7 +1155,7 @@ Photo.create!(
   url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-15.jpg",
   med_url: "https://www.whattocook.com.au/wp-content/uploads/2014/10/WTC-Sausage-Bake-15.jpg",
   position: 5,
-  group_position: 1,
+  group_position: 3,
   full_width: true,
   story_id: 10
 )

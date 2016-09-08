@@ -12,16 +12,13 @@ export default class StoryShow extends React.Component {
   partsContainer() {
     let parts = []
     let photoParts = []
-    let counter = 0
     Object.keys(this.props.parts).forEach((key, idx) => {
       let el = this.props.parts[key];
       if (el.url) {
-        counter++;
-        photoParts.push(<div id={el.group_position} key={`${el.id}-image`} ><img src={el.url} /></div>)
-        if (el.group_position === counter) {
-            parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
-            counter = 0;
-            photoParts = []
+        photoParts.push(<div className="story-photo-item" key={`${el.id}-image`} ><img src={el.url} /></div>)
+        if (Object.keys(this.props.parts).length - 1 < idx + 1 || (this.props.parts[Object.keys(this.props.parts)[idx + 1]].title === '' || this.props.parts[Object.keys(this.props.parts)[idx + 1]].title) || (el.group_position !== this.props.parts[Object.keys(this.props.parts)[idx + 1]].group_position)) {
+          parts.push(<div className="photo-group" key={`group-${idx}`}>{photoParts}</div>);
+          photoParts = []
         }
       } else {
           if (el.title && el.body) {
