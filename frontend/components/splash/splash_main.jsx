@@ -9,7 +9,7 @@ class SplashMain extends React.Component {
 
   componentDidMount() {
     $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
+      $('a[href*="#"]:not(.page)').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -41,7 +41,7 @@ class SplashMain extends React.Component {
           <li className="welcome-link current">Welcome</li>
             <li className="about-link"><a href="#about">About</a></li>
           <li className="examples-link"><a href="#examples" >Examples</a></li>
-          <Link to="/storyboard"><li className="open-login">My Storyboard</li></Link>
+          <Link to="/storyboard" className="page"><li className="open-login">My Storyboard</li></Link>
         </ul>
       );
     }
@@ -50,8 +50,8 @@ class SplashMain extends React.Component {
         <li className="welcome-link current">Welcome</li>
           <li className="about-link"><a href="#about" >About</a></li>
         <li className="examples-link"><a href="#examples" >Examples</a></li>
-        <Link to="/login"><li className="open-login">Login</li></Link>
-        <Link to="/signup"><li className="open-signup">Sign Up</li></Link>
+        <Link to="/login" className="page"><li className="open-login">Login</li></Link>
+        <Link to="/signup" className="page"><li className="open-signup">Sign Up</li></Link>
       </ul>
     );
   }
