@@ -15,7 +15,7 @@ class SplashExamples extends React.Component {
         </h2>
         <div className="stories">
           <div className="photo">
-            <img src="https://exposure.imgix.net/production/posts/183018/cover-photo/cover-1466125923.jpg?w=500&h=500&q=58&fm=pjpg&auto=format&sharp=4&crop=&fit=crop" alt="The Real Steel"/>
+            <Link to="/the-real-steel"><img src="https://exposure.imgix.net/production/posts/183018/cover-photo/cover-1466125923.jpg?w=500&h=500&q=58&fm=pjpg&auto=format&sharp=4&crop=&fit=crop" alt="The Real Steel"/></Link>
             <div className="photo-title">The Real Steel</div>
             <div className="example-title"><a href="http://stories.blacksheepcycling.cc/">Black Sheep Cycling</a></div>
             <div className="example-description">Makers of limited release cycling apparel. Tellers of good stories.</div>

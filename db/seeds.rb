@@ -30,6 +30,16 @@ User.create!(
   website_url: "https://www.whattocook.com.au/"
 )
 
+User.create!(
+  username: "public",
+  password: "password",
+  email: "public@gmail.com",
+  avatar_url: "https://secure.gravatar.com/avatar/d9fb812b41af97e6310fae5bcaf8c460?s=150&d=https://exposure-media.s3.amazonaws.com/static/exposure-logo-mark-avatar.png",
+  profile_title: "Featured Stories",
+  profile_description: "",
+  website_url: "https://www.exposure.co"
+)
+
 Story.create!(
   title: "Battered Fish Tacos",
   description: "The ideal recipe for Friday nights with beers (&/or margaritas) and a bunch of friends! So fun!",
@@ -1159,3 +1169,376 @@ Photo.create!(
   full_width: true,
   story_id: 10
 )
+#end
+
+#public-1
+Story.create!(
+  title: "The Real Steel",
+  description: "We go behind the scenes to discover the intricacies involved in the build process of the Black Sheep | Stinner Racing bikes.",
+  user_id: 3,
+  cover_image_id: 81
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/posts/183018/cover-photo/cover-1466125923.jpg?w=1800&q=58&fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/posts/183018/cover-photo/cover-1466125923.jpg?w=1800&q=58&fm=pjpg&auto=format",
+  position: 1,
+  group_position: 1,
+  full_width: true,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "Stinner Frameworks builds high-quality handmade bicycles in the South of California, USA. Every Stinner bike is custom made using state of the art materials such as steel and titanium to design and deliver the simple freedom of a perfect ride. Stinner prides itself on their individuality, with each frame being unique in its own way. People cycle for different reasons, we know that. However, whether you’re racing or commuting we all have something in common, we enjoy being on two wheels. Stinner aims to unite businesses and people, emphasising responsible manufacturing and community in every way they can. From an idea on a piece of paper to the perfect racing machine, learn how the five Black Sheep | Stinner Racing bikes came to be.",
+position: 2,
+story_id: 11
+)
+
+TextArea.create!(
+title: "The riders of Black Sheep | Stinner need to be able to merely look at their bike and feel fast.",
+body: "",
+position: 3,
+story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/knc8obzsbc1gnw6pgijp2e29z5wpbwxy3iav/original.jpg?fm=pjpg&auto=format&q=95&fm=jpg&w=2000",
+  med_url: "https://exposure.imgix.net/production/photos/knc8obzsbc1gnw6pgijp2e29z5wpbwxy3iav/original.jpg?fm=pjpg&auto=format&q=95&fm=jpg&w=2000",
+  position: 4,
+  group_position: 2,
+  full_width: true,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "Initial Stages.",
+body: "",
+position: 5,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "We pride ourselves on being able to design and build the perfect bike for someone we may never get to meet face to face. At Stinner we have decades of collective fit experience. The first step is gathering some basic measurements from the rider’s body and bike. We developed a simple yet precise method for clearly communicating the information we need from the customer. Once we gather the basic information, we start a discussion with the rider about ride expectations from their bike. This conversation is just as important as the numbers. With this information we can ensure that the new Stinner will be that dream bike the customer imagines.",
+position: 6,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "We want the bike to feel like home as soon as the rider throws a leg over it.",
+position: 7,
+story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/nchcb49w8pbtxhj34s01thuxrk3iyule7vzo/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/nchcb49w8pbtxhj34s01thuxrk3iyule7vzo/original.jpg?fm=pjpg&auto=format",
+  position: 8,
+  group_position: 3,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/68u6gtphc21gf553xa1pmbo6r9moaz8r05gk/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/68u6gtphc21gf553xa1pmbo6r9moaz8r05gk/original.jpg?fm=pjpg&auto=format",
+  position: 9,
+  group_position: 3,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/13u8efyc80q3krhfgvl7bvs4ixkhykmx2d3r/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/13u8efyc80q3krhfgvl7bvs4ixkhykmx2d3r/original.jpg?fm=pjpg&auto=format",
+  position: 10,
+  group_position: 3,
+  full_width: false,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "The build process starts with a conversation, we need to know exactly what’s expected, what fit will look like. For the Black Sheep | Stinner Racing, the bikes had to meet the expectations of some of the most particular cyclists out there: elite level bike racers. We turn to True Temper’s S3 steel tubing to create a high quality, light, and responsive ride. Each bike went through the same considered build process, we wanted to make sure Black Sheep | Stinner Racing riders had full trust in their equipment.",
+position: 11,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "And it begins with the tubing…",
+position: 12,
+story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/obqrukxwm7dlgfnvtqtyv6lxrlqivxmq4zn4/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/obqrukxwm7dlgfnvtqtyv6lxrlqivxmq4zn4/original.jpg?fm=pjpg&auto=format",
+  position: 13,
+  group_position: 4,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/oiiqxsueythdlp5r0nsysnhfrlfl0jbs8kob/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/oiiqxsueythdlp5r0nsysnhfrlfl0jbs8kob/original.jpg?fm=pjpg&auto=format",
+  position: 14,
+  group_position: 4,
+  full_width: false,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "Fabrication.",
+body: "",
+position: 15,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "This is the first part of the build, and it starts with Stinner Fabricator Devin Jones (@doctor_jones_). The bikes were built with True Temper’s high-quality S3 Steel Tubing keeping the builds extremely light while retaining the responsive feel needed from a race bike. Each bike is ultimately customised to specific rider desires from geometry to slight differences in spec. Using the information from fit data provided by Operations Lead Jeremy Platt, Devin cuts each tube to the specific lengths and miters them to fit and join at requested angles. Good miters ensure tube junctions are tight and precise. The angles and tubing specifications for each tube and junction have a massive influence on the ride quality. Any additional modifications to the tubing happens here as well. Each tube type, material, and thickness requires special treatment and an extreme level of precision.",
+position: 16,
+story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/pmwl7sw5n75rramk6llahsemi9xeabu7d22d/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/pmwl7sw5n75rramk6llahsemi9xeabu7d22d/original.jpg?fm=pjpg&auto=format",
+  position: 17,
+  group_position: 5,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/mum5s7fx6yhyawqotx9vhd7vixvh2zkpr0ct/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/mum5s7fx6yhyawqotx9vhd7vixvh2zkpr0ct/original.jpg?fm=pjpg&auto=format",
+  position: 18,
+  group_position: 5,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/iicl0reuv1h7vf5k525fusorar9r8ckx0jzx/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/iicl0reuv1h7vf5k525fusorar9r8ckx0jzx/original.jpg?fm=pjpg&auto=format",
+  position: 19,
+  group_position: 5,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/rskr9rk5s20jdvhway747k3xr84h76b1y7ya/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/rskr9rk5s20jdvhway747k3xr84h76b1y7ya/original.jpg?fm=pjpg&auto=format",
+  position: 20,
+  group_position: 6,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/y0703n57hochxqnwrbsnn4s4igwuwoojzl4y/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/y0703n57hochxqnwrbsnn4s4igwuwoojzl4y/original.jpg?fm=pjpg&auto=format",
+  position: 21,
+  group_position: 6,
+  full_width: false,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "Welding.",
+body: "",
+position: 22,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "Structure and strength come from the welds. Astute readers will see that welds rely on good miters. We use Tig welding because it is extremely strong as well as very clean looking. Stinner Welder, Carlos Velasquez, comes from the aerospace industry, where his welds were keeping airplanes together. Like Devin, Carlos is a true craftsmen. Weld and Fabrication have to work closely together. From fabrication, the bike starts looking like something of a bike and it goes into a jig that is set precisely to the requested angles. The mitered tubes are welded together (and adjusted as needed). Good fabrication, means better welds and the weld process requires the utmost precision. Thus, the fabricator and welder really lean on each other to do their jobs. For those that have not seen tig welding before, it requires three limbs at any given time. It’s not easy. Each step in the process is QCed, and will not be deemed “done” until all aspects of the weld are guaranteed.",
+position: 23,
+story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/4icyvtnzczvwzgg6njdqn3tyb9xmwoxps5h7/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/4icyvtnzczvwzgg6njdqn3tyb9xmwoxps5h7/original.jpg?fm=pjpg&auto=format",
+  position: 24,
+  group_position: 7,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/pbfspssyn207oxxsfxb3mcxrbcbf8r4arzob/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/pbfspssyn207oxxsfxb3mcxrbcbf8r4arzob/original.jpg?fm=pjpg&auto=format",
+  position: 25,
+  group_position: 7,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/ppo873kv7qabm7sx3fecdizt8bokb2rb7034/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/ppo873kv7qabm7sx3fecdizt8bokb2rb7034/original.jpg?fm=pjpg&auto=format",
+  position: 26,
+  group_position: 7,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/an82zhe60dfjjgqhb5vp1fw291cfcj2tlq3x/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/an82zhe60dfjjgqhb5vp1fw291cfcj2tlq3x/original.jpg?fm=pjpg&auto=format",
+  position: 27,
+  group_position: 8,
+  full_width: false,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "Getting Artsy.",
+body: "",
+position: 28,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "This is where a bit of creativity comes into play. Stinner painter James Bellerue went to school for graphic design and has spent a lot of time in the bike industry, particularly at shops as a mechanic. James uses wet paint (as opposed to powder coating) and a three-stage paint process:",
+position: 29,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "Priming. Base Coat (Colours, symbols, patterns). And the clear coat.",
+position: 30,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "The anthracite and pink Black Sheep | Stinner Racing bikes’ topographic schemes were particularly intricate. We don’t use stickers and everything must be masked by hand before another colour can be laid down. The bikes were painted entirely in anthracite, before being masked in order to apply the pink paint. The black topographic lines were one of the most intricate paint jobs we’ve done, and the masking for the artwork required a lot of care, skill, and patience. And some fortitude. The topography itself came from a vector pattern that was cut in masking vinyl to precisely match the digital artwork. Personalised paint jobs, designs, and symbols are never out of the question. As such, as a final touch, each bike has a logo that represents its riders (a hawk, a sloth, a peach, a kiwi, etc.)",
+position: 31,
+story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/u8et2bgkp6iqssat7q4jcerk932tzautihfg/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/u8et2bgkp6iqssat7q4jcerk932tzautihfg/original.jpg?fm=pjpg&auto=format",
+  position: 32,
+  group_position: 9,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/lghp8klmukk6q4zf6rktn8kt967mar0nrr1x/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/lghp8klmukk6q4zf6rktn8kt967mar0nrr1x/original.jpg?fm=pjpg&auto=format",
+  position: 33,
+  group_position: 9,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/bqhg980lsb6ymqphd6c8k0rudius591g08pb/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/bqhg980lsb6ymqphd6c8k0rudius591g08pb/original.jpg?fm=pjpg&auto=format",
+  position: 34,
+  group_position: 9,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/q2tzrogwgpmy0zdlb8uayvi5xe2rx0ad1x2x/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/q2tzrogwgpmy0zdlb8uayvi5xe2rx0ad1x2x/original.jpg?fm=pjpg&auto=format",
+  position: 35,
+  group_position: 10,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/14kdco5me3s8u0wgg3cogeewmi2uio4cc0um/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/14kdco5me3s8u0wgg3cogeewmi2uio4cc0um/original.jpg?fm=pjpg&auto=format",
+  position: 36,
+  group_position: 11,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/udlgh5qihxbk868tuu7x8ncdim4fywpga03z/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/udlgh5qihxbk868tuu7x8ncdim4fywpga03z/original.jpg?fm=pjpg&auto=format",
+  position: 37,
+  group_position: 11,
+  full_width: false,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "Assembly.",
+body: "",
+position: 38,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "Operations Lead Jeremy Platt and Customer Experience Lead Mark Edwards will help with all componentry and bike specification questions. Both possess a deep knowledge of bike parts and compatibility issues from years of bike shop experience and hours of research. Once the bike is painted, it moves to assembly where Jeremy will complete the process. The Black Sheep | Stinner Racing bikes are equipped with SRAM’s wireless shifting group, SRAM E-Tap, as well as cockpits from ENVE, and headsets, bottom brackets, and hubs from Chris King. Each brand is at the top of the bike industry, known for innovation, quality, and performance. The bike build can take a while – from considering ideal housing length and routing to working with tight clearances – but the bike won’t be shipped until everything is working perfectly and also looking good. The builds are test ridden and checked multiple times. Before the final step.",
+position: 39,
+story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/oiu3nuyj1hnkikna4obgfogvi00llj2wece1/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/oiu3nuyj1hnkikna4obgfogvi00llj2wece1/original.jpg?fm=pjpg&auto=format",
+  position: 40,
+  group_position: 12,
+  full_width: false,
+  story_id: 11
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/qjog9h78sctc3syq7duz0k9npu1dnl4yf2wx/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/qjog9h78sctc3syq7duz0k9npu1dnl4yf2wx/original.jpg?fm=pjpg&auto=format",
+  position: 41,
+  group_position: 12,
+  full_width: false,
+  story_id: 11
+)
+
+TextArea.create!(
+title: "Lastly.",
+body: "",
+position: 42,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "Jeremy’s last step is the meticulous shipping process. Getting several bikes to Australia means quite a lot of travel and we needed to make sure they arrived unscathed. We’ve shipped bikes all over the world, from Europe, to Australia, to Asia, to the Middle East. Nobody wants a bike to show up scratched or damaged, and we’ll never trust shippers 100%. Thus, the bikes are carefully prepared for shipping to guard against even the worst possible shippers.",
+position: 43,
+story_id: 11
+)
+
+TextArea.create!(
+title: "About the Collab.",
+body: "",
+position: 44,
+story_id: 11
+)
+
+TextArea.create!(
+title: "",
+body: "The Black Sheep | Stinner Racing bikes are are meant to be innovative. They are meant to be another way to test our own processes. This collaboration is a way for us to not only show that our bikes are able to perform at a high level, but also a way for us to get feedback from riders who ask the most out of their equipment, to work towards the perfect bike.",
+position: 45,
+story_id: 11
+)
+#end

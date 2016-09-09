@@ -9,6 +9,7 @@ import StoryboardContainer from './storyboard/storyboard_container';
 import StoryNewContainer from './story_new/story_new_container';
 import StoryShowContainer from './story_show/story_show_container';
 import StoryEditContainer from './story_edit/story_edit_container';
+import PublicShowContainer from './splash/public/public_show_container';
 
 import * as StoryActions from '../actions/story_actions';
 import { clearErrors } from '../actions/session_actions';
@@ -44,10 +45,15 @@ class AppRouter extends React.Component {
     store.dispatch(StoryActions.requestStory(nextState.params.storyId))
   }
 
+  requestPublicElementsOnEnter(id) {
+    store.dispatch(StoryActions.requestStory(id))
+  }
+
   render() {
     return (
       <Router history={hashHistory}>
         <Route path="/" component={Splash} />
+        <Route path="/the-real-steel" component={PublicShowContainer} onEnter={ this.requestPublicElementsOnEnter(11) } />
         <Route path="/login" component={LoginContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/signup" component={SignupContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/storyboard" component={StoryboardContainer} onEnter={ this._ensureLoggedIn } />

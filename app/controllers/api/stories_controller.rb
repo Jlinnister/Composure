@@ -15,7 +15,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def show
-    @story = current_user.stories.find(params[:id])
+    @story = Story.find(params[:id])
     @elements = @story.sort_photos_and_texts
     @elements.select! { |element| element.id != @story.cover_image_id }
     render "api/stories/show"
