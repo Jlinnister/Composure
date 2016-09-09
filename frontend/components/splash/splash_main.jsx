@@ -39,7 +39,7 @@ class SplashMain extends React.Component {
       return (
         <ul className="options pull-right">
           <li className="welcome-link current">Welcome</li>
-            <li className="about-link"><a href="#about" >About</a></li>
+            <li className="about-link"><a href="#about">About</a></li>
           <li className="examples-link"><a href="#examples" >Examples</a></li>
           <Link to="/storyboard"><li className="open-login">My Storyboard</li></Link>
         </ul>

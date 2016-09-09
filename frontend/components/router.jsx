@@ -21,6 +21,7 @@ class AppRouter extends React.Component {
     this._ensureLoggedIn = this._ensureLoggedIn.bind(this);
     this._redirectIfLoggedIn = this._redirectIfLoggedIn.bind(this);
     this.requestElementsOnEnter = this.requestElementsOnEnter.bind(this);
+    this.clearStories = this.clearStories.bind(this);
   }
 
   _ensureLoggedIn(nextState, replace) {
@@ -49,10 +50,14 @@ class AppRouter extends React.Component {
     store.dispatch(StoryActions.requestStory(id))
   }
 
+  clearStories() {
+    store.dispatch(StoryActions.clearStories());
+  }
+
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={Splash} />
+        <Route path="/" component={Splash} onLeave={this.clearStories} />
         <Route path="/the-real-steel" component={PublicShowContainer} onEnter={ this.requestPublicElementsOnEnter(11) } />
         <Route path="/belize" component={PublicShowContainer} onEnter={ this.requestPublicElementsOnEnter(12) } />
         <Route path="/the-large-hadron-collider" component={PublicShowContainer} onEnter={ this.requestPublicElementsOnEnter(13) } />
