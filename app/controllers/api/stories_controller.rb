@@ -40,16 +40,4 @@ class Api::StoriesController < ApplicationController
     def story_params
       params.require(:story).permit(:title, :description, :cover_image_id, :user_id)
     end
-
-    # def must_be_logged_in
-    #   if !logged_in?
-    #     render text: "Must be logged in.", status: :forbidden
-    #   end
-    # end
-    #
-    # def must_be_album_owner
-    #   if current_user != Album.find(params[:id]).owner
-    #     render text: "Must be logged in.", status: :forbidden
-    #   end
-    # end
 end

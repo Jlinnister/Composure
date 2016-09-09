@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const Modal = require('react-modal');
-
-import * as Actions from './actions/story_actions';
-
 import Root from './components/root';
-
 import configureStore from './store/store';
+
+const Modal = require('react-modal');
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -17,12 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         errors: [],
       },
     };
-    window.store = store = configureStore(initialState); //remove window.store
+    store = configureStore(initialState);
   } else {
-    window.store = store = configureStore(); //remove window.store
+    store = configureStore();
   }
-
-  window.actions = Actions; //remove
 
   Modal.setAppElement(document.body)
   const root = document.getElementById('root');

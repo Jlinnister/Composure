@@ -27,7 +27,6 @@ export const updateUser = user => ({
   user,
 });
 
-
 export const receiveCurrentUser = currentUser => ({
   type: SessionConstants.RECEIVE_CURRENT_USER,
   currentUser,

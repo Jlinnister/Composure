@@ -1,7 +1,5 @@
 import React from 'react';
-
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-
+import { Router, Route, hashHistory } from 'react-router';
 import Splash from './splash/splash';
 import LoginContainer from './session/login_container';
 import SignupContainer from './session/signup_container';
@@ -10,10 +8,8 @@ import StoryNewContainer from './story_new/story_new_container';
 import StoryShowContainer from './story_show/story_show_container';
 import StoryEditContainer from './story_edit/story_edit_container';
 import PublicShowContainer from './splash/public/public_show_container';
-
 import * as StoryActions from '../actions/story_actions';
 import { clearErrors } from '../actions/session_actions';
-
 
 class AppRouter extends React.Component {
   constructor(props) {
@@ -38,20 +34,20 @@ class AppRouter extends React.Component {
     if (currentUser) {
       replace('/');
     } else {
-      store.dispatch(clearErrors());
+      this.context.store.dispatch(clearErrors());
     }
   }
 
   requestElementsOnEnter(nextState) {
-    store.dispatch(StoryActions.requestStory(nextState.params.storyId))
+    this.context.store.dispatch(StoryActions.requestStory(nextState.params.storyId))
   }
 
   requestPublicElementsOnEnter(id) {
-    store.dispatch(StoryActions.requestStory(id))
+    this.context.store.dispatch(StoryActions.requestStory(id))
   }
 
   clearStories() {
-    store.dispatch(StoryActions.clearStories());
+    this.context.store.dispatch(StoryActions.clearStories());
   }
 
   render() {

@@ -7,7 +7,6 @@ const StoryUtil = {
     });
   },
 
-  //  if api fetches all stories and saves to store, do I need this???
   fetchStory(id, success) {
     $.ajax({
       method: 'GET',

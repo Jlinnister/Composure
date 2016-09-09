@@ -219,7 +219,7 @@ a:link {
       display: inline-block;
       margin: 15px 0 15px 0;
       border: 0;
-      -webkit-transition: background 200ms; /* Safari */
+      -webkit-transition: background 200ms;
       transition: background 200ms;
       transition-timing-function: linear;
       &:hover {
@@ -274,8 +274,6 @@ a:link {
 }
 
 #about {
-  // height: 730px;
-  // top: 730px;
   background-position: 50% 65%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -350,8 +348,6 @@ a:link {
     color: $black;
     cursor: default;
   }
-
-
 }
 
 #examples {
@@ -461,8 +457,6 @@ a:link {
       color: $black;
       cursor: default;
     }
-
-
   }
 
   img {
@@ -478,94 +472,8 @@ a:link {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     opacity: .9;
   }
-
-}
-
-.bottom-info {
-  min-width: 790px;
-  min-height: 655px;
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  padding: 0;
-  .create-first {
-    height: 65%;
-    background: #F3F3F3;
-    width: 100%;
-    .top {
-      position: absolute;
-      top: Calc((100% - 250px) / 2);
-      margin-top: -70px;
-      text-align: center;
-      width: 100%;
-
-      .header {
-        font: 32px 'ProximaNova-Bold';
-        color: #111;
-        letter-spacing: 2px;
-        line-height: 35px;
-        margin-bottom: 10px;
-      }
-      .free {
-        font: 27px 'Adobe-Garamond-Pro', 'Garamond', 'Georgia', serif;
-        color: #555;
-        line-height: 38px;
-        .underline {
-          border-bottom: 2px solid $green;
-          padding-bottom: 3px;
-        }
-      }
-      .get-started-guest {
-        display: inline-block;
-        .guest-login-button {
-          @include create-buttons($green, #fff);
-          padding: 10px 50px;
-          text-transform: uppercase;
-          display: inline-block;
-          margin: 15px 0 7px 0;
-          border: 0;
-          -webkit-transition: background 200ms; /* Safari */
-          transition: background 200ms;
-          transition-timing-function: linear;
-          &:hover {
-            background: $darkgrey;
-          }
-        }
-      }
-    }
-  }
-  .info {
-    background: #222;
-    height: 244px;
-    width: 100%;
-
-    a:link, a:active, a:visited {
-      color: $green;
-    }
-
-    .information {
-      color: #fff;
-      line-height: 28px;
-      padding: 50px 100px;
-      min-width: 790px;
-      .github-link {
-        padding-top: 20px;
-        font-size: 40px;
-        & a {
-          color: #ddd;
-          -webkit-transition: color 200ms; /* Safari */
-          transition: color 200ms;
-          transition-timing-function: linear;
-        }
-        & a:hover {
-          color: $green;
-        }
-      }
-    }
-  }
 }
 //end splash
-
 
 .splash-navbar {
   width: 100%;
@@ -592,7 +500,6 @@ a:link {
       font: 12px 'P22UndergroundPro-Heavy';
       text-transform: uppercase;
       letter-spacing: 1px;
-
 
       li {
         display: inline-block;
@@ -627,8 +534,6 @@ a:link {
 .signup-page, .login-page {
   text-align: center;
   padding: 0 40px;
-  // background-image: url("https://oceanus.feralhosting.com/bx1th0j/background1.jpg");
-  // background-image: url("https://hd.unsplash.com/photo-1463778996521-da8b6f00dacf");
   background-image: url("https://hd.unsplash.com/photo-1472469214909-13c93287b522");
   background-position: 50% 65%;
   background-repeat: no-repeat;
@@ -679,13 +584,7 @@ input {
 .form-control::-moz-placeholder { color: $lightgrey; }
 .form-control:-ms-input-placeholder { color: $lightgrey; }
 
-
-
-.login-form-container, .signup-form-container, .recovery-page {
-
-  .signup-form-box {
-
-  }
+.login-form-container, .signup-form-container {
 
   .login-form-title, .signup-form-title {
     font-family: 'P22UndergroundPro-Heavy';
@@ -700,13 +599,7 @@ input {
   .logo {
     margin-bottom: 30px;
   }
-  .notice {
-    font: 11px 'P22UndergroundPro-Demi';
-    color: $lightgrey;
-    position: relative;
-    top: -10px;
-    text-align: center;
-  }
+
   .errors {
     font: 11px 'P22UndergroundPro-Demi';
     color: $black;
@@ -748,15 +641,6 @@ input {
 .sign-up-page {
   margin-top: 100px;
   text-align: center;
-
-  .sign-up-free {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 18px;
-    b {
-      color: #333;
-    }
-  }
 
   .submit-user {
     margin-top: 20px;
@@ -917,8 +801,6 @@ label {
   }
 }
 
-
-
 .save-cancel {
   float: right;
 }
@@ -998,7 +880,6 @@ label {
     }
   }
 }
-
 //end
 
 
@@ -1272,8 +1153,6 @@ nav {
 }
 
 .story-elements {
-  // display: flex;
-  // flex-direction: column;
   align-items: center;
   position: relative;
   margin: 100px 0px;
@@ -1380,9 +1259,6 @@ nav {
   align-items: center;
   position: fixed;
   bottom: 5%;
-  // background: $white;
-  // border-radius: 0;
-  // height: 50px;
   padding: 0 150px;
   min-width: 750px;
   width: 100%;

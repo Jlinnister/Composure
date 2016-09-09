@@ -9,16 +9,6 @@ class Api::TextAreasController < ApplicationController
       render "api/text_areas/show"
   end
 
-  # def show
-  #   @text_area = User.find_by_username(params[:id])
-  #
-  #   if @text_area
-  #     render "api/users/show"
-  #   else
-  #     render json: nil, status: 404
-  #   end
-  # end
-
   def update
     textAreas = text_area_params
     TextArea.update(textAreas.keys, textAreas.values)
@@ -32,7 +22,6 @@ class Api::TextAreasController < ApplicationController
   end
 
   private
-
   def text_area_params
     params.require(:text_area).permit!
   end
@@ -40,7 +29,6 @@ class Api::TextAreasController < ApplicationController
   def parse_text_areas(text_area_params)
     text_areas = []
     text_area_params.keys.each do |key|
-        # text_area_params[key]['story_id'] = Story.all.last.id
         text_areas << text_area_params[key]
     end
     text_areas
