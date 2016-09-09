@@ -1,47 +1,28 @@
 # Composure
 
-## Minimum Viable Product
-Composure.me is a web application inspired by Exposure.co for sharing and discovering beautifully generated photo stories. Technologies used to create Composure will include a React.js with Redux front-end, the Ruby on Rails framework and a PostgreSQL backend. By the end of week 9, Composure.me will satisfy the following requirements:
+[Composure.me][link]
+[link]: http://www.composure.me
+Composure.me is a web application inspired by Exposure.co for creating beautifully generated photo stories. Technologies used to create Composure include a React.js with Redux front-end, the Ruby on Rails framework and a PostgreSQL backend.
+<img src="https://cloud.githubusercontent.com/assets/15305961/18375862/b9cef2a4-760e-11e6-9ca5-ec643747ad28.png">
+<br><br>
 
-- [ ] Hosted on Heroku with a custom domain
-- [ ] User account creation, login and logout
-  - Guest account access
-- [ ] Photo Stories
-  - Ability to Create, Read, Update and Delete
-  - Users can add Cover Photo, Title and Subtitle
-  - Users can add photos
-  - Users can add text
-- [ ] User profiles
-  - User homepage shows avatar, profile title, profile description and stories
-  - Stories are displayed in grid format with cover photo, title, subtitle and date
-  - Ability to edit avatar, profile title and profile description
-- [ ] Auto styling of 'Photo Story' layout
-  - Includes buttons to add a group of photos, a full-width photo and text group
-  - Text group has optional heading and text area
-  - A photo group is auto-justified based on number of photos
-  - A full-width photo will stretch or resize to fill or fit respectively
-- [ ] Dynamic splash page
-  - Navigation bar includes 'Welcome', 'About', 'Examples', 'Login' and 'Sign Up' links
-  - 'Welcome', 'About' and 'Examples' links scroll down to appropriate section
-  - 'Login' and 'Sign Up' links redirect to appropriate form page
-  - 'Guest Login' link redirects to 'Login' form and auto fills
-  - Navigation bar includes 'My Storyboard' link in place of 'Login' and 'Sign Up' for logged in users
-- [ ] Production README
+### Stories
+Composure allows users to easily showcase their photography through as 'Photo Stories'. Users are able to add a title and description to their story along with an uploaded cover image. Stories are then created with a mixture of full-width photos, photo-groups and text groups.
+<img src="https://cloud.githubusercontent.com/assets/15305961/18375864/b9d661f6-760e-11e6-963d-4c2bdbfd09a0.png">
+<br><br>
 
-## Design Documents
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [Database schema][schema]
-* [Redux Structure][redux-structure]
-* [Sample State][sample-state]
+### Photos
+The core component of Composure lies in the rendering and styling of photos. Users can choose between uploading multiple groups of photos or a single full-width photo into their story. Groups of photos are intelligently resized to display in-line. Additionally, removing photos from a group in a story will resize the remaining photos in the group. This logic is handled by storing photo group ids in the backend and on the re-render of the front-end component.
+<img src="https://cloud.githubusercontent.com/assets/15305961/18375861/b9ce4430-760e-11e6-9516-dfa88d152a1a.png">
+<br><br>
 
-[wireframes]: ./docs/wireframes/
-[components]: ./docs/component-hierarchy-revision.md
-[redux-structure]: ./docs/redux-structure.md
-[sample-state]: ./docs/sample-state.md
-[api-endpoints]: ./docs/api-endpoints.md
-[schema]: ./docs/schema.md
-[redux-structure]: ./docs/redux-structure.md
-[sample-state]: ./docs/sample-state.md
-[Implementation Timeline]: ./docs/phases
+### Text groups
+Users have the ability to complement their photography with text groups. Text groups have an optional title and body that can be inserted and removed from anywhere in the story. The CRUD process is batch handled in Rails in order to improve efficiency.
+
+### Storyboard
+The storyboard is where users are able to view the photo stories that they have created. Additionally, users can customize their profile through a modal pop-up. Options include uploading an avatar picture, adding a profile title and a profile description.
+<img src="https://cloud.githubusercontent.com/assets/15305961/18375863/b9d44d30-760e-11e6-81a0-26ed7cae7a85.png">
+<br><br>
+
+### Additional Features
+Future features to include in Composure would be the ability to have rich-text formatting for story text groups, allowing users to 'drag and drop' photo-groups and text-groups when editting their stories and a discovery section that curates users' stories along with the functionality to search by story title or user.
