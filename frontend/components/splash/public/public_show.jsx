@@ -7,6 +7,17 @@ export default class PublicShow extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {
+    let storyId
+    if (this.props.location.pathname === "/the-real-steel"){
+      storyId = 11;
+    } else if (this.props.location.pathname === "/belize") {
+      storyId = 12;
+    } else if (this.props.location.pathname === "/the-large-hadron-collider") {
+      storyId = 13;
+    }
+    this.props.requestStory(storyId);
+  }
 
   componentWillUnmount() {
     this.props.clearStories();
@@ -41,7 +52,11 @@ export default class PublicShow extends React.Component {
   render() {
     let story_id
     if (this.props.location.pathname === "/the-real-steel"){
-      story_id = 11
+      story_id = 11;
+    } else if (this.props.location.pathname === "/belize") {
+      story_id = 12;
+    } else if (this.props.location.pathname === "/the-large-hadron-collider") {
+      story_id = 13;
     }
     const story = this.props.stories[story_id]
 

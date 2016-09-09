@@ -54,6 +54,8 @@ class AppRouter extends React.Component {
       <Router history={hashHistory}>
         <Route path="/" component={Splash} />
         <Route path="/the-real-steel" component={PublicShowContainer} onEnter={ this.requestPublicElementsOnEnter(11) } />
+        <Route path="/belize" component={PublicShowContainer} onEnter={ this.requestPublicElementsOnEnter(12) } />
+        <Route path="/the-large-hadron-collider" component={PublicShowContainer} onEnter={ this.requestPublicElementsOnEnter(13) } />
         <Route path="/login" component={LoginContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/signup" component={SignupContainer} onEnter={this._redirectIfLoggedIn} />
         <Route path="/storyboard" component={StoryboardContainer} onEnter={ this._ensureLoggedIn } />

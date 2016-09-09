@@ -1542,3 +1542,597 @@ position: 45,
 story_id: 11
 )
 #end
+
+#public-2
+Story.create!(
+  title: "Belize",
+  description: "Guardians of the reef",
+  user_id: 3,
+  cover_image_id: 105
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/posts/168603/cover-photo/cover-1460539503.jpg?w=1800&q=58&fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/posts/168603/cover-photo/cover-1460539503.jpg?w=1800&q=58&fm=pjpg&auto=format",
+  position: 1,
+  group_position: 1,
+  full_width: true,
+  story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "A report produced for WWF shows how natural World Heritage sites across the world contribute to economic and social development through the protection of the environment, but also details global failures to protect these areas of outstanding universal value. The report echoes the voices of people we met in Belize. The Belize Barrier Reef Reserve System is shown to be at risk from unsustainable coastal construction, large-scale mangrove clearance, harmful agricultural run-off, and the potential of dangerous oil exploration. These threats put the well-being of 190,000 people – half of Belize‘s population – at risk.",
+position: 2,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "People are already finding solutions to address these threats. From mothers to fishers to scientists to developers, Belizeans are taking the reef’s future into their hands.",
+position: 3,
+story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/vyidvxrzjkir18edtpbi96bt9whbfo8zwhna/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/vyidvxrzjkir18edtpbi96bt9whbfo8zwhna/original.jpg?fm=pjpg&auto=format",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/ckmheof3dfkuli0mz8dzn0zfr7lw06oveuvm/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/ckmheof3dfkuli0mz8dzn0zfr7lw06oveuvm/original.jpg?fm=pjpg&auto=format",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/sswpffm18zao2d9bz4pe97ldigafzbaxwz1j/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/sswpffm18zao2d9bz4pe97ldigafzbaxwz1j/original.jpg?fm=pjpg&auto=format",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "Becoming a tour guide turned out to be the best thing that could happen to Mariko Wallen. “It opened a whole new world to me that I never really imagined,” she says. A native from the small village of Placencia in southern Belize, she used to spend her time helping out her parents at their grocery store or taking care of her two children at home. Now each day she puts on fins, snorkel and mask to dive into her workplace, an underwater world off the coast of her hometown: the Belize reef.",
+position: 5,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "A submarine wall that runs parallel to the shore of the tiny Caribbean nation, the Belize barrier reef is part of one of the largest reef systems in the world and the largest in the Western Hemisphere. More than 350 kilometers of coral build this ecosystem that provides a home for fishes, invertebrates, and other species.",
+position: 6,
+story_id: 12
+)
+
+TextArea.create!(
+title: "'You just get caught up when you’re down there,' Wallen says. 'Seeing all the different creatures is like you’re visiting outer space.'",
+body: "",
+position: 7,
+story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/ummyrl531s4o6msji0bqvkj4iuwvwgrk69dn/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/ummyrl531s4o6msji0bqvkj4iuwvwgrk69dn/original.jpg?fm=pjpg&auto=format",
+  position: 8,
+  group_position: 3,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/zlbhj92ovvzwbrll35hoajorhv54ajp57wd5/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/zlbhj92ovvzwbrll35hoajorhv54ajp57wd5/original.jpg?fm=pjpg&auto=format",
+  position: 9,
+  group_position: 3,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/ish9wpmjv2a8034ayk3xrzo0org0scast6fx/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/ish9wpmjv2a8034ayk3xrzo0org0scast6fx/original.jpg?fm=pjpg&auto=format",
+  position: 10,
+  group_position: 3,
+  full_width: false,
+  story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "A living network of incredible complexity, the reef means everything for Belizeans. A WWF report calculates that more than half of Belize’s population, or about 190,000 people, are supported by incomes generated through reef-related tourism and fisheries. The reef is key to sustain Belize and its people, and it is a prime draw for Belize’s booming tourism industry. The reef also works as a first line of defense against natural disasters, shielding the coast from floods and storms and providing stability to the shoreline.",
+position: 11,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "Despite being no stranger to the sea, growing up as the daughter of a traditional fisherman, tour guiding opened Wallen’s eyes to how important the reef actually is: “I guess it was time for me to acknowledge what we have here and to not take it for granted.",
+position: 12,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "The Belize Barrier Reef Reserve System – made up of seven distinct sites strung out along Belize’s coast – was designated a UNESCO World Heritage site in 1996 in recognition of its “unique array of reef types” and diversity of marine species. But the once pristine system has suffered damage brought by both people and nature itself. Several hurricanes have directly hit the reef, which can take years to recover; waters warmed by El Niño events have triggered coral bleaching; harmful industrial activities have polluted and fragmented the reef and its habitats. The combined effects of these events prompted UNESCO in 2009 to place the Belize Barrier Reef Reserve System on the List of World Heritage in Danger. Today it’s at its most vulnerable point.",
+position: 13,
+story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/y47t1dffr69bffflxy7hqia4i4p97mps6yzt/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/y47t1dffr69bffflxy7hqia4i4p97mps6yzt/original.jpg?fm=pjpg&auto=format",
+  position: 14,
+  group_position: 4,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/lnuoq95qlwd3iemddeu3dilt1me0sarjtprj/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/lnuoq95qlwd3iemddeu3dilt1me0sarjtprj/original.jpg?fm=pjpg&auto=format",
+  position: 15,
+  group_position: 4,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/zv4l0mrroe8tse8un8z1tt91aj6ca4eu1no8/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/zv4l0mrroe8tse8un8z1tt91aj6ca4eu1no8/original.jpg?fm=pjpg&auto=format",
+  position: 16,
+  group_position: 4,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/pigmnq2u9xiwfqqmf3cjtt911tyy2tgx3s7y/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/pigmnq2u9xiwfqqmf3cjtt911tyy2tgx3s7y/original.jpg?fm=pjpg&auto=format",
+  position: 17,
+  group_position: 5,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/n5zv8vi3bfd4gkwfzd9tz9f6rv93qsd3fkne/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/n5zv8vi3bfd4gkwfzd9tz9f6rv93qsd3fkne/original.jpg?fm=pjpg&auto=format",
+  position: 18,
+  group_position: 5,
+  full_width: false,
+  story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "Rather than hoping that the reef somehow manages to heal itself, some Belizeans have decided to take the reef’s future into their hands and are making significant efforts to protect the natural capital that sustains them. For Wallen, that moment came in 2012 when she started volunteering with Fragments of Hope, a local organization working to replenish coral areas that have been wiped out in the past.",
+position: 19,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "With support from WWF, they’re making progress rebuilding the reef and increasing biodiversity. “If it wasn’t for the restoration work, you would mostly see dead rubble here,” she says. But Wallen is not the only one reclaiming responsibility for the reef. Marine biologist Kirah Foreman works in northern Belize at Hol Chan Marine Reserve.",
+position: 20,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "Though not one of the World Heritage locations, Hol Chan is the oldest and only self-sustaining marine protected area in the country. Foreman believes this is because of the way they have approached the community, working closely with tour guides and fishers. While some marine protected areas prohibit fishing, in Hol Chan the protected area designation is used as a fisheries management tool. Locals have the traditional right to fish and rangers chase out fishers that come from other areas. It’s another way to avoid overfishing. “You can’t keep [locals] out,” Foreman says. “We have a lot of people questioning that decision, but then you look at a place like this, where it’s actually working.” In fact, Hol Chan is recognized as a biodiversity hotspot of the Caribbean-Atlantic and has expanded at least three times since it was declared.",
+position: 21,
+story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/8uqacied7ch1vcxjahj5g66r8guz92i4e3it/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/8uqacied7ch1vcxjahj5g66r8guz92i4e3it/original.jpg?fm=pjpg&auto=format",
+  position: 22,
+  group_position: 6,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/8pkjwslneadmnxlhgxsxrms4ibpn7tq6nzhi/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/8pkjwslneadmnxlhgxsxrms4ibpn7tq6nzhi/original.jpg?fm=pjpg&auto=format",
+  position: 23,
+  group_position: 6,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/mfygey5kzm48ji7v5hw4gqfrtgg8toz1is8c/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/mfygey5kzm48ji7v5hw4gqfrtgg8toz1is8c/original.jpg?fm=pjpg&auto=format",
+  position: 24,
+  group_position: 6,
+  full_width: false,
+  story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "Located a few miles north of Hol Chan along Belize’s largest island, Ambergris Caye, lies the marine reserve of Bacalar Chico. Despite sharing the same island, and being one of the seven locations that make up the World Heritage site, Bacalar Chico is arguably having a harder time of it than Hol Chan, especially for turtles. Turtles were the reason Foreman started working at marine reserves in the first place. “Once you start working with them, you get hooked,” she says.",
+position: 25,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "But in recent years they have been struggling to survive. Temperature plays a fundamental role in marine turtle development – it even determines whether the embryo will transform into a male or a female. But if the temperature is too high for too long, they just die. Same thing is true with water – developing eggs need some moisture, but if a nest is flooded by high tides, the eggs will perish. Foreman and her colleagues fear this will happen more frequently as the sea level rises.",
+position: 26,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "But even without the long-term threat of climate change, the future is grim for the turtles and the reef. Unlike Hol Chan, Bacalar Chico and the surrounding areas have witnessed a significant expansion of coastal construction, including mega resorts and cruise terminals.",
+position: 27,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "But badly-planned and executed projects can degrade the natural assets that draw tourists in the first place. Hol Chan marine reserve works with tour guides who want to ensure that the environment is protected. After all, if there’s nothing left for tourists to see, they’ll most likely lose their jobs. The guides recognize the link between keeping the mangroves and seagrass beds safe and having a healthy reef, but most developers and investors haven’t yet.",
+position: 28,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "Historically, the turtles used to nest along all the island’s beaches. Now their nesting ground has been restricted to a single privately owned beach called Robles Point. “It’s prime real estate, so there is a threat that at some point somebody is going to purchase these properties,” Foreman says. If that should happen, turtles may not have a place to nest anymore. ",
+position: 29,
+story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/aa1li7cpcx7hievzjd8hkhuxr8yn12za10ef/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/aa1li7cpcx7hievzjd8hkhuxr8yn12za10ef/original.jpg?fm=pjpg&auto=format",
+  position: 30,
+  group_position: 7,
+  full_width: true,
+  story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "Cases of unsustainable coastal construction abound in Belize. One recent example is the project at Harvest Caye, an island near Placencia. The construction of a cruise ship terminal on this small island has involved dredging, dumping of rocks and sand on corals, and clearing mangroves. When completed, the route from Harvest Caye to the mainland to take passengers to inland tours will cross right through primary breeding grounds for the West Indian manatee, raising the risk of watercraft collisions, which is one of the main threats to the vulnerable animal.",
+position: 31,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "The project is inconsistent with Belize’s National Sustainable Tourism Master Plan, a framework that is strong on paper, but which has apparently been insufficient to guide decision-making on the suitability of such projects. But that could soon change with the full resourcing and implementation of a national coastal zone management plan, recently endorsed by the cabinet, which includes recommendations for the sustainable use of Belize’s coastal and marine environment.",
+position: 32,
+story_id: 12
+)
+
+TextArea.create!(
+title: "",
+body: "In January 2015, rumors spread about plans to drill for oil in Belize’s waters. By December of last year, the government announced it intended to implement a policy to ban offshore oil exploration in the Belize Barrier Reef Reserve System World Heritage site. This is good news, but the measure is not enough. Altogether, the area in which oil exploration would be prohibited would only cover around 15 per cent of the marine environment, which leaves 85 per cent susceptible to offshore concessions, oil exploration and drilling. Given the relatively small area of Belize’s offshore waters, and the nature of the ocean currents in this part of the Caribbean, any oil-related accident in the areas outside the World Heritage locations would likely have an impact on them. Combine this with the fact that Belize lacks any capacity to respond to marine oil spills, and the risk to the Belize World Heritage site, and the wider reef, would seem to remain despite the intended oil ban.",
+position: 33,
+story_id: 12
+)
+
+TextArea.create!(
+title: "However, the biggest challenge for the country is yet to come",
+body: "",
+position: 34,
+story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/xkd2pm1p9fp3o1zi4x36usormicay1zg0yww/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/xkd2pm1p9fp3o1zi4x36usormicay1zg0yww/original.jpg?fm=pjpg&auto=format",
+  position: 35,
+  group_position: 8,
+  full_width: false,
+  story_id: 12
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/97wr8tss2plcjohc09q9f6rkfxdoit0utllf/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/97wr8tss2plcjohc09q9f6rkfxdoit0utllf/original.jpg?fm=pjpg&auto=format",
+  position: 36,
+  group_position: 8,
+  full_width: false,
+  story_id: 12
+)
+#end
+
+#public3
+Story.create!(
+  title: "The Large Hadron Collider",
+  description: "at CERN",
+  user_id: 3,
+  cover_image_id: 123
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/posts/50421/cover-photo/cover-1405074651.jpg?w=1800&q=58&fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/posts/50421/cover-photo/cover-1405074651.jpg?w=1800&q=58&fm=pjpg&auto=format",
+  position: 1,
+  group_position: 1,
+  full_width: true,
+  story_id: 13
+)
+
+TextArea.create!(
+title: "The Tunnel",
+body: "The Large Hadron Collider was shut down in 2013 to allow for upgrades. It will run again at twice the energy in 2015. This is a perfect opportunity to visit the site and access the various parts. When it’s in operation, no one is allowed in the tunnel.",
+position: 2,
+story_id: 13
+)
+
+TextArea.create!(
+title: "",
+body: "100 meters underground, the tunnel is 27 km long. It’s not perfectly circular, it has straight segments to allow for collisions and acceleration. The curved parts don’t accelerate the protons, they just carry them and focus them.",
+position: 3,
+story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/f6cpi6w63y72k3aumub6rx7xb9bw0su78ks6/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/f6cpi6w63y72k3aumub6rx7xb9bw0su78ks6/original.jpg?fm=pjpg&auto=format",
+  position: 4,
+  group_position: 2,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/cyik9p8a7syuvfhfdyfho4ru1az81m5l2gqk/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/cyik9p8a7syuvfhfdyfho4ru1az81m5l2gqk/original.jpg?fm=pjpg&auto=format",
+  position: 5,
+  group_position: 2,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/xrfyijkl4dciprwz7ipndr6l7jnd3gfonm18/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/xrfyijkl4dciprwz7ipndr6l7jnd3gfonm18/original.jpg?fm=pjpg&auto=format",
+  position: 6,
+  group_position: 3,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/qen8qn2ffg9nvskor8btgw6hyc7ma5jgjdvz/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/qen8qn2ffg9nvskor8btgw6hyc7ma5jgjdvz/original.jpg?fm=pjpg&auto=format",
+  position: 7,
+  group_position: 3,
+  full_width: false,
+  story_id: 13
+)
+
+TextArea.create!(
+title: "The CMS Collider",
+body: "Several detectors are spread around the LHC. They are called experiments and they operate independently from each other. The CMS Collider is one of the biggest detectors. It participated in the discovery of the Higgs boson. The two beams of protons collide head on in the middle of the detector and all the resulting subatomic particles fly in all directions from there, through the giant machine. Inside it, powerful magnets curve the trajectories of electrically charged particles. Here, the CMS is wide open for maintenance.",
+position: 8,
+story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/y5vwxtb41emuz9xjbqd6b0u7oyywlyua4dxg/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/y5vwxtb41emuz9xjbqd6b0u7oyywlyua4dxg/original.jpg?fm=pjpg&auto=format",
+  position: 9,
+  group_position: 4,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/xifz8mhpet8iksnx65bgury68x3gxlwvpqtx/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/xifz8mhpet8iksnx65bgury68x3gxlwvpqtx/original.jpg?fm=pjpg&auto=format",
+  position: 10,
+  group_position: 5,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/9ipkbegx7673a6krt35oylyfa98lwc7rk5k6/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/9ipkbegx7673a6krt35oylyfa98lwc7rk5k6/original.jpg?fm=pjpg&auto=format",
+  position: 11,
+  group_position: 5,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/ukuvpmriufnjh9gdamprfvze0eu4i3bksj67/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/ukuvpmriufnjh9gdamprfvze0eu4i3bksj67/original.jpg?fm=pjpg&auto=format",
+  position: 12,
+  group_position: 5,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/mcdhl4165uihml911bs5icjme3piw0odem9d/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/mcdhl4165uihml911bs5icjme3piw0odem9d/original.jpg?fm=pjpg&auto=format",
+  position: 13,
+  group_position: 5,
+  full_width: false,
+  story_id: 13
+)
+
+TextArea.create!(
+title: "Big Data",
+body: "One petabyte of data is sent from the various experiments on the LHC to the processing room each day. That is after a first filtering pass on the experiments sites where 99% of the data is discarded. 40,000 km of fiber optic cables run through the entire site.",
+position: 14,
+story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/plrjagyumvlg0fqo7eaul6kpyni3nfgk7m2i/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/plrjagyumvlg0fqo7eaul6kpyni3nfgk7m2i/original.jpg?fm=pjpg&auto=format",
+  position: 15,
+  group_position: 6,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/wfz23pajm3cr8y8wfin6prl35d0mf4omqf6d/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/wfz23pajm3cr8y8wfin6prl35d0mf4omqf6d/original.jpg?fm=pjpg&auto=format",
+  position: 16,
+  group_position: 6,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/juiz410n0se8fe52jezs7uxbr9o7gdf5yh0u/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/juiz410n0se8fe52jezs7uxbr9o7gdf5yh0u/original.jpg?fm=pjpg&auto=format",
+  position: 17,
+  group_position: 6,
+  full_width: false,
+  story_id: 13
+)
+
+TextArea.create!(
+title: "The Processing Room",
+body: "The data from the experiments is sent here to be processed in order to compute the trajectory of particles. 10,000 servers. 90,000 cores. 3.5 MegaWatts, plus air conditioning.",
+position: 18,
+story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/xirlxjuikmz22i1xgit0kbk8f4w7dm5bhiu2/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/xirlxjuikmz22i1xgit0kbk8f4w7dm5bhiu2/original.jpg?fm=pjpg&auto=format",
+  position: 19,
+  group_position: 7,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/ck7xmxdl7bogtvnysfmunsdbylftocaog085/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/ck7xmxdl7bogtvnysfmunsdbylftocaog085/original.jpg?fm=pjpg&auto=format",
+  position: 20,
+  group_position: 8,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/m1mhvx4qy7ut80uc66e8bva2vflca5z698vu/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/m1mhvx4qy7ut80uc66e8bva2vflca5z698vu/original.jpg?fm=pjpg&auto=format",
+  position: 21,
+  group_position: 9,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/f9cv2fr3c2v1qsepli23gdwjbattcksq34dp/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/f9cv2fr3c2v1qsepli23gdwjbattcksq34dp/original.jpg?fm=pjpg&auto=format",
+  position: 22,
+  group_position: 10,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/thf46n6h94d5ywq7kv1w05hrf91p4slsexvc/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/thf46n6h94d5ywq7kv1w05hrf91p4slsexvc/original.jpg?fm=pjpg&auto=format",
+  position: 23,
+  group_position: 10,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/e1f1b0g6q2emu8knkt93kh0607sfb7r0vdl1/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/e1f1b0g6q2emu8knkt93kh0607sfb7r0vdl1/original.jpg?fm=pjpg&auto=format",
+  position: 24,
+  group_position: 10,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/k7ugdf5b48jn7kz654zyomr647d26d6zdguf/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/k7ugdf5b48jn7kz654zyomr647d26d6zdguf/original.jpg?fm=pjpg&auto=format",
+  position: 25,
+  group_position: 11,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/xl77drle3mk7m0if52lgp0bg6t6zizovh9fk/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/xl77drle3mk7m0if52lgp0bg6t6zizovh9fk/original.jpg?fm=pjpg&auto=format",
+  position: 26,
+  group_position: 11,
+  full_width: false,
+  story_id: 13
+)
+
+TextArea.create!(
+title: "The Tourist Room",
+body: "This place is the sexiest room in the entire CERN. The windows become a giant touchscreen to playback some educational videos. They revert to transparent windows when the videos are over to provide a nice overlook on the processing room. ",
+position: 27,
+story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/70y5fhc9iwhqc2iy3kzt5ge9a7yai79rk0a5/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/70y5fhc9iwhqc2iy3kzt5ge9a7yai79rk0a5/original.jpg?fm=pjpg&auto=format",
+  position: 28,
+  group_position: 12,
+  full_width: true,
+  story_id: 13
+)
+
+TextArea.create!(
+title: "The Control Room",
+body: "Not as sexy as most people would imagine it, the control room is where everything is run. Each quasi-circle is the center of operation for a different part of the accelerator: cryogenics, the SPS (Super Proton Synchrotron) which acts as a pre-accelerator and the LHC itself.",
+position: 29,
+story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/pvhxfigo8vh4s3jklh3yhbq8y8tiwo9pk765/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/pvhxfigo8vh4s3jklh3yhbq8y8tiwo9pk765/original.jpg?fm=pjpg&auto=format",
+  position: 30,
+  group_position: 13,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/xgcis6l1iru4smi70045h1l0eq50g306u530/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/xgcis6l1iru4smi70045h1l0eq50g306u530/original.jpg?fm=pjpg&auto=format",
+  position: 31,
+  group_position: 14,
+  full_width: false,
+  story_id: 13
+)
+
+Photo.create!(
+  url: "https://exposure.imgix.net/production/photos/0g5fg4cuwrjmmqelgam6315kc2kxtznj5skt/original.jpg?fm=pjpg&auto=format",
+  med_url: "https://exposure.imgix.net/production/photos/0g5fg4cuwrjmmqelgam6315kc2kxtznj5skt/original.jpg?fm=pjpg&auto=format",
+  position: 32,
+  group_position: 14,
+  full_width: false,
+  story_id: 13
+)
+#end

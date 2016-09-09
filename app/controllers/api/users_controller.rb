@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     @user.profile_title = ""
     @user.profile_description = ""
-
+    @user.avatar_url = "https://secure.gravatar.com/avatar/d9fb812b41af97e6310fae5bcaf8c460?s=150&d=https://exposure-media.s3.amazonaws.com/static/exposure-logo-mark-avatar.png"
     if @user.save
       login(@user)
       render "api/users/show"
