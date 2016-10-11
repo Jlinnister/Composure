@@ -15,13 +15,13 @@ class Login extends React.Component {
     if (this.props.location.query.demo === "true") {
       const guestUser = ['g', 'u', 'e', 's', 't', 'p', 'a', 's', 's', 'w', 'o', 'r', 'd'];
       let idx = 0;
-      let interval = setInterval(()=>{
+      const interval = setInterval(() => {
         if (idx < 5) {
           const name = this.state.username + guestUser[idx];
           this.setState({ username: name });
         } else if (idx < 13) {
           const pw = this.state.password + guestUser[idx];
-          this.setState({ password: pw })
+          this.setState({ password: pw });
         } else {
           this.props.login(this.state);
           clearInterval(interval);
@@ -36,13 +36,13 @@ class Login extends React.Component {
   }
 
   redirectIfLoggedIn() {
-    if (this.props.loggedIn) {
-      hashHistory.push("/storyboard");
+    if (this.props.loggedIn){
+      hashHistory.push('/storyboard');
     }
   }
 
   splashPage() {
-      hashHistory.push("/");
+    hashHistory.push('/');
   }
 
   update(field) {
@@ -74,15 +74,11 @@ class Login extends React.Component {
               <div className="login-form-title" onClick={this.splashPage}>
                 COMPOSURE
               </div>
-
               {this.props.errors ? this.renderErrors() : null}
               <form onSubmit={this.handleSubmit} className="login-form-box">
-
                 <input className="form-control" type="text" id="login-form-username" value={this.state.username} onChange={this.update("username")} placeholder="Username" />
                 <input className="form-control" type="password" id="login-form-password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
-
                 <input className="btn btn-primary login-user" type="submit" value="Log In" />
-
               </form>
             </div>
           </div>
